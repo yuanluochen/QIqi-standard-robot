@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'standard_robot' 
+ * Project: 'standard_gimbal' 
  * Target:  'standard_gimbal' 
  */
 
