@@ -1,5 +1,5 @@
-standard_tpye_c/ins_task.o: ..\application\ins_task.c \
-  ..\application\ins_task.h \
+standard_tpye_c/ins_task.o: ..\application\INS_task.c \
+  ..\application\INS_task.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   ..\components\devices\BMI088driver.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \

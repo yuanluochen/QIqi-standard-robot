@@ -680,9 +680,9 @@
               <FilePath>..\application\vision_task.c</FilePath>
             </File>
             <File>
-              <FileName>ins_task.c</FileName>
+              <FileName>INS_task.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\application\ins_task.c</FilePath>
+              <FilePath>..\application\INS_task.c</FilePath>
             </File>
           </Files>
         </Group>
