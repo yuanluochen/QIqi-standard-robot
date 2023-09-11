@@ -179,7 +179,6 @@ void gimbal_behaviour_mode_set(gimbal_control_t *gimbal_mode_set)
     //根据云台行为状态机设置电机状态机
     if (gimbal_behaviour == GIMBAL_ZERO_FORCE) 
     {
-
         // 无力模式下,设置为电机原始值控制，方便让电机处于无力态
         gimbal_mode_set->gimbal_yaw_motor.gimbal_motor_mode = GIMBAL_MOTOR_RAW;
         gimbal_mode_set->gimbal_pitch_motor.gimbal_motor_mode = GIMBAL_MOTOR_RAW;
@@ -226,19 +225,33 @@ void gimbal_behaviour_control_set(fp32 *add_yaw, fp32 *add_pitch, gimbal_control
     }
     // 判断云台模式，根据云台模式选择云台控制方式
     if (gimbal_behaviour == GIMBAL_ZERO_FORCE) // 无力模式云台无力
+    {
         gimbal_zero_force_control(add_yaw, add_pitch, gimbal_control_set);
+    }
     else if (gimbal_behaviour == GIMBAL_INIT) // 初始化模式，云台初始化
+    {
         gimbal_init_control(add_yaw, add_pitch, gimbal_control_set);
+    }
     else if (gimbal_behaviour == GIMBAL_RC) // 遥控器控制模式,绝对角控制
+    {
         gimbal_RC_control(add_yaw, add_pitch, gimbal_control_set);
+    }
     else if (gimbal_behaviour == GIMBAL_MOTIONLESS) // 无信号下的控制,即无力
+    {
         gimbal_motionless_control(add_yaw, add_pitch, gimbal_control_set);
+    }
     else if (gimbal_behaviour == GIMBAL_AUTO_ATTACK) // 自动袭击模式
+    {
         gimbal_auto_attack_control(add_yaw, add_pitch, gimbal_control_set);
+    }
     else if (gimbal_behaviour == GIMBAL_AUTO_SCAN) // 自动扫描模式
+    {
         gimbal_auto_scan_control(add_yaw, add_pitch, gimbal_control_set);
+    }
     else if (gimbal_behaviour == GIMBAL_AUTO_MOVE) // 自动跟随模式
+    {
         gimbal_auto_move_control(add_yaw, add_pitch, gimbal_control_set);
+    }
 }
 
 /**
@@ -336,12 +349,12 @@ static void gimbal_behavour_set(gimbal_control_t *gimbal_mode_set)
             }
         }
     }
-
     if (switch_is_down(gimbal_mode_set->gimbal_rc_ctrl->rc.s[GIMBAL_MODE_CHANNEL]))
     {
         // 遥控器控制模式
         gimbal_behaviour = GIMBAL_ZERO_FORCE;
     }
+
     if (switch_is_mid(gimbal_mode_set->gimbal_rc_ctrl->rc.s[GIMBAL_MODE_CHANNEL]))
     {
         // 切换到遥控器控制模式
