@@ -251,6 +251,7 @@ typedef struct
     fp32 vy_set;                         
     fp32 wz_set;                         
 		fp32 chassis_relative_angle_set; //设置相对云台控制角度
+		fp32 relative_angle_Dbuf;//相对角差值
 		
 		fp32 chassis_relative_last;
 		fp32 vx_set_CANsend;      

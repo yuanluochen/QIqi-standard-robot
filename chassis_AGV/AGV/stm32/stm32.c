@@ -100,8 +100,8 @@ void Matlab_PID_Calc(fp32 angle_set,fp32 angle_feedback,fp32 speed_feedback,Rudd
 	}	
 	else
 	{	
-	if(rudder_PID->rudder_out.Out1>=20000.f) rudder_PID->rudder_out.Out1=20000.f;
-	else if(rudder_PID->rudder_out.Out1<=-20000.f) rudder_PID->rudder_out.Out1=-20000.f;
+	if(rudder_PID->rudder_out.Out1>=30000.f) rudder_PID->rudder_out.Out1=30000.f;
+	else if(rudder_PID->rudder_out.Out1<=-30000.f) rudder_PID->rudder_out.Out1=-30000.f;
 	}
 	
 //	if(rudder_PID->rudder_out.Out1>=10000.f) rudder_PID->rudder_out.Out1=10000.f;       //控制舵电机峰值电流

@@ -274,6 +274,7 @@ static void chassis_init(chassis_move_t *chassis_move_init)
 		 chassis_move_init->Back_L.Judge_Speed_Direction=chassis_move_init->Back_R.Judge_Speed_Direction=1.0f;
 		  //底盘数据初始化
 		 chassis_move_init->chassis_relative_last=0.0f;
+		 chassis_move_init->relative_angle_Dbuf=0.0f;
      chassis_feedback_update(chassis_move_init);
 		 //舵电机编码值初始化
 		 chassis_move.Forward_L.ecd_zero_set=1544;
@@ -281,6 +282,8 @@ static void chassis_init(chassis_move_t *chassis_move_init)
 		 chassis_move.Back_R.ecd_zero_set=3625;  
 		 chassis_move.Back_L.ecd_zero_set=5168; 
 		 	chassis_move.power_control.SPEED_MIN=0.1f; 
+			
+
 }
 
 
@@ -311,6 +314,8 @@ static void chassis_feedback_update(chassis_move_t *chassis_move_update)
 		
 		//云台的相对角度
 		chassis_move.gimbal_data.relative_angle=((fp32)(chassis_move.gimbal_data.relative_angle_receive))*Motor_Ecd_to_Rad;
+		chassis_move.relative_angle_Dbuf=chassis_move.chassis_relative_last-chassis_move.gimbal_data.relative_angle;
+		chassis_move.chassis_relative_last=chassis_move.gimbal_data.relative_angle;
 		
 }
 
@@ -425,10 +430,11 @@ static void chassis_set_contorl(chassis_move_t *chassis_move_control)
 				}
 				else
 				{	
-					if(Rear_Brake(chassis_move_control)==0&&fabs(chassis_move_control->vx)>2.0f&&fabs(chassis_move_control->vy)>2.0f)
-					chassis_move_control->wz_set = -PID_Calc(&chassis_move_control->chassis_angle_pid, relative_angle, chassis_move_control->chassis_relative_angle_set); 
+					if(Rear_Brake(chassis_move_control)==1)
+						chassis_move_control->wz_set = 0;
 					else
-					chassis_move_control->wz_set = 0;	
+					chassis_move_control->wz_set = -PID_Calc(&chassis_move_control->chassis_angle_pid, relative_angle, chassis_move_control->chassis_relative_angle_set); 
+
 				}	
 			}	
 		else if(chassis_move_control->chassis_motor_mode == RUDDER_VECTOR_FOLLOW_GIMBAL_YAW)  //舵跟随云台模式
@@ -717,10 +723,11 @@ static void Rudder_motor_relative_angle_control(Rudder_Motor_t *chassis_motor)
 					chassis_motor->ecd_set=chassis_motor->ecd_zero_set+chassis_motor->ecd_add;
 			 }
 	}	
-//	else if(chassis_motor->ecd_add==0.0f)
-//{
-//	chassis_motor->ecd_set=chassis_motor->gimbal_motor_measure->ecd;
-//}
+//	else if(chassis_motor->ecd_add==0.0f&&Rear_Brake(chassis_motor)==1)fabs(chassis_move_control->relative_angle_Dbuf)<0.6f
+		else if(chassis_motor->ecd_add==0.0f&&fabs(chassis_move.relative_angle_Dbuf)<0.3f)
+{
+	chassis_motor->ecd_set=chassis_motor->gimbal_motor_measure->ecd;
+}
 else if(chassis_move.chassis_motor_mode==CHASSIS_VECTOR_FOLLOW_GIMBAL_YAW&&chassis_motor->ecd_add==0.0f)
 {
 	chassis_motor->ecd_set=chassis_motor->gimbal_motor_measure->ecd;
@@ -993,7 +1000,7 @@ void chassis_rc_to_control_vector(fp32 *vx_set, fp32 *vy_set, chassis_move_t *ch
   */
 int Rear_Brake(chassis_move_t *chassis_move_control)
 {	
-	if(fabs(chassis_move_control->gimbal_data.relative_angle)<0.5f&&(chassis_move_control->vx_set_CANsend==0.0f&&chassis_move_control->vy_set_CANsend==0.0f))
+	if(fabs(chassis_move_control->relative_angle_Dbuf)<0.6f&&fabs(chassis_move.vx)<1.0f&&fabs(chassis_move.vy)<1.0f)
 	return 1;
 	else
 	return 0;
