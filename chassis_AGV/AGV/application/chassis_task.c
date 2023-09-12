@@ -430,7 +430,7 @@ static void chassis_set_contorl(chassis_move_t *chassis_move_control)
 				}
 				else
 				{	
-					if(Rear_Brake(chassis_move_control)==1)
+					if(Rear_Brake(chassis_move_control)==0)
 						chassis_move_control->wz_set = 0;
 					else
 					chassis_move_control->wz_set = -PID_Calc(&chassis_move_control->chassis_angle_pid, relative_angle, chassis_move_control->chassis_relative_angle_set); 
@@ -723,10 +723,10 @@ static void Rudder_motor_relative_angle_control(Rudder_Motor_t *chassis_motor)
 					chassis_motor->ecd_set=chassis_motor->ecd_zero_set+chassis_motor->ecd_add;
 			 }
 	}	
-//	else if(chassis_motor->ecd_add==0.0f&&Rear_Brake(chassis_motor)==1)fabs(chassis_move_control->relative_angle_Dbuf)<0.6f
-		else if(chassis_motor->ecd_add==0.0f&&fabs(chassis_move.relative_angle_Dbuf)<0.3f)
+
+	else if(chassis_motor->ecd_add==0.0f&&fabs(chassis_move.relative_angle_Dbuf)<0.3f)
 {
-	chassis_motor->ecd_set=chassis_motor->gimbal_motor_measure->ecd;
+	chassis_motor->ecd_set=chassis_motor->last_ecd_set;
 }
 else if(chassis_move.chassis_motor_mode==CHASSIS_VECTOR_FOLLOW_GIMBAL_YAW&&chassis_motor->ecd_add==0.0f)
 {
@@ -742,7 +742,7 @@ else if(chassis_move.chassis_motor_mode!=CHASSIS_VECTOR_FOLLOW_GIMBAL_YAW&&chass
 } 
 
 	chassis_motor->ecd_error=chassis_motor->ecd_set-chassis_motor->gimbal_motor_measure->ecd;
-	
+	chassis_motor->last_ecd_set = chassis_motor->ecd_set;
   //就近原则
 
 	  if(chassis_motor->ecd_error>4096)
