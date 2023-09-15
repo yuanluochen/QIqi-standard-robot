@@ -1,8 +1,7 @@
 *** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Build target 'standard_gimbal'
-compiling gimbal_behaviour.c...
 compiling gimbal_task.c...
 linking...
-Program Size: Code=90704 RO-data=7320 RW-data=240 ZI-data=54768  
+Program Size: Code=119460 RO-data=7476 RW-data=284 ZI-data=54916  
 "standard_tpye_c\standard_gimbal_type_c.axf" - 0 Error(s), 0 Warning(s).
-Build Time Elapsed:  00:00:02
+Build Time Elapsed:  00:00:04
