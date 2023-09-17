@@ -1,6 +1,5 @@
 standard_tpye_c/can_receive.o: ..\application\CAN_receive.c \
   ..\application\CAN_receive.h ..\application\struct_typedef.h \
-  ..\application\interface\gimbal_chassis_interface\gimbal_chassis_interface.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \

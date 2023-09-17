@@ -19,7 +19,6 @@
   */
 
 #include "CAN_receive.h"
-#include "gimbal_chassis_interface.h"
 #include "cmsis_os.h"
 #include "main.h"
 #include "bsp_rng.h"
