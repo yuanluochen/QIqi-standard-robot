@@ -19,6 +19,7 @@
   */
 
 #include "CAN_receive.h"
+#include "gimbal_chassis_interface.h"
 #include "cmsis_os.h"
 #include "main.h"
 #include "bsp_rng.h"
@@ -230,7 +231,7 @@ void CAN_cmd_chassis_reset_ID(void)
 void CAN_cmd_chassis(int16_t relative_angle, int32_t chassis_vx, int32_t chassis_vy, int16_t chassis_behaviour)
 {
     uint32_t send_mail_box;
-    gimbal_callx_message.StdId = CAN_CHASSIS_ID;
+    gimbal_callx_message.StdId = CAN_GIMBAL_CONTROL_CHASSIS_ID;
     gimbal_callx_message.IDE = CAN_ID_STD;
     gimbal_callx_message.RTR = CAN_RTR_DATA;
     gimbal_callx_message.DLC = 0x08;

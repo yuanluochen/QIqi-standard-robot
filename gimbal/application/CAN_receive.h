@@ -35,8 +35,6 @@ typedef enum
     CAN_3508_M3_ID = 0x202,
     CAN_3508_M4_ID = 0x201,
 
-    CAN_CHASSIS_ID = 0x218,
-
     CAN_YAW_MOTOR_ID = 0x205,
     CAN_PIT_MOTOR_ID = 0x206,
     CAN_TRIGGER_MOTOR_ID = 0x207,

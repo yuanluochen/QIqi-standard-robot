@@ -11478,9 +11478,9 @@ Image component sizes
        160          0          0          0          0       1253   bsp_rc.o
        400          0          0          0          0       1908   bsp_usart.o
        544          0          0          0         84       6485   can.o
-      1246          0          0          0        197       6187   can_receive.o
-      1832         20          0          0          4      11050   chassis_behaviour.o
-      4146         96         32          8        716      13011   chassis_task.o
+      1246          0          0          0        197       6290   can_receive.o
+      1832         20          0          0          4      11049   chassis_behaviour.o
+      4146         96         32          8        716      13010   chassis_task.o
        120          0          0          0          0      24840   cmsis_os.o
       2660         12          0          0          8      11949   controller.o
         98          0          0          0          8       2515   crc.o
@@ -11488,9 +11488,9 @@ Image component sizes
       1536          4         96          0        621       3525   detect_task.o
        224          0          0          0          0       3349   dma.o
        424          0          0          0          0       9408   fifo.o
-       802          0        397          0       1748       4021   freertos.o
-      2688         68          0          0         19       9355   gimbal_behaviour.o
-      2850         84          8          0        316       9853   gimbal_task.o
+       802          0        397          0       1748       4020   freertos.o
+      2688         68          0          0         19       9354   gimbal_behaviour.o
+      2850         84          8          0        316       9852   gimbal_task.o
        670          0          0          0          0       4276   gpio.o
        634          0          0          0      24597       4000   heap_4.o
        800          0          0          0        348       5828   i2c.o
@@ -11498,7 +11498,7 @@ Image component sizes
       3256          0          0          0          4       6893   kalman_filter.o
        516          4          0         28          0       1365   led_flow_task.o
        150          0          0          0          0       2246   list.o
-       390          0          0          0          0       3695   main.o
+       390          0          0          0          0       3694   main.o
       1666          0       2164          0       1055       5609   oled.o
        742          0        128         16          7       3046   oled_task.o
       2146          0          0          8          0       6539   pid.o
@@ -11510,7 +11510,7 @@ Image component sizes
        662          0          0          0         96       3628   remote_control.o
         98          0          0          0         16       2469   rng.o
        102          0          0          0         32       2609   rtc.o
-      2492         32         32          5        366       8194   shoot_task.o
+      2492         32         32          5        366       8193   shoot_task.o
        694          0          0          0        368       5411   spi.o
         64         26        392          0      16384        872   startup_stm32f407xx.o
       1656         40          0          0        112       4285   stm32.o
@@ -11553,7 +11553,7 @@ Image component sizes
        432         48          0          0          8       1339   voltage_task.o
 
     ----------------------------------------------------------------------
-     90108        868       4276        284      54820     710898   Object Totals
+     90108        868       4276        284      54820     710994   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        502         16          3          4         62          0   (incl. Padding)
 
@@ -11747,8 +11747,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    117924       2788       7476        284      54916     748758   Grand Totals
-    117924       2788       7476        284      54916     748758   ELF Image Totals
+    117924       2788       7476        284      54916     748854   Grand Totals
+    117924       2788       7476        284      54916     748854   ELF Image Totals
     117924       2788       7476        284          0          0   ROM Totals
 
 ==============================================================================
