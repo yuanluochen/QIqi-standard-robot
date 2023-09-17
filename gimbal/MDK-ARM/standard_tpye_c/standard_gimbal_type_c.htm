@@ -3,7 +3,7 @@
 <title>Static Call Graph - [standard_tpye_c\standard_gimbal_type_c.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image standard_tpye_c\standard_gimbal_type_c.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Fri Sep 15 21:01:13 2023
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6180002: Last Updated: Sun Sep 17 12:40:28 2023
 <BR><P>
 <H3>Maximum Stack Usage =       1968 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -5797,8 +5797,8 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[244]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_behaviour_control_set
 </UL>
 
-<P><STRONG><a name="[255]"></a>gimbal_init</STRONG> (Thumb, 472 bytes, Stack size 32 bytes, gimbal_task.o(.text.gimbal_init))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = gimbal_init &rArr; gimbal_feedback_update &rArr; motor_ecd_to_angle_change
+<P><STRONG><a name="[255]"></a>gimbal_init</STRONG> (Thumb, 472 bytes, Stack size 24 bytes, gimbal_task.o(.text.gimbal_init))
+<BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = gimbal_init &rArr; gimbal_feedback_update &rArr; motor_ecd_to_angle_change
 </UL>
 <BR>[Calls]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_vision_gimbal_point
 <LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;get_pitch_gimbal_motor_measure_point
@@ -5882,7 +5882,7 @@ Local Symbols
 <BR>[Called By]<UL><LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;gimbal_set_control
 </UL>
 
-<P><STRONG><a name="[25c]"></a>gimbal_relative_angle_limit</STRONG> (Thumb, 292 bytes, Stack size 24 bytes, gimbal_task.o(.text.gimbal_relative_angle_limit))
+<P><STRONG><a name="[25c]"></a>gimbal_relative_angle_limit</STRONG> (Thumb, 296 bytes, Stack size 24 bytes, gimbal_task.o(.text.gimbal_relative_angle_limit))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = gimbal_relative_angle_limit &rArr; motor_ecd_to_angle_change
 </UL>
 <BR>[Calls]<UL><LI><a href="#[254]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;motor_ecd_to_angle_change

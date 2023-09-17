@@ -435,6 +435,11 @@
           <WinNumber>1</WinNumber>
           <ItemText>gimbal_control</ItemText>
         </Ww>
+        <Ww>
+          <count>55</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>INS</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>

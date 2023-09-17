@@ -155,11 +155,11 @@
 #define GIMBAL_PITCH_AUTO_SCAN_NUM 133.3f
 
 //云台pitch轴最大值相对角度
-#define GIMBAL_PITCH_MAX_ENCODE 0x0003
+#define GIMBAL_PITCH_MAX_ENCODE 0x109C
 //云台pitch轴最小相对角
-#define GIMBAL_PITCH_MIN_ENCODE 0x1754
+#define GIMBAL_PITCH_MIN_ENCODE 0x06E1
 //云台pitch轴中值
-#define GIMBAL_PITCH_OFFSET_ENCODE 0x1C05
+#define GIMBAL_PITCH_OFFSET_ENCODE 0x0C0D
 //云台yaw轴中值
 #define GIMBAL_YAW_OFFSET_ENCODE 0x0813
 //yaw轴后侧中值
@@ -202,11 +202,11 @@
 
 //线性控制器前馈系数
 #define YAW_FEED_FORWARD 0.9f
-#define PITCH_FEED_FORWARD 0.9f
+#define PITCH_FEED_FORWARD 0.95f
 
 //角度误差项系数
 #define K_YAW_ANGLE_ERROR 150000.0f
-#define K_PITCH_ANGLE_ERROR 140000.0f
+#define K_PITCH_ANGLE_ERROR 400000.0f
 
 //速度项系数
 #define K_YAW_ANGLE_SPEED 4000.0f
