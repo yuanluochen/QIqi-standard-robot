@@ -74,5 +74,8 @@ standard_tpye_c/shoot_task.o: ..\application\shoot_task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   ..\bsp\boards\bsp_laser.h ..\bsp\boards\bsp_fric.h \
   ..\application\gimbal_behaviour.h ..\application\detect_task.h \
-  ..\stm32\stm32.h ..\stm32\STM32_Config.h ..\stm32\rtwtypes.h \
-  ..\stm32\stm32_External_Functions.h ..\stm32\stm32_types.h
+  ..\components\controller\stm32\stm32.h \
+  ..\components\controller\stm32\STM32_Config.h \
+  ..\components\controller\stm32\rtwtypes.h \
+  ..\components\controller\stm32\stm32_External_Functions.h \
+  ..\components\controller\stm32\stm32_types.h

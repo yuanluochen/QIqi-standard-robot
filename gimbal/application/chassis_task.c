@@ -120,50 +120,30 @@ void chassis_task(void const *pvParameters)
     chassis_init(&chassis_move);
     // make sure all chassis motor is online,
     // 判断底盘电机是否都在线
-    while (toe_is_error(CHASSIS_MOTOR1_TOE) || toe_is_error(CHASSIS_MOTOR2_TOE) || toe_is_error(CHASSIS_MOTOR3_TOE) || toe_is_error(CHASSIS_MOTOR4_TOE) || toe_is_error(DBUS_TOE))
-    {
-        vTaskDelay(CHASSIS_CONTROL_TIME_MS);
-    }
     while (1)
     {
         //set chassis control mode
         //设置底盘控制模式
         chassis_set_mode(&chassis_move);
-
         //whenmode changes, some data save
         //模式切换数据保存
         chassis_mode_change_control_transit(&chassis_move);
-
-        //chassis data update
-        //底盘数据更新
-        chassis_feedback_update(&chassis_move);
-
         //set chassis control set-point 
         //底盘控制量设置
         chassis_set_contorl(&chassis_move);
 
-        //chassis control pid calculate
-        //底盘控制PID计算
-        chassis_control_loop(&chassis_move);
-        
-        if (!(toe_is_error(CHASSIS_MOTOR1_TOE) && toe_is_error(CHASSIS_MOTOR2_TOE) && toe_is_error(CHASSIS_MOTOR3_TOE) && toe_is_error(CHASSIS_MOTOR4_TOE)))
+        if (toe_is_error(DBUS_TOE))
         {
-            // 确保至少一个电机在线
-            if (toe_is_error(DBUS_TOE))
-            {
-                // 当遥控器掉线的时候，发送给底盘电机零电流.
-                CAN_cmd_chassis(0, 0, 0, 0);
-            }
-            else
-            {
-                //发送控制电流
-                // CAN_cmd_chassis(chassis_move.motor_chassis[0].give_current, chassis_move.motor_chassis[1].give_current,
-                //                 chassis_move.motor_chassis[2].give_current, chassis_move.motor_chassis[3].give_current);
-            }
+            // 当遥控器离线发送控制信号为零
+            CAN_cmd_chassis(0, 0, 0, 0);
+        }
+        else
+        {
+            CAN_cmd_chassis(chassis_move.chassis_yaw_motor->relative_angle, chassis_move.vx_set, chassis_move.vy_set, 0);
         }
 
-        //os delay
-        //系统延时
+        // os delay
+        // 系统延时
         vTaskDelay(CHASSIS_CONTROL_TIME_MS);
 
 #if INCLUDE_uxTaskGetStackHighWaterMark

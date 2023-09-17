@@ -35,6 +35,8 @@ typedef enum
     CAN_3508_M3_ID = 0x202,
     CAN_3508_M4_ID = 0x201,
 
+    CAN_CHASSIS_ID = 0x218,
+
     CAN_YAW_MOTOR_ID = 0x205,
     CAN_PIT_MOTOR_ID = 0x206,
     CAN_TRIGGER_MOTOR_ID = 0x207,
@@ -88,22 +90,15 @@ extern void CAN_cmd_gimbal(int16_t yaw, int16_t pitch,int16_t rev);
 extern void CAN_cmd_chassis_reset_ID(void);
 
 /**
-  * @brief          send control current of motor (0x201, 0x202, 0x203, 0x204)
-  * @param[in]      motor1: (0x201) 3508 motor control current, range [-16384,16384] 
-  * @param[in]      motor2: (0x202) 3508 motor control current, range [-16384,16384] 
-  * @param[in]      motor3: (0x203) 3508 motor control current, range [-16384,16384] 
-  * @param[in]      motor4: (0x204) 3508 motor control current, range [-16384,16384] 
-  * @retval         none
-  */
-/**
-  * @brief          发送电机控制电流(0x201,0x202,0x203,0x204)
-  * @param[in]      motor1: (0x201) 3508电机控制电流, 范围 [-16384,16384]
-  * @param[in]      motor2: (0x202) 3508电机控制电流, 范围 [-16384,16384]
-  * @param[in]      motor3: (0x203) 3508电机控制电流, 范围 [-16384,16384]
-  * @param[in]      motor4: (0x204) 3508电机控制电流, 范围 [-16384,16384]
-  * @retval         none
-  */
-extern void CAN_cmd_chassis(int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4);
+ * @brief 发送底盘控制命令
+ *
+ * @param[in]      relative_angle: 云台相对角
+ * @param[in]      chassis_vx: 底盘x轴方向速度分量
+ * @param[in]      chassis_vy: 底盘y轴方向速度分量
+ * @param[in]      chassis_behaviour: 底盘运动模式
+ * @retval         none
+ */
+extern void CAN_cmd_chassis(int16_t relative_angle, int32_t chassis_vx, int32_t chassis_vy, int16_t chassis_behaviour);
 
 extern void CAN_cmd_shoot(int16_t fric1,int16_t fric2 ,int16_t shoot, int16_t rev);
 /**

@@ -50,6 +50,9 @@ static CAN_TxHeaderTypeDef  chassis_tx_message;
 static uint8_t              chassis_can_send_data[8];
 static CAN_TxHeaderTypeDef  shoot_tx_message;
 static uint8_t              shoot_can_send_data[8];
+
+static CAN_TxHeaderTypeDef  gimbal_callx_message;
+static uint8_t              gimbal_can_call_data[8];
 /**
   * @brief          hal CAN fifo call back, receive motor data
   * @param[in]      hcan, the point to CAN handle
@@ -215,40 +218,31 @@ void CAN_cmd_chassis_reset_ID(void)
     HAL_CAN_AddTxMessage(&CHASSIS_CAN, &chassis_tx_message, chassis_can_send_data, &send_mail_box);
 }
 
-
 /**
-  * @brief          send control current of motor (0x201, 0x202, 0x203, 0x204)
-  * @param[in]      motor1: (0x201) 3508 motor control current, range [-16384,16384] 
-  * @param[in]      motor2: (0x202) 3508 motor control current, range [-16384,16384] 
-  * @param[in]      motor3: (0x203) 3508 motor control current, range [-16384,16384] 
-  * @param[in]      motor4: (0x204) 3508 motor control current, range [-16384,16384] 
-  * @retval         none
-  */
-/**
-  * @brief          发送电机控制电流(0x201,0x202,0x203,0x204)
-  * @param[in]      motor1: (0x201) 3508电机控制电流, 范围 [-16384,16384]
-  * @param[in]      motor2: (0x202) 3508电机控制电流, 范围 [-16384,16384]
-  * @param[in]      motor3: (0x203) 3508电机控制电流, 范围 [-16384,16384]
-  * @param[in]      motor4: (0x204) 3508电机控制电流, 范围 [-16384,16384]
-  * @retval         none
-  */
-void CAN_cmd_chassis(int16_t motor1, int16_t motor2, int16_t motor3, int16_t motor4)
+ * @brief 发送底盘控制命令
+ *
+ * @param[in]      relative_angle: 云台相对角
+ * @param[in]      chassis_vx: 底盘x轴方向速度分量
+ * @param[in]      chassis_vy: 底盘y轴方向速度分量
+ * @param[in]      chassis_behaviour: 底盘运动模式
+ * @retval         none
+ */
+void CAN_cmd_chassis(int16_t relative_angle, int32_t chassis_vx, int32_t chassis_vy, int16_t chassis_behaviour)
 {
     uint32_t send_mail_box;
-    chassis_tx_message.StdId = CAN_CHASSIS_ALL_ID;
-    chassis_tx_message.IDE = CAN_ID_STD;
-    chassis_tx_message.RTR = CAN_RTR_DATA;
-    chassis_tx_message.DLC = 0x08;
-    chassis_can_send_data[0] = motor1 >> 8;
-    chassis_can_send_data[1] = motor1;
-    chassis_can_send_data[2] = motor2 >> 8;
-    chassis_can_send_data[3] = motor2;
-    chassis_can_send_data[4] = motor3 >> 8;
-    chassis_can_send_data[5] = motor3;
-    chassis_can_send_data[6] = motor4 >> 8;
-    chassis_can_send_data[7] = motor4;
-
-    HAL_CAN_AddTxMessage(&CHASSIS_CAN, &chassis_tx_message, chassis_can_send_data, &send_mail_box);
+    gimbal_callx_message.StdId = CAN_CHASSIS_ID;
+    gimbal_callx_message.IDE = CAN_ID_STD;
+    gimbal_callx_message.RTR = CAN_RTR_DATA;
+    gimbal_callx_message.DLC = 0x08;
+    gimbal_can_call_data[0] = (relative_angle >> 8);
+    gimbal_can_call_data[1] = relative_angle;
+    gimbal_can_call_data[2] = (chassis_vx >> 8);
+    gimbal_can_call_data[3] = chassis_vx;
+    gimbal_can_call_data[4] = (chassis_vy >> 8);
+    gimbal_can_call_data[5] = chassis_vy;
+    gimbal_can_call_data[6] = (chassis_behaviour >> 8);
+    gimbal_can_call_data[7] = chassis_behaviour;
+    HAL_CAN_AddTxMessage( &hcan1,  &gimbal_callx_message, gimbal_can_call_data, &send_mail_box);
 }
 
 /**

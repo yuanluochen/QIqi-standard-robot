@@ -79,6 +79,9 @@ standard_tpye_c/main.o: ..\Src\main.c ..\Inc\main.h \
   ..\application\protocol\protocol.h ..\application\detect_task.h \
   ..\application\led_flow_task.h ..\application\oled_task.h \
   ..\application\referee_usart_task.h ..\application\voltage_task.h \
-  ..\stm32\stm32.h ..\stm32\STM32_Config.h ..\stm32\rtwtypes.h \
-  ..\stm32\stm32_External_Functions.h ..\stm32\stm32_types.h \
-  ..\stm32\stm32_private.h ..\bsp\boards\bsp_dwt.h
+  ..\components\controller\stm32\stm32.h \
+  ..\components\controller\stm32\STM32_Config.h \
+  ..\components\controller\stm32\rtwtypes.h \
+  ..\components\controller\stm32\stm32_External_Functions.h \
+  ..\components\controller\stm32\stm32_types.h \
+  ..\components\controller\stm32\stm32_private.h ..\bsp\boards\bsp_dwt.h

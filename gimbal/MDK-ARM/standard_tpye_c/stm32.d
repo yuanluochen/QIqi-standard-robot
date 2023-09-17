@@ -1,5 +1,6 @@
-standard_tpye_c/stm32.o: ..\stm32\stm32.c ..\stm32\stm32.h \
-  ..\stm32\STM32_Config.h \
+standard_tpye_c/stm32.o: ..\components\controller\stm32\stm32.c \
+  ..\components\controller\stm32\stm32.h \
+  ..\components\controller\stm32\STM32_Config.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
@@ -45,7 +46,9 @@ standard_tpye_c/stm32.o: ..\stm32\stm32.c ..\stm32\stm32.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\application\struct_typedef.h ..\stm32\rtwtypes.h \
-  ..\stm32\stm32_External_Functions.h ..\stm32\stm32_types.h \
-  ..\stm32\stm32_private.h \
+  ..\application\struct_typedef.h \
+  ..\components\controller\stm32\rtwtypes.h \
+  ..\components\controller\stm32\stm32_External_Functions.h \
+  ..\components\controller\stm32\stm32_types.h \
+  ..\components\controller\stm32\stm32_private.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h
