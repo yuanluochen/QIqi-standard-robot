@@ -3425,9 +3425,9 @@
           <GroupName>readme</GroupName>
           <Files>
             <File>
-              <FileName>readme.md</FileName>
+              <FileName>README.md</FileName>
               <FileType>5</FileType>
-              <FilePath>..\readme\readme.md</FilePath>
+              <FilePath>..\README.md</FilePath>
             </File>
           </Files>
         </Group>

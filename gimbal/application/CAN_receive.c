@@ -150,7 +150,6 @@ void CAN_cmd_shoot(int16_t fric1,int16_t fric2 ,int16_t shoot, int16_t rev)
    shoot_can_send_data[6] = (rev >> 8);
    shoot_can_send_data[7] = rev;
    HAL_CAN_AddTxMessage(&hcan2, &shoot_tx_message, shoot_can_send_data, &send_mail_box);
-
 }
 
 

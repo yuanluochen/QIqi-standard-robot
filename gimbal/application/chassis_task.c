@@ -125,9 +125,6 @@ void chassis_task(void const *pvParameters)
         //set chassis control mode
         //设置底盘控制模式
         chassis_set_mode(&chassis_move);
-        //whenmode changes, some data save
-        //模式切换数据保存
-        chassis_mode_change_control_transit(&chassis_move);
         //set chassis control set-point 
         //底盘控制量设置
         chassis_set_contorl(&chassis_move);
