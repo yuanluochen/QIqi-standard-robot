@@ -524,9 +524,6 @@ void shoot_control_loop(void)
     fric_control_loop(&fric_move);        // Ä¦²ÁÂÖ¿ØÖÆ
     trigger_control_loop(&trigger_motor); // ²¦µ¯ÅÌ¿ØÖÆ
 
-    //·¢µ¯Í£Ö¹
-    
-
     //ÅĞ¶ÏÊÇ·ñ¿¨µ¯
     if (judge_bullet_is_stuck(&trigger_motor))
     {
@@ -534,7 +531,6 @@ void shoot_control_loop(void)
         trigger_motor.given_current = -5;
     }
 }
-
 /**
  * @brief  Ä¦²ÁÂÖ¿ØÖÆÑ­»·
  */
@@ -549,8 +545,6 @@ static void fric_control_loop(fric_move_t *fric_move_control_loop)
     fric_move.fric_CAN_Set_Current[0] = stm32_Y_shoot.out_shoot_0;
     fric_move.fric_CAN_Set_Current[1] = stm32_Y_shoot.out_shoot_1;
 }
-
-
 static void trigger_control_loop(Shoot_Motor_t* trigger_move_control_loop)
 {
     trigger_move_control_loop->motor_pid.max_out = TRIGGER_BULLET_PID_MAX_OUT;
@@ -558,8 +552,6 @@ static void trigger_control_loop(Shoot_Motor_t* trigger_move_control_loop)
     PID_Calc(&trigger_move_control_loop->motor_pid, trigger_move_control_loop->speed, trigger_move_control_loop->speed_set); // ²¦µ¯ÅÌ
     trigger_move_control_loop->given_current = (int16_t)(trigger_move_control_loop->motor_pid.out);
 }
-
-
 //Éä»÷¿ØÖÆÊÓ¾õ
 bool_t shoot_control_vision_task(void)
 {

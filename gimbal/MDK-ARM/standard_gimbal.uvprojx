@@ -620,11 +620,6 @@
               <FilePath>..\application\gimbal_task.c</FilePath>
             </File>
             <File>
-              <FileName>oled_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\oled_task.c</FilePath>
-            </File>
-            <File>
               <FileName>referee.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\referee.c</FilePath>
@@ -648,11 +643,6 @@
               <FileName>CAN_receive.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\CAN_receive.c</FilePath>
-            </File>
-            <File>
-              <FileName>voltage_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\voltage_task.c</FilePath>
             </File>
             <File>
               <FileName>led_flow_task.c</FileName>

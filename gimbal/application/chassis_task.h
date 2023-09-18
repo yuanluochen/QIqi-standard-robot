@@ -1,21 +1,13 @@
 /**
-  ****************************(C) COPYRIGHT 2019 DJI****************************
-  * @file       chassis.c/h
-  * @brief      chassis control task,
-  *             底盘控制任务
-  * @note       
-  * @history
-  *  Version    Date            Author          Modification
-  *  V1.0.0     Dec-26-2018     RM              1. 完成
-  *  V1.1.0     Nov-11-2019     RM              1. add chassis power control
-  *
-  @verbatim
-  ==============================================================================
-
-  ==============================================================================
-  @endverbatim
-  ****************************(C) COPYRIGHT 2019 DJI****************************
-  */
+ * @file chassis_task.h
+ * @author yuanluochen
+ * @brief 双板步兵底盘控制任务，读取遥控器数据，通过can总线发送到底盘
+ * @version 0.1
+ * @date 2023-09-19
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #ifndef CHASSIS_TASK_H
 #define CHASSIS_TASK_H
 #include "struct_typedef.h"
@@ -26,31 +18,21 @@
 #include "user_lib.h"
 #include "referee.h"
 
-//in the beginning of task ,wait a time
 //任务开始空闲一段时间
 #define CHASSIS_TASK_INIT_TIME 357
 
-//the channel num of controlling vertial speed 
 //前后的遥控器通道号码
 #define CHASSIS_X_CHANNEL 1
-//the channel num of controlling horizontal speed
 //左右的遥控器通道号码
 #define CHASSIS_Y_CHANNEL 0
-
-
-//the channel of choosing chassis mode,
 //选择底盘状态 开关通道号
 #define CHASSIS_MODE_CHANNEL 0
 //底盘运行模式通道
 #define CHASSIS_RUN_MODE_CHANNEL 1
-//选择自动模式
-#define CHASSIS_AUTO_MODE 1
 //遥控器前进摇杆（max 660）转化成车体前进速度（m/s）的比例
 #define CHASSIS_VX_RC_SEN 0.006f
 //遥控器左右摇杆（max 660）转化成车体左右速度（m/s）的比例
 #define CHASSIS_VY_RC_SEN 0.005f
-
-//rocker value deadline
 //摇杆死区
 #define CHASSIS_RC_DEADLINE 15
 

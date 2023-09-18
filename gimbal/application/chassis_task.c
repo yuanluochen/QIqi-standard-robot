@@ -1,21 +1,13 @@
 /**
-  ****************************(C) COPYRIGHT 2019 DJI****************************
-  * @file       chassis.c/h
-  * @brief      chassis control task,
-  *             底盘控制任务
-  * @note       
-  * @history
-  *  Version    Date            Author          Modification
-  *  V1.0.0     Dec-26-2018     RM              1. done
-  *  V1.1.0     Nov-11-2019     RM              1. add chassis power control
-  *
-  @verbatim
-  ==============================================================================
-
-  ==============================================================================
-  @endverbatim
-  ****************************(C) COPYRIGHT 2019 DJI****************************
-  */
+ * @file chassis_task.c
+ * @author yuanluochen
+ * @brief 双板步兵底盘控制任务，读取遥控器数据，通过can总线发送到底盘
+ * @version 0.1
+ * @date 2023-09-19
+ * 
+ * @copyright Copyright (c) 2023
+ * 
+ */
 #include "chassis_task.h"
 #include "cmsis_os.h"
 #include "arm_math.h"
@@ -39,10 +31,6 @@
             (output) = 0;                                \
         }                                                \
     }
-
-
-
-
 /**
   * @brief          初始化"chassis_move"变量，包括pid初始化， 遥控器指针初始化，3508底盘电机指针初始化，云台电机初始化，陀螺仪角度指针初始化
   * @param[out]     chassis_move_init:"chassis_move"变量指针.

@@ -72,5 +72,4 @@ standard_tpye_c/freertos.o: ..\Src\freertos.c \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\application\referee.h ..\application\protocol\protocol.h \
   ..\application\detect_task.h ..\application\shoot_task.h \
-  ..\application\led_flow_task.h ..\application\oled_task.h \
-  ..\application\referee_usart_task.h ..\application\voltage_task.h
+  ..\application\led_flow_task.h ..\application\referee_usart_task.h

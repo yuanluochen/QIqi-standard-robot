@@ -77,8 +77,7 @@ standard_tpye_c/main.o: ..\Src\main.c ..\Inc\main.h \
   ..\components\algorithm\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h ..\application\referee.h \
   ..\application\protocol\protocol.h ..\application\detect_task.h \
-  ..\application\led_flow_task.h ..\application\oled_task.h \
-  ..\application\referee_usart_task.h ..\application\voltage_task.h \
+  ..\application\led_flow_task.h ..\application\referee_usart_task.h \
   ..\components\controller\stm32\stm32.h \
   ..\components\controller\stm32\STM32_Config.h \
   ..\components\controller\stm32\rtwtypes.h \
