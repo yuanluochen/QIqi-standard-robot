@@ -51,10 +51,17 @@
 static void chassis_init(chassis_move_t *chassis_move_init);
 
 /**
-  * @brief          设置底盘控制模式，主要在'chassis_behaviour_mode_set'函数中改变
-  * @param[out]     chassis_move_mode:"chassis_move"变量指针.
-  * @retval         none
-  */
+ * @brief 底盘数据更新 
+ * 
+ * @param chassis_move_feedback_update  底盘控制结构体
+ */
+static void chassis_feedback_update(chassis_move_t *chassis_move_feedback_update); 
+
+/**
+ * @brief          设置底盘控制模式，主要在'chassis_behaviour_mode_set'函数中改变
+ * @param[out]     chassis_move_mode:"chassis_move"变量指针.
+ * @retval         none
+ */
 static void chassis_set_mode(chassis_move_t *chassis_move_mode);
 
 /**
@@ -86,6 +93,8 @@ void chassis_task(void const *pvParameters)
     // 判断底盘电机是否都在线
     while (1)
     {
+        //数据更新
+        chassis_feedback_update(&chassis_move);
         //设置底盘控制模式
         chassis_set_mode(&chassis_move);
         //底盘控制量设置
@@ -98,7 +107,8 @@ void chassis_task(void const *pvParameters)
         }
         else
         {
-            CAN_cmd_chassis(chassis_move.chassis_yaw_motor->relative_angle, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
+            //发送控制数据
+            CAN_cmd_chassis(chassis_move.chassis_yaw_motor->relative_angle, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_relative_angle);
         }
 
         // 系统延时
@@ -117,16 +127,22 @@ void chassis_task(void const *pvParameters)
   */
 static void chassis_init(chassis_move_t *chassis_move_init)
 {
-    //get remote control point
     //获取遥控器指针
     chassis_move_init->chassis_RC = get_remote_control_point();
-    //get gyro sensor euler angle point
-    //获取陀螺仪姿态角指针
-    chassis_move_init->chassis_INS_point = get_INS_point();
-    //get gimbal motor data point
     //获取云台电机数据指针
     chassis_move_init->chassis_yaw_motor = get_yaw_motor_point();
-    chassis_move_init->chassis_pitch_motor = get_pitch_motor_point();
+    //数据更新
+    chassis_feedback_update(chassis_move_init);
+}
+
+/**
+ * @brief 底盘数据更新 
+ * 
+ * @param chassis_move_feedback_update  底盘控制结构体
+ */
+static void chassis_feedback_update(chassis_move_t *chassis_move_feedback_update)
+{
+    chassis_move_feedback_update->chassis_relative_angle = chassis_move_feedback_update->chassis_yaw_motor->relative_angle;
 }
 
 

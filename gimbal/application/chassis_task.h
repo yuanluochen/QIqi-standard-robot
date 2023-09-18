@@ -76,18 +76,14 @@ typedef enum
     CHASSIS_ZERO_FORCE,               // 底盘无力, 跟没上电那样
 } chassis_behaviour_e;
 
-
 typedef struct
 {
-    const RC_ctrl_t *chassis_RC;               // 底盘使用的遥控器指针, the point to remote control
-    const gimbal_motor_t *chassis_yaw_motor;   // will use the relative angle of yaw gimbal motor to calculate the euler angle.底盘使用到yaw云台电机的相对角度来计算底盘的欧拉角.
-    const gimbal_motor_t *chassis_pitch_motor; // will use the relative angle of pitch gimbal motor to calculate the euler angle.底盘使用到pitch云台电机的相对角度来计算底盘的欧拉角
-    const INS_t* chassis_INS_point;             // the point to the euler angle of gyro sensor.获取陀螺仪解算出的欧拉角指针
+    const RC_ctrl_t *chassis_RC;             // 底盘使用的遥控器指针
+    const gimbal_motor_t *chassis_yaw_motor; // 底盘使用到yaw云台电机的相对角度来计算底盘的欧拉角
     chassis_behaviour_e chassis_behaviour;
-    fp32 vx_set;                     // chassis set vertical speed,positive means forward,unit m/s.底盘设定速度 前进方向 前为正，单位 m/s
-    fp32 vy_set;                     // chassis set horizontal speed,positive means left,unit m/s.底盘设定速度 左右方向 左为正，单位 m/s
-    fp32 chassis_relative_angle;     // the relative angle between chassis and gimbal.底盘与云台的相对角度，单位 rad
-
+    fp32 vx_set;                 // 底盘设定速度 前进方向 前为正，单位 m/s
+    fp32 vy_set;                 // 底盘设定速度 左右方向 左为正，单位 m/s
+    fp32 chassis_relative_angle; // 底盘与云台的相对角度，单位 rad
 } chassis_move_t;
 
 /**
