@@ -38,8 +38,6 @@
 "standard_tpye_c\bsp_servo_pwm.o"
 "standard_tpye_c\bsp_dwt.o"
 "standard_tpye_c\bsp_pwm.o"
-"standard_tpye_c\chassis_behaviour.o"
-"standard_tpye_c\chassis_power_control.o"
 "standard_tpye_c\chassis_task.o"
 "standard_tpye_c\detect_task.o"
 "standard_tpye_c\gimbal_behaviour.o"

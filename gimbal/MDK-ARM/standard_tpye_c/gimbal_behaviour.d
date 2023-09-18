@@ -58,5 +58,4 @@ standard_tpye_c/gimbal_behaviour.o: ..\application\gimbal_behaviour.c \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\application\referee.h ..\application\protocol\protocol.h \
-  ..\bsp\boards\bsp_buzzer.h ..\application\detect_task.h \
-  ..\application\chassis_behaviour.h ..\application\chassis_task.h
+  ..\bsp\boards\bsp_buzzer.h ..\application\detect_task.h

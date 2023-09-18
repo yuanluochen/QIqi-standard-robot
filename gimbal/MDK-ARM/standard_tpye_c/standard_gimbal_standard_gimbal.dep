@@ -85,7 +85,7 @@ I (..\bsp\boards\bsp_delay.h)(0x65064E8D)
 I (..\bsp\boards\bsp_usart.h)(0x65064E8D)
 I (..\application\remote_control.h)(0x65064E8D)
 I (..\bsp\boards\bsp_rc.h)(0x65064E8D)
-I (..\application\chassis_task.h)(0x65064E8D)
+I (..\application\chassis_task.h)(0x650877C6)
 I (..\application\CAN_receive.h)(0x65069073)
 I (..\application\gimbal_task.h)(0x65064E8D)
 I (..\components\controller\pid.h)(0x65064E8D)
@@ -220,7 +220,7 @@ I (..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h)(0x65064E8D)
-I (..\application\chassis_task.h)(0x65064E8D)
+I (..\application\chassis_task.h)(0x650877C6)
 I (..\application\struct_typedef.h)(0x65064E8D)
 I (..\application\CAN_receive.h)(0x65069073)
 I (..\application\gimbal_task.h)(0x65064E8D)
@@ -2005,10 +2005,9 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x65064E8C)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x65064E8C)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x65064E8C)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x65064E8C)
-F (..\application\chassis_behaviour.c)(0x65086521)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/chassis_behaviour.o -MD)
-I (..\application\chassis_behaviour.h)(0x65064E8D)
+F (..\application\chassis_task.c)(0x6508782E)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/chassis_task.o -MD)
+I (..\application\chassis_task.h)(0x650877C6)
 I (..\application\struct_typedef.h)(0x65064E8D)
-I (..\application\chassis_task.h)(0x65064E8D)
 I (..\application\CAN_receive.h)(0x65069073)
 I (..\application\gimbal_task.h)(0x65064E8D)
 I (..\components\controller\pid.h)(0x65064E8D)
@@ -2074,7 +2073,6 @@ I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x625260D6)
 I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
 I (..\application\referee.h)(0x65064E8D)
 I (..\application\protocol\protocol.h)(0x65064E8D)
-I (..\application\detect_task.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h)(0x65064E8D)
 I (..\Inc\FreeRTOSConfig.h)(0x65064E8C)
@@ -2089,162 +2087,8 @@ I (..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h)(0x65064E8D)
+I (..\application\detect_task.h)(0x65064E8D)
 I (..\application\gimbal_behaviour.h)(0x65064E8D)
-F (..\application\chassis_power_control.c)(0x65064E8D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/chassis_power_control.o -MD)
-I (..\application\chassis_power_control.h)(0x65064E8D)
-I (..\application\chassis_task.h)(0x65064E8D)
-I (..\application\struct_typedef.h)(0x65064E8D)
-I (..\application\CAN_receive.h)(0x65069073)
-I (..\application\gimbal_task.h)(0x65064E8D)
-I (..\components\controller\pid.h)(0x65064E8D)
-I (..\application\remote_control.h)(0x65064E8D)
-I (..\bsp\boards\bsp_rc.h)(0x65064E8D)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65064E8C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x64EFDF8C)
-I (..\components\algorithm\user_lib.h)(0x65064E8D)
-I (..\application\vision_task.h)(0x65064E8D)
-I (..\Inc\usart.h)(0x65064E8C)
-I (..\Inc\main.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x65064E8C)
-I (..\Inc\stm32f4xx_hal_conf.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\core_cm4.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x65064E8C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_crc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rng.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x65064E8C)
-I (..\Inc\dma.h)(0x65064E8C)
-I (..\application\INS_task.h)(0x65064E8D)
-I (..\components\devices\BMI088driver.h)(0x65064E8D)
-I (..\components\algorithm\QuaternionEKF.h)(0x65064E8D)
-I (..\components\algorithm\kalman_filter.h)(0x65064E8D)
-I (..\components\algorithm\Include\arm_math.h)(0x65064E8D)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
-I (..\application\referee.h)(0x65064E8D)
-I (..\application\protocol\protocol.h)(0x65064E8D)
-I (..\application\detect_task.h)(0x65064E8D)
-F (..\application\chassis_task.c)(0x6508677A)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/chassis_task.o -MD)
-I (..\application\chassis_task.h)(0x65064E8D)
-I (..\application\struct_typedef.h)(0x65064E8D)
-I (..\application\CAN_receive.h)(0x65069073)
-I (..\application\gimbal_task.h)(0x65064E8D)
-I (..\components\controller\pid.h)(0x65064E8D)
-I (..\application\remote_control.h)(0x65064E8D)
-I (..\bsp\boards\bsp_rc.h)(0x65064E8D)
-I (..\Drivers\CMSIS\Include\cmsis_armclang.h)(0x65064E8C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_compat.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\arm_acle.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x64EFDF8C)
-I (..\components\algorithm\user_lib.h)(0x65064E8D)
-I (..\application\vision_task.h)(0x65064E8D)
-I (..\Inc\usart.h)(0x65064E8C)
-I (..\Inc\main.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h)(0x65064E8C)
-I (..\Inc\stm32f4xx_hal_conf.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f4xx.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\core_cm4.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\cmsis_version.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\cmsis_compiler.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Include\mpu_armv7.h)(0x65064E8C)
-I (..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\Legacy\stm32_hal_legacy.h)(0x65064E8C)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x625260D6)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_exti.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_gpio_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_dma_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_cortex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_adc_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_can.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_crc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_flash_ramfunc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_i2c_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rng.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rtc_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_spi.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x65064E8C)
-I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x65064E8C)
-I (..\Inc\dma.h)(0x65064E8C)
-I (..\application\INS_task.h)(0x65064E8D)
-I (..\components\devices\BMI088driver.h)(0x65064E8D)
-I (..\components\algorithm\QuaternionEKF.h)(0x65064E8D)
-I (..\components\algorithm\kalman_filter.h)(0x65064E8D)
-I (..\components\algorithm\Include\arm_math.h)(0x65064E8D)
-I (C:\Keil_v5\ARM\ARMCLANG\include\string.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\math.h)(0x625260D6)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdlib.h)(0x625260D6)
-I (..\application\referee.h)(0x65064E8D)
-I (..\application\protocol\protocol.h)(0x65064E8D)
-I (..\application\chassis_behaviour.h)(0x65064E8D)
-I (..\application\detect_task.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h)(0x65064E8D)
-I (..\Inc\FreeRTOSConfig.h)(0x65064E8C)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\portable.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\deprecated_definitions.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\portable\RVDS\ARM_CM4F\portmacro.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\mpu_wrappers.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h)(0x65064E8D)
-I (..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h)(0x65064E8D)
-I (..\application\chassis_power_control.h)(0x65064E8D)
 F (..\application\detect_task.c)(0x65064E8D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/detect_task.o -MD)
 I (..\application\detect_task.h)(0x65064E8D)
 I (..\application\struct_typedef.h)(0x65064E8D)
@@ -2267,7 +2111,7 @@ I (..\Middlewares\Third_Party\FreeRTOS\Source\include\timers.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h)(0x65064E8D)
 I (..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h)(0x65064E8D)
-F (..\application\gimbal_behaviour.c)(0x65064E8D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/gimbal_behaviour.o -MD)
+F (..\application\gimbal_behaviour.c)(0x65087582)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/gimbal_behaviour.o -MD)
 I (..\application\gimbal_behaviour.h)(0x65064E8D)
 I (..\application\struct_typedef.h)(0x65064E8D)
 I (..\application\gimbal_task.h)(0x65064E8D)
@@ -2337,8 +2181,6 @@ I (..\application\referee.h)(0x65064E8D)
 I (..\application\protocol\protocol.h)(0x65064E8D)
 I (..\bsp\boards\bsp_buzzer.h)(0x65064E8D)
 I (..\application\detect_task.h)(0x65064E8D)
-I (..\application\chassis_behaviour.h)(0x65064E8D)
-I (..\application\chassis_task.h)(0x65064E8D)
 F (..\application\gimbal_task.c)(0x65064E8D)(-xc -std=c99 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I ../Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc -I ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I ../Middlewares/Third_Party/FreeRTOS/Source/include -I ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F -I ../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I ../Drivers/CMSIS/Include -I ../application -I ../bsp/boards -I ../components/devices -I ../components/algorithm -I ../components/algorithm/Include -I ../components/support -I ../application/protocol -I ../components/controller -I ../Middlewares/ST/STM32_USB_Device_Library/Core/Inc -I ../Middlewares/ST/STM32_USB_Device_Library/Class/CDC/Inc -I ../../standard -I ../fuzzypid -I ../components/controller/stm32 -I ../application/interface/gimbal_chassis_interface-I./RTE/_standard_gimbal-IC:/Users/discipline/AppData/Local/arm/packs/ARM/CMSIS/5.9.0/CMSIS/Core/Include-IC:/Users/discipline/AppData/Local/arm/packs/Keil/STM32F4xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include-D__UVISION_VERSION="537" -D_RTE_ -DSTM32F407xx -D_RTE_ -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_HAL_DRIVER -DSTM32F407xx -DARM_MATH_CM4 -D__FPU_USED="1U" -D__FPU_PRESENT="1U" -DARM_MATH_MATRIX_CHECK -DARM_MATH_ROUNDING-o standard_tpye_c/gimbal_task.o -MD)
 I (..\application\gimbal_task.h)(0x65064E8D)
 I (..\application\struct_typedef.h)(0x65064E8D)
@@ -5501,4 +5343,4 @@ I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h)(0x65064E8C)
 I (..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h)(0x65064E8C)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h)(0x65064E8D)
 I (..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h)(0x65064E8D)
-F (..\README.md)(0x6508661C)()
+F (..\README.md)(0x65086B50)()

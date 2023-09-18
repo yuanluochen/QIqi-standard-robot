@@ -47,7 +47,6 @@
 #include "arm_math.h"
 #include "bsp_buzzer.h"
 #include "detect_task.h"
-#include "chassis_behaviour.h"
 #include "user_lib.h"
 
 #define int_abs(x) ((x) > 0 ? (x) : (-x))
@@ -154,7 +153,6 @@ static gimbal_behaviour_e gimbal_behaviour = GIMBAL_ZERO_FORCE;
 int yaw_flag=0;  
 fp32 Pitch_Set[8]={0};
 /*----------------------------------外部变量---------------------------*/
-extern chassis_behaviour_e chassis_behaviour_mode;
 //云台初始化完毕标志位
 bool_t gimbal_init_finish_flag = 0;
 

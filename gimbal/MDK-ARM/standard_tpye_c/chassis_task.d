@@ -58,7 +58,6 @@ standard_tpye_c/chassis_task.o: ..\application\chassis_task.c \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\application\referee.h ..\application\protocol\protocol.h \
-  ..\application\chassis_behaviour.h ..\application\detect_task.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   ..\Inc\FreeRTOSConfig.h \
@@ -73,4 +72,4 @@ standard_tpye_c/chassis_task.o: ..\application\chassis_task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
-  ..\application\chassis_power_control.h
+  ..\application\detect_task.h ..\application\gimbal_behaviour.h
