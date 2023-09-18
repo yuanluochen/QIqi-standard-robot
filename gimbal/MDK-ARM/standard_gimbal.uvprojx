@@ -635,11 +635,6 @@
               <FilePath>..\application\remote_control.c</FilePath>
             </File>
             <File>
-              <FileName>test_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\application\test_task.c</FilePath>
-            </File>
-            <File>
               <FileName>CAN_receive.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\application\CAN_receive.c</FilePath>

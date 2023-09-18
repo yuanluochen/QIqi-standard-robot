@@ -86,37 +86,19 @@ typedef struct
     fp32 out_shoot_0;
     fp32 out_shoot_1; /* '<Root>/Out1' */
 } ExtY_stm32;
-typedef struct
-{
-   fp32 rtb_Sum1;
-   fp32 rtb_Reciprocal;
-   fp32 rtb_FilterDifferentiatorTF;
-   fp32 rtb_IProdOut;
-   fp32 Integrator;
-   fp32 Integrator_d;
-   fp32 TmpSignalConversionAtFilterDifferentiatorTFInport2_idx_1;
-   fp32 TmpSignalConversionAtFilterDifferentiatorTFInport2_c_idx_1;
-		
-} stm32_PID_t;
 
 /* Model entry point functions */
 
-// 云台电机pid 初始化
-void stm32_pid_init_pitch(void);
-void stm32_pid_init_yaw(void);
 
 //摩擦轮电机初始化
 void stm32_shoot_pid_init(void);
-
-void stm32_step_pitch(fp32 angle_set, fp32 angle_feedback, fp32 speed_feedback);
-void stm32_step_yaw(fp32 angle_set, fp32 angle_feedback, fp32 speed_feedback);
 
 void stm32_step_shoot_0(fp32 speedset, fp32 speedback);
 void stm32_step_shoot_1(fp32 speedset, fp32 speedback);
 
 //pid清除
 void stm32_step_shoot_pid_clear(void);
-void stm32_step_gimbal_pid_clear(void);
+
 
 /*-
  * These blocks were eliminated from the model due to optimizations:
