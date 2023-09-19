@@ -1,4 +1,4 @@
-set(CMAKE_C_COMPILER "c:/Users/discipline/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/bin/armclang.exe")
+set(CMAKE_C_COMPILER "/home/yuanluochen/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/bin/armclang")
 set(CMAKE_C_COMPILER_ARG1 "")
 set(CMAKE_C_COMPILER_ID "ARMClang")
 set(CMAKE_C_COMPILER_VERSION "6.20.2")
@@ -21,11 +21,11 @@ set(CMAKE_C_SIMULATE_VERSION "")
 
 
 
-set(CMAKE_AR "C:/Users/discipline/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/bin/armar.exe")
+set(CMAKE_AR "/home/yuanluochen/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/bin/armar")
 set(CMAKE_C_COMPILER_AR "")
-set(CMAKE_RANLIB "C:/vs_code_file/mingw64/bin/ranlib.exe")
+set(CMAKE_RANLIB "/usr/bin/ranlib")
 set(CMAKE_C_COMPILER_RANLIB "")
-set(CMAKE_LINKER "C:/Users/discipline/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/bin/armlink.exe")
+set(CMAKE_LINKER "/home/yuanluochen/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/bin/armlink")
 set(CMAKE_MT "")
 set(CMAKE_COMPILER_IS_GNUCC )
 set(CMAKE_C_COMPILER_LOADED 1)
@@ -66,7 +66,7 @@ endif()
 
 
 
-set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "C:/Users/discipline/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/include")
+set(CMAKE_C_IMPLICIT_INCLUDE_DIRECTORIES "/home/yuanluochen/.vcpkg/artifacts/fd3d78d7/compilers.arm.armclang/6.20.0/include")
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "")
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "")
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

@@ -8131,10 +8131,10 @@ Image Symbol Table
     ..\\MatrixFunctions\\arm_mat_mult_f32.c  0x00000000   Number         0  arm_mat_mult_f32.o ABSOLUTE
     ..\\MatrixFunctions\\arm_mat_sub_f32.c   0x00000000   Number         0  arm_mat_sub_f32.o ABSOLUTE
     ..\\MatrixFunctions\\arm_mat_trans_f32.c 0x00000000   Number         0  arm_mat_trans_f32.o ABSOLUTE
+    /home/yuanluochen/code/QIqi-standard-robot/gimbal/MDK-ARM/startup_stm32f407xx.s 0x00000000   Number         0  startup_stm32f407xx.o ABSOLUTE
     AHRS_middleware.c                        0x00000000   Number         0  AHRS_middleware.o ABSOLUTE
     BMI088Middleware.c                       0x00000000   Number         0  BMI088Middleware.o ABSOLUTE
     BMI088driver.c                           0x00000000   Number         0  BMI088driver.o ABSOLUTE
-    C:/Users/discipline/developer_workspace/code/QIqi-standard-robot/gimbal/MDK-ARM/startup_stm32f407xx.s 0x00000000   Number         0  startup_stm32f407xx.o ABSOLUTE
     CAN_receive.c                            0x00000000   Number         0  CAN_receive.o ABSOLUTE
     CRC8_CRC16.c                             0x00000000   Number         0  CRC8_CRC16.o ABSOLUTE
     INS_task.c                               0x00000000   Number         0  INS_task.o ABSOLUTE
@@ -11457,90 +11457,90 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       124          0          0          0          4       4442   BMI088Middleware.o
-      3488         28          0         47         87       8248   BMI088driver.o
-      1212          0          0          0        197       6648   CAN_receive.o
-       464          0        768          2          0       2441   CRC8_CRC16.o
-      2848         52         36          4        390       7749   INS_task.o
-        52          0          0          0          2       6035   OLED.o
-      4674         64        144        144        692       8759   QuaternionEKF.o
-       450          0          0          0        144       5551   adc.o
-       124         14          0          0          0       3794   bsp_PWM.o
-       100          0          0          0          0       1498   bsp_can.o
-        62          0          0          0          5       1896   bsp_delay.o
-       704          8          0          0         60       3816   bsp_dwt.o
-       310          0          0          0          0       6217   bsp_i2c.o
-       106          0          0          0          7       1012   bsp_led.o
-       160          0          0          0          0       1541   bsp_rc.o
-       400          0          0          0          0       2197   bsp_usart.o
-       544          0          0          0         84       6844   can.o
-       528          8          0          0         28       4681   chassis_task.o
-       262          0          0          0          0      17865   cmsis_os.o
-      2660         12          0          0          8      12375   controller.o
-        98          0          0          0          8       2873   crc.o
-      1526          4         96          0        621       3852   detect_task.o
-       224          0          0          0          0       3636   dma.o
-       424          0          0          0          0       9843   fifo.o
-       616          0        287          0       1736       4448   freertos.o
-      2700         72          0          0         19       9750   gimbal_behaviour.o
-      2838         84          8          0        316      10249   gimbal_task.o
-       670          0          0          0          0       4632   gpio.o
-      1056          0          0          0      24600       3888   heap_4.o
-       800          0          0          0        348       6188   i2c.o
-      3256          0          0          0          4       7281   kalman_filter.o
-       516          4          0         28          0       1666   led_flow_task.o
-       296          0          0          0          0       2592   list.o
-       390          0          0          0          0       4189   main.o
-      1432          0          0          8          0       6935   pid.o
-      1128         16          0          4          5       4278   port.o
-      2586          0          0          0         64      15610   queue.o
-      1088          0          0          0        173       7209   referee.o
-       846          6          0          0       2211       3995   referee_usart_task.o
-       662          0          0          0         96       4011   remote_control.o
-        98          0          0          0         16       2827   rng.o
-       102          0          0          0         32       2967   rtc.o
-      2492         32         32          5        366       8716   shoot_task.o
-       694          0          0          0        368       5770   spi.o
-        64         26        392          0      16384       1068   startup_stm32f407xx.o
-      1656         40          0          0        112       2807   stm32.o
-       270          0          0          5          4       7510   stm32f4xx_hal.o
-      1098          0          0          0          0      10291   stm32f4xx_hal_adc.o
-      3088          0          0          0          0      11772   stm32f4xx_hal_can.o
-       482          0          0          0          0       9902   stm32f4xx_hal_cortex.o
-        70          0          0          0          0       3108   stm32f4xx_hal_crc.o
-      1490          8          8          0          0       8844   stm32f4xx_hal_dma.o
-      1110          0          0          0          0       5469   stm32f4xx_hal_gpio.o
-       652          0          0          0          0      36021   stm32f4xx_hal_i2c.o
-        88          0          0          0          0       3656   stm32f4xx_hal_msp.o
-      3616          0          0          0          0      13417   stm32f4xx_hal_pcd.o
-        12          0          0          0          0       4476   stm32f4xx_hal_pcd_ex.o
-      2496          0          0          0          0       7795   stm32f4xx_hal_rcc.o
-       564          0          0          0          0       4561   stm32f4xx_hal_rcc_ex.o
-        86          0          0          0          0       4213   stm32f4xx_hal_rng.o
-       472          0          0          0          0       9872   stm32f4xx_hal_rtc.o
-      1456          0          0          0          0      19879   stm32f4xx_hal_spi.o
-      2674         14          0          0          0      31849   stm32f4xx_hal_tim.o
-       330          0          0          0          0      13047   stm32f4xx_hal_tim_ex.o
-      1186          0          0          0          0      15895   stm32f4xx_hal_uart.o
-       196          0          0          0          0       2510   stm32f4xx_it.o
-      3230          0          0          0          0      18435   stm32f4xx_ll_usb.o
-       110          0         24          4          0       2915   system_stm32f4xx.o
-      4070          0          5          0        300      23303   tasks.o
-      2650          0          0          0        384       8756   tim.o
-      1604         10         13          0        292      11001   timers.o
-      1172          0          0          0        672       8111   usart.o
-         0          0          0          0        668       3085   usb_device.o
-       144          0          0          0          0       9676   usbd_cdc.o
-        96          0          0          0          0       2894   usbd_cdc_if.o
-       944          4          0          0       1032      14271   usbd_conf.o
-      1150          0          0          0          0       6878   usbd_core.o
-      2456         24          0          0          1       7579   usbd_ctlreq.o
-       194          0          0          0          0       4205   usbd_ioreq.o
-      1348          0          0          0         12       7068   user_lib.o
-      5546        156          0          0        412      15693   vision_task.o
+       124          0          0          0          4       4329   BMI088Middleware.o
+      3488         28          0         47         87       8030   BMI088driver.o
+      1212          0          0          0        197       6430   CAN_receive.o
+       464          0        768          2          0       2373   CRC8_CRC16.o
+      2848         52         36          4        390       7477   INS_task.o
+        52          0          0          0          2       5824   OLED.o
+      4674         64        144        144        692       8568   QuaternionEKF.o
+       450          0          0          0        144       5480   adc.o
+       124         14          0          0          0       3648   bsp_PWM.o
+       100          0          0          0          0       1286   bsp_can.o
+        62          0          0          0          5       1756   bsp_delay.o
+       704          8          0          0         60       3604   bsp_dwt.o
+       310          0          0          0          0       5999   bsp_i2c.o
+       106          0          0          0          7        944   bsp_led.o
+       160          0          0          0          0       1401   bsp_rc.o
+       400          0          0          0          0       2057   bsp_usart.o
+       544          0          0          0         84       6740   can.o
+       528          8          0          0         28       4601   chassis_task.o
+       262          0          0          0          0      17749   cmsis_os.o
+      2660         12          0          0          8      12093   controller.o
+        98          0          0          0          8       2694   crc.o
+      1526          4         96          0        621       3652   detect_task.o
+       224          0          0          0          0       3496   dma.o
+       424          0          0          0          0       9631   fifo.o
+       616          0        287          0       1736       4140   freertos.o
+      2700         72          0          0         19       9634   gimbal_behaviour.o
+      2838         84          8          0        316      10121   gimbal_task.o
+       670          0          0          0          0       4420   gpio.o
+      1056          0          0          0      24600       3812   heap_4.o
+       800          0          0          0        348       6075   i2c.o
+      3256          0          0          0          4       7069   kalman_filter.o
+       516          4          0         28          0       1526   led_flow_task.o
+       296          0          0          0          0       2380   list.o
+       390          0          0          0          0       3899   main.o
+      1432          0          0          8          0       6723   pid.o
+      1128         16          0          4          5       4066   port.o
+      2586          0          0          0         64      15606   queue.o
+      1088          0          0          0        173       7011   referee.o
+       846          6          0          0       2211       3693   referee_usart_task.o
+       662          0          0          0         96       3853   remote_control.o
+        98          0          0          0         16       2648   rng.o
+       102          0          0          0         32       2830   rtc.o
+      2492         32         32          5        366       8420   shoot_task.o
+       694          0          0          0        368       5657   spi.o
+        64         26        392          0      16384       1004   startup_stm32f407xx.o
+      1656         40          0          0        112       2625   stm32.o
+       270          0          0          5          4       7301   stm32f4xx_hal.o
+      1098          0          0          0          0      10187   stm32f4xx_hal_adc.o
+      3088          0          0          0          0      11635   stm32f4xx_hal_can.o
+       482          0          0          0          0       9660   stm32f4xx_hal_cortex.o
+        70          0          0          0          0       2929   stm32f4xx_hal_crc.o
+      1490          8          8          0          0       8707   stm32f4xx_hal_dma.o
+      1110          0          0          0          0       5332   stm32f4xx_hal_gpio.o
+       652          0          0          0          0      35917   stm32f4xx_hal_i2c.o
+        88          0          0          0          0       3516   stm32f4xx_hal_msp.o
+      3616          0          0          0          0      13271   stm32f4xx_hal_pcd.o
+        12          0          0          0          0       4330   stm32f4xx_hal_pcd_ex.o
+      2496          0          0          0          0       7724   stm32f4xx_hal_rcc.o
+       564          0          0          0          0       4424   stm32f4xx_hal_rcc_ex.o
+        86          0          0          0          0       4076   stm32f4xx_hal_rng.o
+       472          0          0          0          0       9735   stm32f4xx_hal_rtc.o
+      1456          0          0          0          0      19775   stm32f4xx_hal_spi.o
+      2674         14          0          0          0      31745   stm32f4xx_hal_tim.o
+       330          0          0          0          0      12976   stm32f4xx_hal_tim_ex.o
+      1186          0          0          0          0      15791   stm32f4xx_hal_uart.o
+       196          0          0          0          0       2370   stm32f4xx_it.o
+      3230          0          0          0          0      18184   stm32f4xx_ll_usb.o
+       110          0         24          4          0       2703   system_stm32f4xx.o
+      4070          0          5          0        300      23299   tasks.o
+      2650          0          0          0        384       8643   tim.o
+      1604         10         13          0        292      11045   timers.o
+      1172          0          0          0        672       7998   usart.o
+         0          0          0          0        668       2945   usb_device.o
+       144          0          0          0          0       9386   usbd_cdc.o
+        96          0          0          0          0       2610   usbd_cdc_if.o
+       944          4          0          0       1032      14056   usbd_conf.o
+      1150          0          0          0          0       6738   usbd_core.o
+      2456         24          0          0          1       7439   usbd_ctlreq.o
+       194          0          0          0          0       4065   usbd_ioreq.o
+      1348          0          0          0         12       6856   user_lib.o
+      5546        156          0          0        412      15591   vision_task.o
 
     ----------------------------------------------------------------------
-     94164        694       1848        252      53020     622846   Object Totals
+     94164        694       1848        252      53020     610033   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        484          8          3          1         56          0   (incl. Padding)
 
@@ -11677,8 +11677,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-    116620       2488       4636        252      53116     659442   Grand Totals
-    116620       2488       4636        252      53116     659442   ELF Image Totals
+    116620       2488       4636        252      53116     646629   Grand Totals
+    116620       2488       4636        252      53116     646629   ELF Image Totals
     116620       2488       4636        252          0          0   ROM Totals
 
 ==============================================================================
