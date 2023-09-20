@@ -1,4 +1,0 @@
-/home/yuanluochen/code/QIqi-standard-robot/gimbal/MDK-ARM/tmp/standard_gimbal/standardgimbal/CMakeFiles/database.dir
-/home/yuanluochen/code/QIqi-standard-robot/gimbal/MDK-ARM/tmp/standard_gimbal/standardgimbal/CMakeFiles/standard_gimbal.dir
-/home/yuanluochen/code/QIqi-standard-robot/gimbal/MDK-ARM/tmp/standard_gimbal/standardgimbal/CMakeFiles/edit_cache.dir
-/home/yuanluochen/code/QIqi-standard-robot/gimbal/MDK-ARM/tmp/standard_gimbal/standardgimbal/CMakeFiles/rebuild_cache.dir
