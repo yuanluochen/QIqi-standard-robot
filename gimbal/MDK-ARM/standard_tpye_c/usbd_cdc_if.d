@@ -59,4 +59,4 @@ standard_tpye_c/usbd_cdc_if.o: ..\Src\usbd_cdc_if.c ..\Inc\usbd_cdc_if.h \
   ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h ..\application\referee.h \
   ..\application\protocol\protocol.h ..\application\struct_typedef.h \
-  ..\application\remote_control.h ..\bsp\bsp_rc.h
+  ..\module\remote_control\remote_control.h ..\bsp\bsp_rc.h

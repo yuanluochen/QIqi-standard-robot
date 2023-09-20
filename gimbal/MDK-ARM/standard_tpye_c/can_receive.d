@@ -1,5 +1,5 @@
-standard_tpye_c/can_receive.o: ..\application\CAN_receive.c \
-  ..\application\CAN_receive.h ..\application\struct_typedef.h \
+standard_tpye_c/can_receive.o: ..\module\dji_motor\CAN_receive.c \
+  ..\module\dji_motor\CAN_receive.h ..\application\struct_typedef.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \

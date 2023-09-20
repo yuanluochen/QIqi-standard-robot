@@ -9,10 +9,10 @@
  * 
  */
 #include "can_comm.h"
+#include "main.h"
 #include "CRC8_CRC16.h"
 #include <string.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 
 /**

@@ -1,6 +1,8 @@
-standard_tpye_c/remote_control.o: ..\application\remote_control.c \
-  ..\application\remote_control.h ..\application\struct_typedef.h \
-  ..\bsp\bsp_rc.h ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+standard_tpye_c/remote_control.o: \
+  ..\module\remote_control\remote_control.c \
+  ..\module\remote_control\remote_control.h \
+  ..\application\struct_typedef.h ..\bsp\bsp_rc.h \
+  ..\Drivers\CMSIS\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\Inc\main.h \

@@ -18,9 +18,8 @@
 #ifndef CRC8_CRC16_H
 #define CRC8_CRC16_H
 
-// #include "main.h"
-#include <stdint.h>
-#include <stdio.h>
+#include "main.h"
+#include "struct_typedef.h"
 
 /**
   * @brief          calculate the crc8  

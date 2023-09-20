@@ -10,7 +10,7 @@
  */
 #ifndef CAN_PACKEET_CONNECTION_H
 #define CAN_PACKEET_CONNECTION_H
-#include <stdint.h>
+#include "struct_typedef.h"
 
 //最大传输数据量 unit byte
 #define CAN_COMM_MAX_BUFSIZE 60

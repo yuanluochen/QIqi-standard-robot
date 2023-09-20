@@ -61,7 +61,7 @@ standard_tpye_c/referee_usart_task.o: ..\application\referee_usart_task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   ..\bsp\bsp_usart.h ..\application\struct_typedef.h \
   ..\application\detect_task.h ..\module\crc8_crc16\CRC8_CRC16.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\support\fifo.h \
+  ..\support\fifo.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\application\protocol\protocol.h ..\application\referee.h

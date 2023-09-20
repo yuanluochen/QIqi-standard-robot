@@ -1,7 +1,7 @@
 standard_tpye_c/gimbal_task.o: ..\application\gimbal_task.c \
   ..\application\gimbal_task.h ..\application\struct_typedef.h \
-  ..\application\CAN_receive.h ..\module\controller\pid.h \
-  ..\application\remote_control.h ..\bsp\bsp_rc.h \
+  ..\module\dji_motor\CAN_receive.h ..\module\controller\pid.h \
+  ..\module\remote_control\remote_control.h ..\bsp\bsp_rc.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \

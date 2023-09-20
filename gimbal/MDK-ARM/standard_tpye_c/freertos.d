@@ -59,8 +59,8 @@ standard_tpye_c/freertos.o: ..\Src\freertos.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   ..\application\chassis_task.h ..\application\struct_typedef.h \
-  ..\application\CAN_receive.h ..\application\gimbal_task.h \
-  ..\module\controller\pid.h ..\application\remote_control.h \
+  ..\module\dji_motor\CAN_receive.h ..\application\gimbal_task.h \
+  ..\module\controller\pid.h ..\module\remote_control\remote_control.h \
   ..\bsp\bsp_rc.h ..\module\userlib\user_lib.h \
   ..\application\vision_task.h ..\Inc\usart.h ..\Inc\dma.h \
   ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \

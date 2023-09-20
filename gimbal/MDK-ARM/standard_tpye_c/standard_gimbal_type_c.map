@@ -739,67 +739,6 @@ Section Cross References
     referee_usart_task.o(.text.USART6_IRQHandler) refers to fifo.o(.text.fifo_s_puts) for fifo_s_puts
     referee_usart_task.o(.text.USART6_IRQHandler) refers to detect_task.o(.text.detect_hook) for detect_hook
     referee_usart_task.o(.ARM.exidx.text.USART6_IRQHandler) refers to referee_usart_task.o(.text.USART6_IRQHandler) for [Anonymous Symbol]
-    remote_control.o(.text.remote_control_init) refers to remote_control.o(.bss.sbus_rx_buf) for sbus_rx_buf
-    remote_control.o(.text.remote_control_init) refers to bsp_rc.o(.text.RC_Init) for RC_Init
-    remote_control.o(.ARM.exidx.text.remote_control_init) refers to remote_control.o(.text.remote_control_init) for [Anonymous Symbol]
-    remote_control.o(.text.get_remote_control_point) refers to remote_control.o(.bss.rc_ctrl) for rc_ctrl
-    remote_control.o(.ARM.exidx.text.get_remote_control_point) refers to remote_control.o(.text.get_remote_control_point) for [Anonymous Symbol]
-    remote_control.o(.text.RC_data_is_error) refers to remote_control.o(.bss.rc_ctrl) for rc_ctrl
-    remote_control.o(.text.RC_data_is_error) refers to remote_control.o(.text.RC_abs) for RC_abs
-    remote_control.o(.ARM.exidx.text.RC_data_is_error) refers to remote_control.o(.text.RC_data_is_error) for [Anonymous Symbol]
-    remote_control.o(.ARM.exidx.text.RC_abs) refers to remote_control.o(.text.RC_abs) for [Anonymous Symbol]
-    remote_control.o(.text.slove_RC_lost) refers to bsp_rc.o(.text.RC_restart) for RC_restart
-    remote_control.o(.ARM.exidx.text.slove_RC_lost) refers to remote_control.o(.text.slove_RC_lost) for [Anonymous Symbol]
-    remote_control.o(.text.slove_data_error) refers to bsp_rc.o(.text.RC_restart) for RC_restart
-    remote_control.o(.ARM.exidx.text.slove_data_error) refers to remote_control.o(.text.slove_data_error) for [Anonymous Symbol]
-    remote_control.o(.text.USART3_IRQHandler) refers to usart.o(.bss.huart3) for huart3
-    remote_control.o(.text.USART3_IRQHandler) refers to usart.o(.bss.hdma_usart3_rx) for hdma_usart3_rx
-    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.bss.USART3_IRQHandler.this_time_rx_len) for USART3_IRQHandler.this_time_rx_len
-    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.bss.sbus_rx_buf) for sbus_rx_buf
-    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.bss.rc_ctrl) for rc_ctrl
-    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.text.sbus_to_rc) for sbus_to_rc
-    remote_control.o(.text.USART3_IRQHandler) refers to detect_task.o(.text.detect_hook) for detect_hook
-    remote_control.o(.ARM.exidx.text.USART3_IRQHandler) refers to remote_control.o(.text.USART3_IRQHandler) for [Anonymous Symbol]
-    remote_control.o(.ARM.exidx.text.sbus_to_rc) refers to remote_control.o(.text.sbus_to_rc) for [Anonymous Symbol]
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_GetRxMessage) for HAL_CAN_GetRxMessage
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can.o(.bss.hcan1) for hcan1
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.HAL_CAN_RxFifo0MsgPendingCallback.i) for HAL_CAN_RxFifo0MsgPendingCallback.i
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to detect_task.o(.text.detect_hook) for detect_hook
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can.o(.bss.hcan2) for hcan2
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.motor_tri) for motor_tri
-    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.motor_shoot) for motor_shoot
-    can_receive.o(.ARM.exidx.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) for [Anonymous Symbol]
-    can_receive.o(.text.CAN_cmd_shoot) refers to can_receive.o(.bss.shoot_tx_message) for shoot_tx_message
-    can_receive.o(.text.CAN_cmd_shoot) refers to can_receive.o(.bss.shoot_can_send_data) for shoot_can_send_data
-    can_receive.o(.text.CAN_cmd_shoot) refers to can.o(.bss.hcan2) for hcan2
-    can_receive.o(.text.CAN_cmd_shoot) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
-    can_receive.o(.ARM.exidx.text.CAN_cmd_shoot) refers to can_receive.o(.text.CAN_cmd_shoot) for [Anonymous Symbol]
-    can_receive.o(.text.CAN_cmd_gimbal) refers to can_receive.o(.bss.gimbal_tx_message) for gimbal_tx_message
-    can_receive.o(.text.CAN_cmd_gimbal) refers to can_receive.o(.bss.gimbal_can_send_data) for gimbal_can_send_data
-    can_receive.o(.text.CAN_cmd_gimbal) refers to can.o(.bss.hcan1) for hcan1
-    can_receive.o(.text.CAN_cmd_gimbal) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
-    can_receive.o(.ARM.exidx.text.CAN_cmd_gimbal) refers to can_receive.o(.text.CAN_cmd_gimbal) for [Anonymous Symbol]
-    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to can_receive.o(.bss.chassis_tx_message) for chassis_tx_message
-    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to can_receive.o(.bss.chassis_can_send_data) for chassis_can_send_data
-    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to can.o(.bss.hcan1) for hcan1
-    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
-    can_receive.o(.ARM.exidx.text.CAN_cmd_chassis_reset_ID) refers to can_receive.o(.text.CAN_cmd_chassis_reset_ID) for [Anonymous Symbol]
-    can_receive.o(.text.CAN_cmd_chassis) refers to can_receive.o(.bss.gimbal_callx_message) for gimbal_callx_message
-    can_receive.o(.text.CAN_cmd_chassis) refers to can_receive.o(.bss.gimbal_can_call_data) for gimbal_can_call_data
-    can_receive.o(.text.CAN_cmd_chassis) refers to can.o(.bss.hcan1) for hcan1
-    can_receive.o(.text.CAN_cmd_chassis) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
-    can_receive.o(.ARM.exidx.text.CAN_cmd_chassis) refers to can_receive.o(.text.CAN_cmd_chassis) for [Anonymous Symbol]
-    can_receive.o(.text.get_yaw_gimbal_motor_measure_point) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
-    can_receive.o(.ARM.exidx.text.get_yaw_gimbal_motor_measure_point) refers to can_receive.o(.text.get_yaw_gimbal_motor_measure_point) for [Anonymous Symbol]
-    can_receive.o(.text.get_pitch_gimbal_motor_measure_point) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
-    can_receive.o(.ARM.exidx.text.get_pitch_gimbal_motor_measure_point) refers to can_receive.o(.text.get_pitch_gimbal_motor_measure_point) for [Anonymous Symbol]
-    can_receive.o(.text.get_shoot_motor_measure_point) refers to can_receive.o(.bss.motor_shoot) for motor_shoot
-    can_receive.o(.ARM.exidx.text.get_shoot_motor_measure_point) refers to can_receive.o(.text.get_shoot_motor_measure_point) for [Anonymous Symbol]
-    can_receive.o(.text.get_trigger_motor_measure_point) refers to can_receive.o(.bss.motor_tri) for motor_tri
-    can_receive.o(.ARM.exidx.text.get_trigger_motor_measure_point) refers to can_receive.o(.text.get_trigger_motor_measure_point) for [Anonymous Symbol]
-    can_receive.o(.text.get_chassis_motor_measure_point) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
-    can_receive.o(.ARM.exidx.text.get_chassis_motor_measure_point) refers to can_receive.o(.text.get_chassis_motor_measure_point) for [Anonymous Symbol]
     led_flow_task.o(.text.led_RGB_flow_task) refers to led_flow_task.o(.data.RGB_flow_color) for RGB_flow_color
     led_flow_task.o(.text.led_RGB_flow_task) refers to bsp_led.o(.text.aRGB_led_show) for aRGB_led_show
     led_flow_task.o(.text.led_RGB_flow_task) refers to cmsis_os.o(.text.osDelay) for osDelay
@@ -1465,6 +1404,67 @@ Section Cross References
     stm32.o(.text.stm32_step_shoot_pid_clear) refers to stm32.o(.bss.stm32_DW_shoot_0) for stm32_DW_shoot_0
     stm32.o(.text.stm32_step_shoot_pid_clear) refers to stm32.o(.bss.stm32_DW_shoot_1) for stm32_DW_shoot_1
     stm32.o(.ARM.exidx.text.stm32_step_shoot_pid_clear) refers to stm32.o(.text.stm32_step_shoot_pid_clear) for [Anonymous Symbol]
+    remote_control.o(.text.remote_control_init) refers to remote_control.o(.bss.sbus_rx_buf) for sbus_rx_buf
+    remote_control.o(.text.remote_control_init) refers to bsp_rc.o(.text.RC_Init) for RC_Init
+    remote_control.o(.ARM.exidx.text.remote_control_init) refers to remote_control.o(.text.remote_control_init) for [Anonymous Symbol]
+    remote_control.o(.text.get_remote_control_point) refers to remote_control.o(.bss.rc_ctrl) for rc_ctrl
+    remote_control.o(.ARM.exidx.text.get_remote_control_point) refers to remote_control.o(.text.get_remote_control_point) for [Anonymous Symbol]
+    remote_control.o(.text.RC_data_is_error) refers to remote_control.o(.bss.rc_ctrl) for rc_ctrl
+    remote_control.o(.text.RC_data_is_error) refers to remote_control.o(.text.RC_abs) for RC_abs
+    remote_control.o(.ARM.exidx.text.RC_data_is_error) refers to remote_control.o(.text.RC_data_is_error) for [Anonymous Symbol]
+    remote_control.o(.ARM.exidx.text.RC_abs) refers to remote_control.o(.text.RC_abs) for [Anonymous Symbol]
+    remote_control.o(.text.slove_RC_lost) refers to bsp_rc.o(.text.RC_restart) for RC_restart
+    remote_control.o(.ARM.exidx.text.slove_RC_lost) refers to remote_control.o(.text.slove_RC_lost) for [Anonymous Symbol]
+    remote_control.o(.text.slove_data_error) refers to bsp_rc.o(.text.RC_restart) for RC_restart
+    remote_control.o(.ARM.exidx.text.slove_data_error) refers to remote_control.o(.text.slove_data_error) for [Anonymous Symbol]
+    remote_control.o(.text.USART3_IRQHandler) refers to usart.o(.bss.huart3) for huart3
+    remote_control.o(.text.USART3_IRQHandler) refers to usart.o(.bss.hdma_usart3_rx) for hdma_usart3_rx
+    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.bss.USART3_IRQHandler.this_time_rx_len) for USART3_IRQHandler.this_time_rx_len
+    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.bss.sbus_rx_buf) for sbus_rx_buf
+    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.bss.rc_ctrl) for rc_ctrl
+    remote_control.o(.text.USART3_IRQHandler) refers to remote_control.o(.text.sbus_to_rc) for sbus_to_rc
+    remote_control.o(.text.USART3_IRQHandler) refers to detect_task.o(.text.detect_hook) for detect_hook
+    remote_control.o(.ARM.exidx.text.USART3_IRQHandler) refers to remote_control.o(.text.USART3_IRQHandler) for [Anonymous Symbol]
+    remote_control.o(.ARM.exidx.text.sbus_to_rc) refers to remote_control.o(.text.sbus_to_rc) for [Anonymous Symbol]
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_GetRxMessage) for HAL_CAN_GetRxMessage
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can.o(.bss.hcan1) for hcan1
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.HAL_CAN_RxFifo0MsgPendingCallback.i) for HAL_CAN_RxFifo0MsgPendingCallback.i
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to detect_task.o(.text.detect_hook) for detect_hook
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can.o(.bss.hcan2) for hcan2
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.motor_tri) for motor_tri
+    can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.bss.motor_shoot) for motor_shoot
+    can_receive.o(.ARM.exidx.text.HAL_CAN_RxFifo0MsgPendingCallback) refers to can_receive.o(.text.HAL_CAN_RxFifo0MsgPendingCallback) for [Anonymous Symbol]
+    can_receive.o(.text.CAN_cmd_shoot) refers to can_receive.o(.bss.shoot_tx_message) for shoot_tx_message
+    can_receive.o(.text.CAN_cmd_shoot) refers to can_receive.o(.bss.shoot_can_send_data) for shoot_can_send_data
+    can_receive.o(.text.CAN_cmd_shoot) refers to can.o(.bss.hcan2) for hcan2
+    can_receive.o(.text.CAN_cmd_shoot) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
+    can_receive.o(.ARM.exidx.text.CAN_cmd_shoot) refers to can_receive.o(.text.CAN_cmd_shoot) for [Anonymous Symbol]
+    can_receive.o(.text.CAN_cmd_gimbal) refers to can_receive.o(.bss.gimbal_tx_message) for gimbal_tx_message
+    can_receive.o(.text.CAN_cmd_gimbal) refers to can_receive.o(.bss.gimbal_can_send_data) for gimbal_can_send_data
+    can_receive.o(.text.CAN_cmd_gimbal) refers to can.o(.bss.hcan1) for hcan1
+    can_receive.o(.text.CAN_cmd_gimbal) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
+    can_receive.o(.ARM.exidx.text.CAN_cmd_gimbal) refers to can_receive.o(.text.CAN_cmd_gimbal) for [Anonymous Symbol]
+    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to can_receive.o(.bss.chassis_tx_message) for chassis_tx_message
+    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to can_receive.o(.bss.chassis_can_send_data) for chassis_can_send_data
+    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to can.o(.bss.hcan1) for hcan1
+    can_receive.o(.text.CAN_cmd_chassis_reset_ID) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
+    can_receive.o(.ARM.exidx.text.CAN_cmd_chassis_reset_ID) refers to can_receive.o(.text.CAN_cmd_chassis_reset_ID) for [Anonymous Symbol]
+    can_receive.o(.text.CAN_cmd_chassis) refers to can_receive.o(.bss.gimbal_callx_message) for gimbal_callx_message
+    can_receive.o(.text.CAN_cmd_chassis) refers to can_receive.o(.bss.gimbal_can_call_data) for gimbal_can_call_data
+    can_receive.o(.text.CAN_cmd_chassis) refers to can.o(.bss.hcan1) for hcan1
+    can_receive.o(.text.CAN_cmd_chassis) refers to stm32f4xx_hal_can.o(.text.HAL_CAN_AddTxMessage) for HAL_CAN_AddTxMessage
+    can_receive.o(.ARM.exidx.text.CAN_cmd_chassis) refers to can_receive.o(.text.CAN_cmd_chassis) for [Anonymous Symbol]
+    can_receive.o(.text.get_yaw_gimbal_motor_measure_point) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
+    can_receive.o(.ARM.exidx.text.get_yaw_gimbal_motor_measure_point) refers to can_receive.o(.text.get_yaw_gimbal_motor_measure_point) for [Anonymous Symbol]
+    can_receive.o(.text.get_pitch_gimbal_motor_measure_point) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
+    can_receive.o(.ARM.exidx.text.get_pitch_gimbal_motor_measure_point) refers to can_receive.o(.text.get_pitch_gimbal_motor_measure_point) for [Anonymous Symbol]
+    can_receive.o(.text.get_shoot_motor_measure_point) refers to can_receive.o(.bss.motor_shoot) for motor_shoot
+    can_receive.o(.ARM.exidx.text.get_shoot_motor_measure_point) refers to can_receive.o(.text.get_shoot_motor_measure_point) for [Anonymous Symbol]
+    can_receive.o(.text.get_trigger_motor_measure_point) refers to can_receive.o(.bss.motor_tri) for motor_tri
+    can_receive.o(.ARM.exidx.text.get_trigger_motor_measure_point) refers to can_receive.o(.text.get_trigger_motor_measure_point) for [Anonymous Symbol]
+    can_receive.o(.text.get_chassis_motor_measure_point) refers to can_receive.o(.bss.motor_chassis) for motor_chassis
+    can_receive.o(.ARM.exidx.text.get_chassis_motor_measure_point) refers to can_receive.o(.text.get_chassis_motor_measure_point) for [Anonymous Symbol]
     bsp_adc.o(.text.init_vrefint_reciprocal) refers to adc.o(.bss.hadc1) for hadc1
     bsp_adc.o(.text.init_vrefint_reciprocal) refers to bsp_adc.o(.text.adcx_get_chx_value) for adcx_get_chx_value
     bsp_adc.o(.text.init_vrefint_reciprocal) refers to bsp_adc.o(.data.voltage_vrefint_proportion) for voltage_vrefint_proportion
@@ -4945,34 +4945,6 @@ Removing Unused input sections from the image.
     Removing referee_usart_task.o(.ARM.exidx.text.referee_unpack_fifo_data), (8 bytes).
     Removing referee_usart_task.o(.ARM.exidx.text.USART6_IRQHandler), (8 bytes).
     Removing referee_usart_task.o(.bss.USART6_IRQHandler.res), (1 bytes).
-    Removing remote_control.o(.text), (0 bytes).
-    Removing remote_control.o(.ARM.exidx.text.remote_control_init), (8 bytes).
-    Removing remote_control.o(.ARM.exidx.text.get_remote_control_point), (8 bytes).
-    Removing remote_control.o(.text.RC_data_is_error), (206 bytes).
-    Removing remote_control.o(.ARM.exidx.text.RC_data_is_error), (8 bytes).
-    Removing remote_control.o(.text.RC_abs), (46 bytes).
-    Removing remote_control.o(.ARM.exidx.text.RC_abs), (8 bytes).
-    Removing remote_control.o(.text.slove_RC_lost), (10 bytes).
-    Removing remote_control.o(.ARM.exidx.text.slove_RC_lost), (8 bytes).
-    Removing remote_control.o(.text.slove_data_error), (10 bytes).
-    Removing remote_control.o(.ARM.exidx.text.slove_data_error), (8 bytes).
-    Removing remote_control.o(.ARM.exidx.text.USART3_IRQHandler), (8 bytes).
-    Removing remote_control.o(.ARM.exidx.text.sbus_to_rc), (8 bytes).
-    Removing can_receive.o(.text), (0 bytes).
-    Removing can_receive.o(.ARM.exidx.text.HAL_CAN_RxFifo0MsgPendingCallback), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_shoot), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_gimbal), (8 bytes).
-    Removing can_receive.o(.text.CAN_cmd_chassis_reset_ID), (70 bytes).
-    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_chassis_reset_ID), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_chassis), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.get_yaw_gimbal_motor_measure_point), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.get_pitch_gimbal_motor_measure_point), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.get_shoot_motor_measure_point), (8 bytes).
-    Removing can_receive.o(.ARM.exidx.text.get_trigger_motor_measure_point), (8 bytes).
-    Removing can_receive.o(.text.get_chassis_motor_measure_point), (34 bytes).
-    Removing can_receive.o(.ARM.exidx.text.get_chassis_motor_measure_point), (8 bytes).
-    Removing can_receive.o(.bss.chassis_tx_message), (24 bytes).
-    Removing can_receive.o(.bss.chassis_can_send_data), (8 bytes).
     Removing led_flow_task.o(.text), (0 bytes).
     Removing led_flow_task.o(.ARM.exidx.text.led_RGB_flow_task), (8 bytes).
     Removing shoot_task.o(.text), (0 bytes).
@@ -5248,6 +5220,34 @@ Removing Unused input sections from the image.
     Removing stm32.o(.ARM.exidx.text.stm32_step_shoot_0), (8 bytes).
     Removing stm32.o(.ARM.exidx.text.stm32_step_shoot_1), (8 bytes).
     Removing stm32.o(.ARM.exidx.text.stm32_step_shoot_pid_clear), (8 bytes).
+    Removing remote_control.o(.text), (0 bytes).
+    Removing remote_control.o(.ARM.exidx.text.remote_control_init), (8 bytes).
+    Removing remote_control.o(.ARM.exidx.text.get_remote_control_point), (8 bytes).
+    Removing remote_control.o(.text.RC_data_is_error), (206 bytes).
+    Removing remote_control.o(.ARM.exidx.text.RC_data_is_error), (8 bytes).
+    Removing remote_control.o(.text.RC_abs), (46 bytes).
+    Removing remote_control.o(.ARM.exidx.text.RC_abs), (8 bytes).
+    Removing remote_control.o(.text.slove_RC_lost), (10 bytes).
+    Removing remote_control.o(.ARM.exidx.text.slove_RC_lost), (8 bytes).
+    Removing remote_control.o(.text.slove_data_error), (10 bytes).
+    Removing remote_control.o(.ARM.exidx.text.slove_data_error), (8 bytes).
+    Removing remote_control.o(.ARM.exidx.text.USART3_IRQHandler), (8 bytes).
+    Removing remote_control.o(.ARM.exidx.text.sbus_to_rc), (8 bytes).
+    Removing can_receive.o(.text), (0 bytes).
+    Removing can_receive.o(.ARM.exidx.text.HAL_CAN_RxFifo0MsgPendingCallback), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_shoot), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_gimbal), (8 bytes).
+    Removing can_receive.o(.text.CAN_cmd_chassis_reset_ID), (70 bytes).
+    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_chassis_reset_ID), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.CAN_cmd_chassis), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.get_yaw_gimbal_motor_measure_point), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.get_pitch_gimbal_motor_measure_point), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.get_shoot_motor_measure_point), (8 bytes).
+    Removing can_receive.o(.ARM.exidx.text.get_trigger_motor_measure_point), (8 bytes).
+    Removing can_receive.o(.text.get_chassis_motor_measure_point), (34 bytes).
+    Removing can_receive.o(.ARM.exidx.text.get_chassis_motor_measure_point), (8 bytes).
+    Removing can_receive.o(.bss.chassis_tx_message), (24 bytes).
+    Removing can_receive.o(.bss.chassis_can_send_data), (8 bytes).
     Removing bsp_adc.o(.text), (0 bytes).
     Removing bsp_adc.o(.text.init_vrefint_reciprocal), (100 bytes).
     Removing bsp_adc.o(.ARM.exidx.text.init_vrefint_reciprocal), (8 bytes).
@@ -9614,32 +9614,32 @@ Memory Map of the image
     0x08001274   0x08001274   0x000000ac   Code   RO         4811    .text               c_w.l(defsig_fpe_inner.o)
     0x08001320   0x08001320   0x0000000e   Code   RO         4831    .text               c_w.l(sys_wrch.o)
     0x0800132e   0x0800132e   0x00000002   PAD
-    0x08001330   0x08001330   0x00000054   Code   RO         1250    .text.ABSLimit      pid.o
-    0x08001384   0x08001384   0x00000012   Code   RO          966    .text.BMI088_ACCEL_NS_H  bmi088middleware.o
+    0x08001330   0x08001330   0x00000054   Code   RO         1185    .text.ABSLimit      pid.o
+    0x08001384   0x08001384   0x00000012   Code   RO          901    .text.BMI088_ACCEL_NS_H  bmi088middleware.o
     0x08001396   0x08001396   0x00000002   PAD
-    0x08001398   0x08001398   0x00000012   Code   RO          964    .text.BMI088_ACCEL_NS_L  bmi088middleware.o
+    0x08001398   0x08001398   0x00000012   Code   RO          899    .text.BMI088_ACCEL_NS_L  bmi088middleware.o
     0x080013aa   0x080013aa   0x00000002   PAD
-    0x080013ac   0x080013ac   0x00000014   Code   RO          970    .text.BMI088_GYRO_NS_H  bmi088middleware.o
-    0x080013c0   0x080013c0   0x00000014   Code   RO          968    .text.BMI088_GYRO_NS_L  bmi088middleware.o
-    0x080013d4   0x080013d4   0x00000298   Code   RO          937    .text.BMI088_Read   bmi088driver.o
-    0x0800166c   0x0800166c   0x000000b4   Code   RO          925    .text.BMI088_init   bmi088driver.o
-    0x08001720   0x08001720   0x00000044   Code   RO          939    .text.BMI088_read_muli_reg  bmi088driver.o
-    0x08001764   0x08001764   0x00000024   Code   RO          935    .text.BMI088_read_single_reg  bmi088driver.o
-    0x08001788   0x08001788   0x00000030   Code   RO          972    .text.BMI088_read_write_byte  bmi088middleware.o
-    0x080017b8   0x080017b8   0x00000020   Code   RO          933    .text.BMI088_write_single_reg  bmi088driver.o
-    0x080017d8   0x080017d8   0x00000142   Code   RO          846    .text.BodyFrameToEarthFrame  ins_task.o
+    0x080013ac   0x080013ac   0x00000014   Code   RO          905    .text.BMI088_GYRO_NS_H  bmi088middleware.o
+    0x080013c0   0x080013c0   0x00000014   Code   RO          903    .text.BMI088_GYRO_NS_L  bmi088middleware.o
+    0x080013d4   0x080013d4   0x00000298   Code   RO          872    .text.BMI088_Read   bmi088driver.o
+    0x0800166c   0x0800166c   0x000000b4   Code   RO          860    .text.BMI088_init   bmi088driver.o
+    0x08001720   0x08001720   0x00000044   Code   RO          874    .text.BMI088_read_muli_reg  bmi088driver.o
+    0x08001764   0x08001764   0x00000024   Code   RO          870    .text.BMI088_read_single_reg  bmi088driver.o
+    0x08001788   0x08001788   0x00000030   Code   RO          907    .text.BMI088_read_write_byte  bmi088middleware.o
+    0x080017b8   0x080017b8   0x00000020   Code   RO          868    .text.BMI088_write_single_reg  bmi088driver.o
+    0x080017d8   0x080017d8   0x00000142   Code   RO          781    .text.BodyFrameToEarthFrame  ins_task.o
     0x0800191a   0x0800191a   0x00000002   PAD
     0x0800191c   0x0800191c   0x00000004   Code   RO          385    .text.BusFault_Handler  stm32f4xx_it.o
     0x08001920   0x08001920   0x00000010   Code   RO          399    .text.CAN1_RX0_IRQHandler  stm32f4xx_it.o
     0x08001930   0x08001930   0x00000010   Code   RO          405    .text.CAN2_RX0_IRQHandler  stm32f4xx_it.o
-    0x08001940   0x08001940   0x0000006e   Code   RO          684    .text.CAN_cmd_chassis  can_receive.o
+    0x08001940   0x08001940   0x0000006e   Code   RO         1266    .text.CAN_cmd_chassis  can_receive.o
     0x080019ae   0x080019ae   0x00000002   PAD
-    0x080019b0   0x080019b0   0x00000072   Code   RO          680    .text.CAN_cmd_gimbal  can_receive.o
+    0x080019b0   0x080019b0   0x00000072   Code   RO         1262    .text.CAN_cmd_gimbal  can_receive.o
     0x08001a22   0x08001a22   0x00000002   PAD
-    0x08001a24   0x08001a24   0x00000076   Code   RO          678    .text.CAN_cmd_shoot  can_receive.o
+    0x08001a24   0x08001a24   0x00000076   Code   RO         1260    .text.CAN_cmd_shoot  can_receive.o
     0x08001a9a   0x08001a9a   0x00000002   PAD
     0x08001a9c   0x08001a9c   0x00000060   Code   RO          367    .text.CDC_Transmit_FS  usbd_cdc_if.o
-    0x08001afc   0x08001afc   0x0000069c   Code   RO          931    .text.Calibrate_MPU_Offset  bmi088driver.o
+    0x08001afc   0x08001afc   0x0000069c   Code   RO          866    .text.Calibrate_MPU_Offset  bmi088driver.o
     0x08002198   0x08002198   0x000000ca   Code   RO         1441    .text.DMA1_Stream7_IRQHandler  bsp_i2c.o
     0x08002262   0x08002262   0x00000002   PAD
     0x08002264   0x08002264   0x00000010   Code   RO          403    .text.DMA2_Stream1_IRQHandler  stm32f4xx_it.o
@@ -9662,7 +9662,7 @@ Memory Map of the image
     0x0800258a   0x0800258a   0x00000002   PAD
     0x0800258c   0x0800258c   0x0000000a   Code   RO          401    .text.EXTI9_5_IRQHandler  stm32f4xx_it.o
     0x08002596   0x08002596   0x00000002   PAD
-    0x08002598   0x08002598   0x00000142   Code   RO          848    .text.EarthFrameToBodyFrame  ins_task.o
+    0x08002598   0x08002598   0x00000142   Code   RO          783    .text.EarthFrameToBodyFrame  ins_task.o
     0x080026da   0x080026da   0x00000002   PAD
     0x080026dc   0x080026dc   0x00000002   Code   RO           15    .text.Error_Handler  main.o
     0x080026de   0x080026de   0x00000002   PAD
@@ -9684,7 +9684,7 @@ Memory Map of the image
     0x08002ff4   0x08002ff4   0x00000184   Code   RO           93    .text.HAL_CAN_MspInit  can.o
     0x08003178   0x08003178   0x00000002   Code   RO         2372    .text.HAL_CAN_RxFifo0FullCallback  stm32f4xx_hal_can.o
     0x0800317a   0x0800317a   0x00000002   PAD
-    0x0800317c   0x0800317c   0x00000322   Code   RO          676    .text.HAL_CAN_RxFifo0MsgPendingCallback  can_receive.o
+    0x0800317c   0x0800317c   0x00000322   Code   RO         1258    .text.HAL_CAN_RxFifo0MsgPendingCallback  can_receive.o
     0x0800349e   0x0800349e   0x00000002   PAD
     0x080034a0   0x080034a0   0x00000002   Code   RO         2376    .text.HAL_CAN_RxFifo1FullCallback  stm32f4xx_hal_can.o
     0x080034a2   0x080034a2   0x00000002   PAD
@@ -9807,35 +9807,35 @@ Memory Map of the image
     0x08005fa4   0x08005fa4   0x0000005e   Code   RO         3136    .text.HAL_UART_Init  stm32f4xx_hal_uart.o
     0x08006002   0x08006002   0x00000002   PAD
     0x08006004   0x08006004   0x000003cc   Code   RO          234    .text.HAL_UART_MspInit  usart.o
-    0x080063d0   0x080063d0   0x0000018e   Code   RO         1029    .text.H_K_R_Adjustment  kalman_filter.o
+    0x080063d0   0x080063d0   0x0000018e   Code   RO          964    .text.H_K_R_Adjustment  kalman_filter.o
     0x0800655e   0x0800655e   0x00000002   PAD
     0x08006560   0x08006560   0x00000004   Code   RO          381    .text.HardFault_Handler  stm32f4xx_it.o
-    0x08006564   0x08006564   0x000004ce   Code   RO          844    .text.IMU_Param_Correction  ins_task.o
+    0x08006564   0x08006564   0x000004ce   Code   RO          779    .text.IMU_Param_Correction  ins_task.o
     0x08006a32   0x08006a32   0x00000002   PAD
-    0x08006a34   0x08006a34   0x0000026c   Code   RO         1056    .text.IMU_QuaternionEKF_F_Linearization_P_Fading  quaternionekf.o
-    0x08006ca0   0x08006ca0   0x00000136   Code   RO         1052    .text.IMU_QuaternionEKF_Init  quaternionekf.o
+    0x08006a34   0x08006a34   0x0000026c   Code   RO          991    .text.IMU_QuaternionEKF_F_Linearization_P_Fading  quaternionekf.o
+    0x08006ca0   0x08006ca0   0x00000136   Code   RO          987    .text.IMU_QuaternionEKF_Init  quaternionekf.o
     0x08006dd6   0x08006dd6   0x00000002   PAD
-    0x08006dd8   0x08006dd8   0x00000048   Code   RO         1054    .text.IMU_QuaternionEKF_Observe  quaternionekf.o
-    0x08006e20   0x08006e20   0x00000162   Code   RO         1058    .text.IMU_QuaternionEKF_SetH  quaternionekf.o
+    0x08006dd8   0x08006dd8   0x00000048   Code   RO          989    .text.IMU_QuaternionEKF_Observe  quaternionekf.o
+    0x08006e20   0x08006e20   0x00000162   Code   RO          993    .text.IMU_QuaternionEKF_SetH  quaternionekf.o
     0x08006f82   0x08006f82   0x00000002   PAD
-    0x08006f84   0x08006f84   0x00000628   Code   RO         1062    .text.IMU_QuaternionEKF_Update  quaternionekf.o
-    0x080075ac   0x080075ac   0x00000674   Code   RO         1060    .text.IMU_QuaternionEKF_xhatUpdate  quaternionekf.o
-    0x08007c20   0x08007c20   0x0000006c   Code   RO          850    .text.IMU_Temperature_Ctrl  ins_task.o
-    0x08007c8c   0x08007c8c   0x000000b4   Code   RO          840    .text.INS_Init      ins_task.o
-    0x08007d40   0x08007d40   0x000002a4   Code   RO          842    .text.INS_Task      ins_task.o
-    0x08007fe4   0x08007fe4   0x000005f2   Code   RO         1025    .text.Kalman_Filter_Init  kalman_filter.o
+    0x08006f84   0x08006f84   0x00000628   Code   RO          997    .text.IMU_QuaternionEKF_Update  quaternionekf.o
+    0x080075ac   0x080075ac   0x00000674   Code   RO          995    .text.IMU_QuaternionEKF_xhatUpdate  quaternionekf.o
+    0x08007c20   0x08007c20   0x0000006c   Code   RO          785    .text.IMU_Temperature_Ctrl  ins_task.o
+    0x08007c8c   0x08007c8c   0x000000b4   Code   RO          775    .text.INS_Init      ins_task.o
+    0x08007d40   0x08007d40   0x000002a4   Code   RO          777    .text.INS_Task      ins_task.o
+    0x08007fe4   0x08007fe4   0x000005f2   Code   RO          960    .text.Kalman_Filter_Init  kalman_filter.o
     0x080085d6   0x080085d6   0x00000002   PAD
-    0x080085d8   0x080085d8   0x00000062   Code   RO         1027    .text.Kalman_Filter_Measure  kalman_filter.o
+    0x080085d8   0x080085d8   0x00000062   Code   RO          962    .text.Kalman_Filter_Measure  kalman_filter.o
     0x0800863a   0x0800863a   0x00000002   PAD
-    0x0800863c   0x0800863c   0x00000080   Code   RO         1039    .text.Kalman_Filter_P_Update  kalman_filter.o
-    0x080086bc   0x080086bc   0x0000007e   Code   RO         1033    .text.Kalman_Filter_PminusUpdate  kalman_filter.o
+    0x0800863c   0x0800863c   0x00000080   Code   RO          974    .text.Kalman_Filter_P_Update  kalman_filter.o
+    0x080086bc   0x080086bc   0x0000007e   Code   RO          968    .text.Kalman_Filter_PminusUpdate  kalman_filter.o
     0x0800873a   0x0800873a   0x00000002   PAD
-    0x0800873c   0x0800873c   0x000000fa   Code   RO         1035    .text.Kalman_Filter_SetK  kalman_filter.o
+    0x0800873c   0x0800873c   0x000000fa   Code   RO          970    .text.Kalman_Filter_SetK  kalman_filter.o
     0x08008836   0x08008836   0x00000002   PAD
-    0x08008838   0x08008838   0x00000190   Code   RO         1041    .text.Kalman_Filter_Update  kalman_filter.o
-    0x080089c8   0x080089c8   0x000000a2   Code   RO         1031    .text.Kalman_Filter_xhatMinusUpdate  kalman_filter.o
+    0x08008838   0x08008838   0x00000190   Code   RO          976    .text.Kalman_Filter_Update  kalman_filter.o
+    0x080089c8   0x080089c8   0x000000a2   Code   RO          966    .text.Kalman_Filter_xhatMinusUpdate  kalman_filter.o
     0x08008a6a   0x08008a6a   0x00000002   PAD
-    0x08008a6c   0x08008a6c   0x000000ac   Code   RO         1037    .text.Kalman_Filter_xhatUpdate  kalman_filter.o
+    0x08008a6c   0x08008a6c   0x000000ac   Code   RO          972    .text.Kalman_Filter_xhatUpdate  kalman_filter.o
     0x08008b18   0x08008b18   0x00000080   Code   RO           72    .text.MX_ADC1_Init  adc.o
     0x08008b98   0x08008b98   0x00000080   Code   RO           74    .text.MX_ADC3_Init  adc.o
     0x08008c18   0x08008c18   0x0000004e   Code   RO           89    .text.MX_CAN1_Init  can.o
@@ -9874,22 +9874,22 @@ Memory Map of the image
     0x08009b00   0x08009b00   0x00000004   Code   RO          383    .text.MemManage_Handler  stm32f4xx_it.o
     0x08009b04   0x08009b04   0x00000002   Code   RO          379    .text.NMI_Handler   stm32f4xx_it.o
     0x08009b06   0x08009b06   0x00000002   PAD
-    0x08009b08   0x08009b08   0x00000034   Code   RO         1147    .text.OLED_com_reset  oled.o
-    0x08009b3c   0x08009b3c   0x000002c2   Code   RO         1127    .text.OLS_Derivative  user_lib.o
+    0x08009b08   0x08009b08   0x00000034   Code   RO         1082    .text.OLED_com_reset  oled.o
+    0x08009b3c   0x08009b3c   0x000002c2   Code   RO         1062    .text.OLS_Derivative  user_lib.o
     0x08009dfe   0x08009dfe   0x00000002   PAD
-    0x08009e00   0x08009e00   0x00000084   Code   RO         1123    .text.OLS_Init      user_lib.o
+    0x08009e00   0x08009e00   0x00000084   Code   RO         1058    .text.OLS_Init      user_lib.o
     0x08009e84   0x08009e84   0x00000010   Code   RO          407    .text.OTG_FS_IRQHandler  stm32f4xx_it.o
-    0x08009e94   0x08009e94   0x000004ae   Code   RO         1258    .text.PID_Calc      pid.o
+    0x08009e94   0x08009e94   0x000004ae   Code   RO         1193    .text.PID_Calc      pid.o
     0x0800a342   0x0800a342   0x00000002   PAD
-    0x0800a344   0x0800a344   0x00000096   Code   RO         1256    .text.PID_Init      pid.o
+    0x0800a344   0x0800a344   0x00000096   Code   RO         1191    .text.PID_Init      pid.o
     0x0800a3da   0x0800a3da   0x00000006   PAD
     0x0800a3e0   0x0800a3e0   0x00000064   Code   RO         3735    .text.PendSV_Handler  port.o
     0x0800a444   0x0800a444   0x000000a0   Code   RO         1497    .text.RC_Init       bsp_rc.o
     0x0800a4e4   0x0800a4e4   0x000000c8   Code   RO         2727    .text.SPI_EndRxTxTransaction  stm32f4xx_hal_spi.o
     0x0800a5ac   0x0800a5ac   0x00000004   PAD
     0x0800a5b0   0x0800a5b0   0x00000024   Code   RO         3719    .text.SVC_Handler   port.o
-    0x0800a5d4   0x0800a5d4   0x0000019c   Code   RO          732    .text.Shoot_Feedback_Update  shoot_task.o
-    0x0800a770   0x0800a770   0x0000018e   Code   RO          728    .text.Shoot_Set_Mode  shoot_task.o
+    0x0800a5d4   0x0800a5d4   0x0000019c   Code   RO          667    .text.Shoot_Feedback_Update  shoot_task.o
+    0x0800a770   0x0800a770   0x0000018e   Code   RO          663    .text.Shoot_Set_Mode  shoot_task.o
     0x0800a8fe   0x0800a8fe   0x00000002   PAD
     0x0800a900   0x0800a900   0x00000018   Code   RO           40    .text.StartINSTask  freertos.o
     0x0800a918   0x0800a918   0x00000018   Code   RO          391    .text.SysTick_Handler  stm32f4xx_it.o
@@ -9900,7 +9900,7 @@ Memory Map of the image
     0x0800aba8   0x0800aba8   0x0000007c   Code   RO         1489    .text.TIM_Set_PWM   bsp_pwm.o
     0x0800ac24   0x0800ac24   0x0000028a   Code   RO         3140    .text.UART_SetConfig  stm32f4xx_hal_uart.o
     0x0800aeae   0x0800aeae   0x00000002   PAD
-    0x0800aeb0   0x0800aeb0   0x00000156   Code   RO          662    .text.USART3_IRQHandler  remote_control.o
+    0x0800aeb0   0x0800aeb0   0x00000156   Code   RO         1244    .text.USART3_IRQHandler  remote_control.o
     0x0800b006   0x0800b006   0x00000002   PAD
     0x0800b008   0x0800b008   0x00000126   Code   RO          635    .text.USART6_IRQHandler  referee_usart_task.o
     0x0800b12e   0x0800b12e   0x00000002   PAD
@@ -9989,17 +9989,17 @@ Memory Map of the image
     0x0800c2c0   0x0800c2c0   0x00000004   Code   RO          387    .text.UsageFault_Handler  stm32f4xx_it.o
     0x0800c2c4   0x0800c2c4   0x0000006a   Code   RO         1477    .text.aRGB_led_show  bsp_led.o
     0x0800c32e   0x0800c32e   0x00000002   PAD
-    0x0800c330   0x0800c330   0x00000058   Code   RO          910    .text.append_CRC16_check_sum  crc8_crc16.o
-    0x0800c388   0x0800c388   0x00000030   Code   RO          821    .text.assign_solve_trajectory_param  vision_task.o
-    0x0800c3b8   0x0800c3b8   0x000001bc   Code   RO          927    .text.bmi088_accel_init  bmi088driver.o
-    0x0800c574   0x0800c574   0x00000174   Code   RO          929    .text.bmi088_gyro_init  bmi088driver.o
+    0x0800c330   0x0800c330   0x00000058   Code   RO          845    .text.append_CRC16_check_sum  crc8_crc16.o
+    0x0800c388   0x0800c388   0x00000030   Code   RO          756    .text.assign_solve_trajectory_param  vision_task.o
+    0x0800c3b8   0x0800c3b8   0x000001bc   Code   RO          862    .text.bmi088_accel_init  bmi088driver.o
+    0x0800c574   0x0800c574   0x00000174   Code   RO          864    .text.bmi088_gyro_init  bmi088driver.o
     0x0800c6e8   0x0800c6e8   0x0000006c   Code   RO         1437    .text.bsp_I2C_reset  bsp_i2c.o
     0x0800c754   0x0800c754   0x00000004   PAD
-    0x0800c758   0x0800c758   0x000004d4   Code   RO          829    .text.calc_bullet_drop_in_complete_air  vision_task.o
-    0x0800cc2c   0x0800cc2c   0x00000098   Code   RO          819    .text.calc_current_bullet_speed  vision_task.o
-    0x0800ccc4   0x0800ccc4   0x0000006e   Code   RO          825    .text.calc_robot_gimbal_aim_vector  vision_task.o
+    0x0800c758   0x0800c758   0x000004d4   Code   RO          764    .text.calc_bullet_drop_in_complete_air  vision_task.o
+    0x0800cc2c   0x0800cc2c   0x00000098   Code   RO          754    .text.calc_current_bullet_speed  vision_task.o
+    0x0800ccc4   0x0800ccc4   0x0000006e   Code   RO          760    .text.calc_robot_gimbal_aim_vector  vision_task.o
     0x0800cd32   0x0800cd32   0x00000006   PAD
-    0x0800cd38   0x0800cd38   0x000000f4   Code   RO          827    .text.calc_target_position_pitch_angle  vision_task.o
+    0x0800cd38   0x0800cd38   0x000000f4   Code   RO          762    .text.calc_target_position_pitch_angle  vision_task.o
     0x0800ce2c   0x0800ce2c   0x00000064   Code   RO         1327    .text.can_filter_init  bsp_can.o
     0x0800ce90   0x0800ce90   0x00000010   Code   RO          448    .text.chassis_feedback_update  chassis_task.o
     0x0800cea0   0x0800cea0   0x00000020   Code   RO          446    .text.chassis_init  chassis_task.o
@@ -10014,16 +10014,16 @@ Memory Map of the image
     0x0800d23a   0x0800d23a   0x00000002   PAD
     0x0800d23c   0x0800d23c   0x00000198   Code   RO          465    .text.detect_init   detect_task.o
     0x0800d3d4   0x0800d3d4   0x000002e4   Code   RO          463    .text.detect_task   detect_task.o
-    0x0800d6b8   0x0800d6b8   0x00000148   Code   RO         1205    .text.f_Changing_Integration_Rate  controller.o
-    0x0800d800   0x0800d800   0x00000044   Code   RO         1209    .text.f_Derivative_Filter  controller.o
-    0x0800d844   0x0800d844   0x00000128   Code   RO         1207    .text.f_Derivative_On_Measurement  controller.o
-    0x0800d96c   0x0800d96c   0x0000012a   Code   RO         1211    .text.f_Integral_Limit  controller.o
+    0x0800d6b8   0x0800d6b8   0x00000148   Code   RO         1140    .text.f_Changing_Integration_Rate  controller.o
+    0x0800d800   0x0800d800   0x00000044   Code   RO         1144    .text.f_Derivative_Filter  controller.o
+    0x0800d844   0x0800d844   0x00000128   Code   RO         1142    .text.f_Derivative_On_Measurement  controller.o
+    0x0800d96c   0x0800d96c   0x0000012a   Code   RO         1146    .text.f_Integral_Limit  controller.o
     0x0800da96   0x0800da96   0x00000002   PAD
-    0x0800da98   0x0800da98   0x00000044   Code   RO         1213    .text.f_Output_Filter  controller.o
-    0x0800dadc   0x0800dadc   0x00000054   Code   RO         1215    .text.f_Output_Limit  controller.o
-    0x0800db30   0x0800db30   0x000000cc   Code   RO         1201    .text.f_PID_ErrorHandle  controller.o
-    0x0800dbfc   0x0800dbfc   0x00000054   Code   RO         1217    .text.f_Proportion_Limit  controller.o
-    0x0800dc50   0x0800dc50   0x00000096   Code   RO         1203    .text.f_Trapezoid_Intergral  controller.o
+    0x0800da98   0x0800da98   0x00000044   Code   RO         1148    .text.f_Output_Filter  controller.o
+    0x0800dadc   0x0800dadc   0x00000054   Code   RO         1150    .text.f_Output_Limit  controller.o
+    0x0800db30   0x0800db30   0x000000cc   Code   RO         1136    .text.f_PID_ErrorHandle  controller.o
+    0x0800dbfc   0x0800dbfc   0x00000054   Code   RO         1152    .text.f_Proportion_Limit  controller.o
+    0x0800dc50   0x0800dc50   0x00000096   Code   RO         1138    .text.f_Trapezoid_Intergral  controller.o
     0x0800dce6   0x0800dce6   0x00000002   PAD
     0x0800dce8   0x0800dce8   0x00000064   Code   RO         1569    .text.fifo_s_get    fifo.o
     0x0800dd4c   0x0800dd4c   0x00000036   Code   RO         1559    .text.fifo_s_init   fifo.o
@@ -10031,19 +10031,19 @@ Memory Map of the image
     0x0800dd84   0x0800dd84   0x00000102   Code   RO         1565    .text.fifo_s_puts   fifo.o
     0x0800de86   0x0800de86   0x00000002   PAD
     0x0800de88   0x0800de88   0x0000000c   Code   RO         1583    .text.fifo_s_used   fifo.o
-    0x0800de94   0x0800de94   0x0000004c   Code   RO         1103    .text.first_order_filter_cali  user_lib.o
-    0x0800dee0   0x0800dee0   0x00000026   Code   RO         1101    .text.first_order_filter_init  user_lib.o
+    0x0800de94   0x0800de94   0x0000004c   Code   RO         1038    .text.first_order_filter_cali  user_lib.o
+    0x0800dee0   0x0800dee0   0x00000026   Code   RO         1036    .text.first_order_filter_init  user_lib.o
     0x0800df06   0x0800df06   0x00000002   PAD
-    0x0800df08   0x0800df08   0x00000050   Code   RO         1115    .text.fp32_constrain  user_lib.o
-    0x0800df58   0x0800df58   0x00000068   Code   RO         1111    .text.fp32_rounding  user_lib.o
-    0x0800dfc0   0x0800dfc0   0x0000005a   Code   RO          736    .text.fric_control_loop  shoot_task.o
+    0x0800df08   0x0800df08   0x00000050   Code   RO         1050    .text.fp32_constrain  user_lib.o
+    0x0800df58   0x0800df58   0x00000068   Code   RO         1046    .text.fp32_rounding  user_lib.o
+    0x0800dfc0   0x0800dfc0   0x0000005a   Code   RO          671    .text.fric_control_loop  shoot_task.o
     0x0800e01a   0x0800e01a   0x00000002   PAD
-    0x0800e01c   0x0800e01c   0x00000066   Code   RO          906    .text.get_CRC16_check_sum  crc8_crc16.o
+    0x0800e01c   0x0800e01c   0x00000066   Code   RO          841    .text.get_CRC16_check_sum  crc8_crc16.o
     0x0800e082   0x0800e082   0x00000002   PAD
-    0x0800e084   0x0800e084   0x00000044   Code   RO          900    .text.get_CRC8_check_sum  crc8_crc16.o
-    0x0800e0c8   0x0800e0c8   0x0000000a   Code   RO          858    .text.get_INS_point  ins_task.o
+    0x0800e084   0x0800e084   0x00000044   Code   RO          835    .text.get_CRC8_check_sum  crc8_crc16.o
+    0x0800e0c8   0x0800e0c8   0x0000000a   Code   RO          793    .text.get_INS_point  ins_task.o
     0x0800e0d2   0x0800e0d2   0x00000002   PAD
-    0x0800e0d4   0x0800e0d4   0x0000000e   Code   RO          805    .text.get_auto_move_point  vision_task.o
+    0x0800e0d4   0x0800e0d4   0x0000000e   Code   RO          740    .text.get_auto_move_point  vision_task.o
     0x0800e0e2   0x0800e0e2   0x00000002   PAD
     0x0800e0e4   0x0800e0e4   0x0000000a   Code   RO          598    .text.get_field_event_point  referee.o
     0x0800e0ee   0x0800e0ee   0x00000002   PAD
@@ -10053,24 +10053,24 @@ Memory Map of the image
     0x0800e106   0x0800e106   0x00000002   PAD
     0x0800e108   0x0800e108   0x0000000a   Code   RO          590    .text.get_game_robot_status_point  referee.o
     0x0800e112   0x0800e112   0x00000002   PAD
-    0x0800e114   0x0800e114   0x0000000c   Code   RO          688    .text.get_pitch_gimbal_motor_measure_point  can_receive.o
-    0x0800e120   0x0800e120   0x0000000a   Code   RO          652    .text.get_remote_control_point  remote_control.o
+    0x0800e114   0x0800e114   0x0000000c   Code   RO         1270    .text.get_pitch_gimbal_motor_measure_point  can_receive.o
+    0x0800e120   0x0800e120   0x0000000a   Code   RO         1234    .text.get_remote_control_point  remote_control.o
     0x0800e12a   0x0800e12a   0x00000002   PAD
     0x0800e12c   0x0800e12c   0x0000000a   Code   RO          596    .text.get_robot_command_point  referee.o
     0x0800e136   0x0800e136   0x00000002   PAD
     0x0800e138   0x0800e138   0x0000000a   Code   RO          594    .text.get_shoot_data_point  referee.o
     0x0800e142   0x0800e142   0x00000002   PAD
-    0x0800e144   0x0800e144   0x00000022   Code   RO          690    .text.get_shoot_motor_measure_point  can_receive.o
+    0x0800e144   0x0800e144   0x00000022   Code   RO         1272    .text.get_shoot_motor_measure_point  can_receive.o
     0x0800e166   0x0800e166   0x00000002   PAD
-    0x0800e168   0x0800e168   0x0000000a   Code   RO          692    .text.get_trigger_motor_measure_point  can_receive.o
+    0x0800e168   0x0800e168   0x0000000a   Code   RO         1274    .text.get_trigger_motor_measure_point  can_receive.o
     0x0800e172   0x0800e172   0x00000002   PAD
-    0x0800e174   0x0800e174   0x0000000e   Code   RO          799    .text.get_vision_gimbal_point  vision_task.o
+    0x0800e174   0x0800e174   0x0000000e   Code   RO          734    .text.get_vision_gimbal_point  vision_task.o
     0x0800e182   0x0800e182   0x00000002   PAD
-    0x0800e184   0x0800e184   0x0000000a   Code   RO          815    .text.get_vision_receive_point  vision_task.o
+    0x0800e184   0x0800e184   0x0000000a   Code   RO          750    .text.get_vision_receive_point  vision_task.o
     0x0800e18e   0x0800e18e   0x00000002   PAD
-    0x0800e190   0x0800e190   0x0000000e   Code   RO          801    .text.get_vision_shoot_point  vision_task.o
+    0x0800e190   0x0800e190   0x0000000e   Code   RO          736    .text.get_vision_shoot_point  vision_task.o
     0x0800e19e   0x0800e19e   0x00000002   PAD
-    0x0800e1a0   0x0800e1a0   0x0000000c   Code   RO          686    .text.get_yaw_gimbal_motor_measure_point  can_receive.o
+    0x0800e1a0   0x0800e1a0   0x0000000c   Code   RO         1268    .text.get_yaw_gimbal_motor_measure_point  can_receive.o
     0x0800e1ac   0x0800e1ac   0x0000000c   Code   RO          544    .text.get_yaw_motor_point  gimbal_task.o
     0x0800e1b8   0x0800e1b8   0x0000000e   Code   RO          548    .text.get_yaw_positive_direction  gimbal_task.o
     0x0800e1c6   0x0800e1c6   0x00000002   PAD
@@ -10115,14 +10115,14 @@ Memory Map of the image
     0x0800f536   0x0800f536   0x00000002   PAD
     0x0800f538   0x0800f538   0x0000002c   Code   RO          491    .text.gimbal_zero_force_control  gimbal_behaviour.o
     0x0800f564   0x0800f564   0x00000108   Code   RO          580    .text.init_referee_struct_data  referee.o
-    0x0800f66c   0x0800f66c   0x0000005a   Code   RO         1064    .text.invSqrt       quaternionekf.o
+    0x0800f66c   0x0800f66c   0x0000005a   Code   RO          999    .text.invSqrt       quaternionekf.o
     0x0800f6c6   0x0800f6c6   0x00000002   PAD
-    0x0800f6c8   0x0800f6c8   0x000000e0   Code   RO          740    .text.judge_bullet_is_stuck  shoot_task.o
-    0x0800f7a8   0x0800f7a8   0x00000004   Code   RO          797    .text.judge_cur_mode_is_auto_move_mode  vision_task.o
-    0x0800f7ac   0x0800f7ac   0x00000016   Code   RO          795    .text.judge_vision_appear_target  vision_task.o
+    0x0800f6c8   0x0800f6c8   0x000000e0   Code   RO          675    .text.judge_bullet_is_stuck  shoot_task.o
+    0x0800f7a8   0x0800f7a8   0x00000004   Code   RO          732    .text.judge_cur_mode_is_auto_move_mode  vision_task.o
+    0x0800f7ac   0x0800f7ac   0x00000016   Code   RO          730    .text.judge_vision_appear_target  vision_task.o
     0x0800f7c2   0x0800f7c2   0x00000002   PAD
-    0x0800f7c4   0x0800f7c4   0x00000204   Code   RO          715    .text.led_RGB_flow_task  led_flow_task.o
-    0x0800f9c8   0x0800f9c8   0x000000d4   Code   RO         1119    .text.loop_fp32_constrain  user_lib.o
+    0x0800f7c4   0x0800f7c4   0x00000204   Code   RO          650    .text.led_RGB_flow_task  led_flow_task.o
+    0x0800f9c8   0x0800f9c8   0x000000d4   Code   RO         1054    .text.loop_fp32_constrain  user_lib.o
     0x0800fa9c   0x0800fa9c   0x000000a0   Code   RO           11    .text.main          main.o
     0x0800fb3c   0x0800fb3c   0x00000094   Code   RO          552    .text.motor_ecd_to_angle_change  gimbal_task.o
     0x0800fbd0   0x0800fbd0   0x00000010   Code   RO         3590    .text.osDelay       cmsis_os.o
@@ -10130,9 +10130,9 @@ Memory Map of the image
     0x0800fbea   0x0800fbea   0x00000002   PAD
     0x0800fbec   0x0800fbec   0x0000005e   Code   RO         3578    .text.osThreadCreate  cmsis_os.o
     0x0800fc4a   0x0800fc4a   0x00000002   PAD
-    0x0800fc4c   0x0800fc4c   0x00000372   Code   RO         1199    .text.pid_calculate  controller.o
+    0x0800fc4c   0x0800fc4c   0x00000372   Code   RO         1134    .text.pid_calculate  controller.o
     0x0800ffbe   0x0800ffbe   0x00000002   PAD
-    0x0800ffc0   0x0800ffc0   0x000000c6   Code   RO         1197    .text.pid_init      controller.o
+    0x0800ffc0   0x0800ffc0   0x000000c6   Code   RO         1132    .text.pid_init      controller.o
     0x08010086   0x08010086   0x00000002   PAD
     0x08010088   0x08010088   0x000000aa   Code   RO         3406    .text.prvAddCurrentTaskToDelayedList  tasks.o
     0x08010132   0x08010132   0x00000002   PAD
@@ -10152,43 +10152,43 @@ Memory Map of the image
     0x080107b2   0x080107b2   0x00000002   PAD
     0x080107b4   0x080107b4   0x000001b8   Code   RO         3691    .text.pvPortMalloc  heap_4.o
     0x0801096c   0x0801096c   0x00000028   Code   RO         3715    .text.pxPortInitialiseStack  port.o
-    0x08010994   0x08010994   0x000000ae   Code   RO          809    .text.queue_append_data  vision_task.o
+    0x08010994   0x08010994   0x000000ae   Code   RO          744    .text.queue_append_data  vision_task.o
     0x08010a42   0x08010a42   0x00000002   PAD
-    0x08010a44   0x08010a44   0x00000052   Code   RO          807    .text.queue_create  vision_task.o
+    0x08010a44   0x08010a44   0x00000052   Code   RO          742    .text.queue_create  vision_task.o
     0x08010a96   0x08010a96   0x00000002   PAD
-    0x08010a98   0x08010a98   0x00000088   Code   RO          811    .text.queue_data_calc_average  vision_task.o
+    0x08010a98   0x08010a98   0x00000088   Code   RO          746    .text.queue_data_calc_average  vision_task.o
     0x08010b20   0x08010b20   0x000002fc   Code   RO          582    .text.referee_data_solve  referee.o
     0x08010e1c   0x08010e1c   0x000001e4   Code   RO          633    .text.referee_unpack_fifo_data  referee_usart_task.o
     0x08011000   0x08011000   0x00000044   Code   RO          631    .text.referee_usart_task  referee_usart_task.o
-    0x08011044   0x08011044   0x00000016   Code   RO          650    .text.remote_control_init  remote_control.o
+    0x08011044   0x08011044   0x00000016   Code   RO         1232    .text.remote_control_init  remote_control.o
     0x0801105a   0x0801105a   0x00000002   PAD
-    0x0801105c   0x0801105c   0x00000120   Code   RO          664    .text.sbus_to_rc    remote_control.o
+    0x0801105c   0x0801105c   0x00000120   Code   RO         1246    .text.sbus_to_rc    remote_control.o
     0x0801117c   0x0801117c   0x0000016a   Code   RO          509    .text.scan_control_set  gimbal_behaviour.o
     0x080112e6   0x080112e6   0x00000002   PAD
-    0x080112e8   0x080112e8   0x000002e8   Code   RO          823    .text.select_optimal_target  vision_task.o
-    0x080115d0   0x080115d0   0x0000002a   Code   RO          789    .text.send_packet   vision_task.o
+    0x080112e8   0x080112e8   0x000002e8   Code   RO          758    .text.select_optimal_target  vision_task.o
+    0x080115d0   0x080115d0   0x0000002a   Code   RO          724    .text.send_packet   vision_task.o
     0x080115fa   0x080115fa   0x00000002   PAD
-    0x080115fc   0x080115fc   0x00000062   Code   RO          787    .text.set_vision_send_packet  vision_task.o
+    0x080115fc   0x080115fc   0x00000062   Code   RO          722    .text.set_vision_send_packet  vision_task.o
     0x0801165e   0x0801165e   0x00000002   PAD
-    0x08011660   0x08011660   0x000001d6   Code   RO          734    .text.shoot_control_loop  shoot_task.o
+    0x08011660   0x08011660   0x000001d6   Code   RO          669    .text.shoot_control_loop  shoot_task.o
     0x08011836   0x08011836   0x00000002   PAD
-    0x08011838   0x08011838   0x00000046   Code   RO          742    .text.shoot_control_vision_task  shoot_task.o
+    0x08011838   0x08011838   0x00000046   Code   RO          677    .text.shoot_control_vision_task  shoot_task.o
     0x0801187e   0x0801187e   0x00000002   PAD
-    0x08011880   0x08011880   0x000000d0   Code   RO          726    .text.shoot_init    shoot_task.o
-    0x08011950   0x08011950   0x00000024   Code   RO          730    .text.shoot_mode_change_transit  shoot_task.o
-    0x08011974   0x08011974   0x0000018a   Code   RO          744    .text.shoot_set_control_mode  shoot_task.o
+    0x08011880   0x08011880   0x000000d0   Code   RO          661    .text.shoot_init    shoot_task.o
+    0x08011950   0x08011950   0x00000024   Code   RO          665    .text.shoot_mode_change_transit  shoot_task.o
+    0x08011974   0x08011974   0x0000018a   Code   RO          679    .text.shoot_set_control_mode  shoot_task.o
     0x08011afe   0x08011afe   0x00000002   PAD
-    0x08011b00   0x08011b00   0x0000007c   Code   RO          724    .text.shoot_task    shoot_task.o
-    0x08011b7c   0x08011b7c   0x0000004a   Code   RO          817    .text.solve_trajectory_param_init  vision_task.o
+    0x08011b00   0x08011b00   0x0000007c   Code   RO          659    .text.shoot_task    shoot_task.o
+    0x08011b7c   0x08011b7c   0x0000004a   Code   RO          752    .text.solve_trajectory_param_init  vision_task.o
     0x08011bc6   0x08011bc6   0x00000002   PAD
-    0x08011bc8   0x08011bc8   0x0000002c   Code   RO         1278    .text.stm32_shoot_pid_init  stm32.o
+    0x08011bc8   0x08011bc8   0x0000002c   Code   RO         1213    .text.stm32_shoot_pid_init  stm32.o
     0x08011bf4   0x08011bf4   0x00000004   PAD
-    0x08011bf8   0x08011bf8   0x00000314   Code   RO         1280    .text.stm32_step_shoot_0  stm32.o
+    0x08011bf8   0x08011bf8   0x00000314   Code   RO         1215    .text.stm32_step_shoot_0  stm32.o
     0x08011f0c   0x08011f0c   0x00000004   PAD
-    0x08011f10   0x08011f10   0x00000314   Code   RO         1282    .text.stm32_step_shoot_1  stm32.o
-    0x08012224   0x08012224   0x00000024   Code   RO         1284    .text.stm32_step_shoot_pid_clear  stm32.o
+    0x08011f10   0x08011f10   0x00000314   Code   RO         1217    .text.stm32_step_shoot_1  stm32.o
+    0x08012224   0x08012224   0x00000024   Code   RO         1219    .text.stm32_step_shoot_pid_clear  stm32.o
     0x08012248   0x08012248   0x00000024   Code   RO          467    .text.toe_is_error  detect_task.o
-    0x0801226c   0x0801226c   0x00000042   Code   RO          738    .text.trigger_control_loop  shoot_task.o
+    0x0801226c   0x0801226c   0x00000042   Code   RO          673    .text.trigger_control_loop  shoot_task.o
     0x080122ae   0x080122ae   0x00000002   PAD
     0x080122b0   0x080122b0   0x00000190   Code   RO         1546    .text.usart6_init   bsp_usart.o
     0x08012440   0x08012440   0x00000024   Code   RO         3281    .text.uxListRemove  list.o
@@ -10226,20 +10226,20 @@ Memory Map of the image
     0x080128e4   0x080128e4   0x00000010   Code   RO         3404    .text.vTaskSuspendAll  tasks.o
     0x080128f4   0x080128f4   0x00000086   Code   RO         3422    .text.vTaskSwitchContext  tasks.o
     0x0801297a   0x0801297a   0x00000002   PAD
-    0x0801297c   0x0801297c   0x0000007c   Code   RO          908    .text.verify_CRC16_check_sum  crc8_crc16.o
-    0x080129f8   0x080129f8   0x00000052   Code   RO          902    .text.verify_CRC8_check_sum  crc8_crc16.o
+    0x0801297c   0x0801297c   0x0000007c   Code   RO          843    .text.verify_CRC16_check_sum  crc8_crc16.o
+    0x080129f8   0x080129f8   0x00000052   Code   RO          837    .text.verify_CRC8_check_sum  crc8_crc16.o
     0x08012a4a   0x08012a4a   0x00000006   PAD
-    0x08012a50   0x08012a50   0x00000288   Code   RO          785    .text.vision_data_process  vision_task.o
-    0x08012cd8   0x08012cd8   0x0000024c   Code   RO          783    .text.vision_judge_appear_target  vision_task.o
-    0x08012f24   0x08012f24   0x0000007a   Code   RO          777    .text.vision_set_robot_mode  vision_task.o
+    0x08012a50   0x08012a50   0x00000288   Code   RO          720    .text.vision_data_process  vision_task.o
+    0x08012cd8   0x08012cd8   0x0000024c   Code   RO          718    .text.vision_judge_appear_target  vision_task.o
+    0x08012f24   0x08012f24   0x0000007a   Code   RO          712    .text.vision_set_robot_mode  vision_task.o
     0x08012f9e   0x08012f9e   0x00000002   PAD
-    0x08012fa0   0x08012fa0   0x00000070   Code   RO          779    .text.vision_set_target_armor_color  vision_task.o
-    0x08013010   0x08013010   0x00000068   Code   RO          781    .text.vision_set_target_armor_num  vision_task.o
-    0x08013078   0x08013078   0x000000e8   Code   RO          791    .text.vision_shoot_judge  vision_task.o
-    0x08013160   0x08013160   0x0000008a   Code   RO          771    .text.vision_task   vision_task.o
+    0x08012fa0   0x08012fa0   0x00000070   Code   RO          714    .text.vision_set_target_armor_color  vision_task.o
+    0x08013010   0x08013010   0x00000068   Code   RO          716    .text.vision_set_target_armor_num  vision_task.o
+    0x08013078   0x08013078   0x000000e8   Code   RO          726    .text.vision_shoot_judge  vision_task.o
+    0x08013160   0x08013160   0x0000008a   Code   RO          706    .text.vision_task   vision_task.o
     0x080131ea   0x080131ea   0x00000002   PAD
-    0x080131ec   0x080131ec   0x000000c4   Code   RO          775    .text.vision_task_feedback_update  vision_task.o
-    0x080132b0   0x080132b0   0x000000bc   Code   RO          773    .text.vision_task_init  vision_task.o
+    0x080131ec   0x080131ec   0x000000c4   Code   RO          710    .text.vision_task_feedback_update  vision_task.o
+    0x080132b0   0x080132b0   0x000000bc   Code   RO          708    .text.vision_task_init  vision_task.o
     0x0801336c   0x0801336c   0x0000012e   Code   RO         3721    .text.xPortStartScheduler  port.o
     0x0801349a   0x0801349a   0x00000002   PAD
     0x0801349c   0x0801349c   0x0000002e   Code   RO         3737    .text.xPortSysTickHandler  port.o
@@ -10345,7 +10345,7 @@ Memory Map of the image
     0x080190a0   0x080190a0   0x000000cc   Data   RO         4640    .constdata          m_wm.l(rred.o)
     0x0801916c   0x0801916c   0x00000004   PAD
     0x08019170   0x08019170   0x00000028   Data   RO         4644    .constdata          m_wm.l(sin_i.o)
-    0x08019198   0x08019198   0x0000000c   Data   RO          870    .rodata..L__const.INS_Task.gravity  ins_task.o
+    0x08019198   0x08019198   0x0000000c   Data   RO          805    .rodata..L__const.INS_Task.gravity  ins_task.o
     0x080191a4   0x080191a4   0x0000001c   Data   RO           49    .rodata..L__const.MX_FREERTOS_Init.os_thread_def_ChassisTask  freertos.o
     0x080191c0   0x080191c0   0x0000001c   Data   RO           51    .rodata..L__const.MX_FREERTOS_Init.os_thread_def_DETECT  freertos.o
     0x080191dc   0x080191dc   0x0000001c   Data   RO           55    .rodata..L__const.MX_FREERTOS_Init.os_thread_def_INSTask  freertos.o
@@ -10357,21 +10357,21 @@ Memory Map of the image
     0x08019284   0x08019284   0x00000060   Data   RO          477    .rodata..L__const.detect_init.set_item  detect_task.o
     0x080192e4   0x080192e4   0x00000010   Data   RO          435    .rodata.AHBPrescTable  system_stm32f4xx.o
     0x080192f4   0x080192f4   0x00000008   Data   RO          436    .rodata.APBPrescTable  system_stm32f4xx.o
-    0x080192fc   0x080192fc   0x00000100   Data   RO          913    .rodata.CRC8_table  crc8_crc16.o
-    0x080193fc   0x080193fc   0x00000090   Data   RO         1066    .rodata.IMU_QuaternionEKF_F  quaternionekf.o
-    0x0801948c   0x0801948c   0x0000000c   Data   RO          761    .rodata.Shoot_Feedback_Update.fliter_num  shoot_task.o
+    0x080192fc   0x080192fc   0x00000100   Data   RO          848    .rodata.CRC8_table  crc8_crc16.o
+    0x080193fc   0x080193fc   0x00000090   Data   RO         1001    .rodata.IMU_QuaternionEKF_F  quaternionekf.o
+    0x0801948c   0x0801948c   0x0000000c   Data   RO          696    .rodata.Shoot_Feedback_Update.fliter_num  shoot_task.o
     0x08019498   0x08019498   0x00000008   Data   RO         2016    .rodata.cst8        stm32f4xx_hal_dma.o
     0x080194a0   0x080194a0   0x00000004   Data   RO          569    .rodata.gimbal_init.gimbal_pitch_auto_scan_order_filter  gimbal_task.o
     0x080194a4   0x080194a4   0x00000004   Data   RO          568    .rodata.gimbal_init.gimbal_yaw_auto_scan_order_filter  gimbal_task.o
-    0x080194a8   0x080194a8   0x0000000c   Data   RO          754    .rodata.shoot_init.Trigger_speed_pid  shoot_task.o
-    0x080194b4   0x080194b4   0x00000004   Data   RO          755    .rodata.shoot_init.fric_1_order_filter  shoot_task.o
-    0x080194b8   0x080194b8   0x00000004   Data   RO          756    .rodata.shoot_init.fric_2_order_filter  shoot_task.o
+    0x080194a8   0x080194a8   0x0000000c   Data   RO          689    .rodata.shoot_init.Trigger_speed_pid  shoot_task.o
+    0x080194b4   0x080194b4   0x00000004   Data   RO          690    .rodata.shoot_init.fric_1_order_filter  shoot_task.o
+    0x080194b8   0x080194b8   0x00000004   Data   RO          691    .rodata.shoot_init.fric_2_order_filter  shoot_task.o
     0x080194bc   0x080194bc   0x0000003f   Data   RO           48    .rodata.str1.1      freertos.o
     0x080194fb   0x080194fb   0x00000001   PAD
-    0x080194fc   0x080194fc   0x00000200   Data   RO          915    .rodata.wCRC_table  crc8_crc16.o
-    0x080196fc   0x080196fc   0x0000000c   Data   RO          861    .rodata.xb          ins_task.o
-    0x08019708   0x08019708   0x0000000c   Data   RO          862    .rodata.yb          ins_task.o
-    0x08019714   0x08019714   0x0000000c   Data   RO          863    .rodata.zb          ins_task.o
+    0x080194fc   0x080194fc   0x00000200   Data   RO          850    .rodata.wCRC_table  crc8_crc16.o
+    0x080196fc   0x080196fc   0x0000000c   Data   RO          796    .rodata.xb          ins_task.o
+    0x08019708   0x08019708   0x0000000c   Data   RO          797    .rodata.yb          ins_task.o
+    0x08019714   0x08019714   0x0000000c   Data   RO          798    .rodata.zb          ins_task.o
     0x08019720   0x08019720   0x00000020   Data   RO         4864    Region$$Table       anon$$obj.o
 
 
@@ -10379,96 +10379,96 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x08019740   0x00000004   Data   RW          941    .data.BMI088_ACCEL_SEN  bmi088driver.o
-    0x20000004   0x08019744   0x00000004   Data   RW          942    .data.BMI088_GYRO_SEN  bmi088driver.o
-    0x20000008   0x08019748   0x00000002   Data   RW          914    .data.CRC16_INIT    crc8_crc16.o
-    0x2000000a   0x0801974a   0x00000002   Data   RW          956    .data.Calibrate_MPU_Offset.CaliTimes  bmi088driver.o
-    0x2000000c   0x0801974c   0x00000090   Data   RW         1067    .data.IMU_QuaternionEKF_P  quaternionekf.o
-    0x2000009c   0x080197dc   0x00000004   Data   RW         1266    .data.PID_Calc.M    pid.o
-    0x200000a0   0x080197e0   0x00000004   Data   RW         1267    .data.PID_Calc.a    pid.o
-    0x200000a4   0x080197e4   0x0000001c   Data   RW          717    .data.RGB_flow_color  led_flow_task.o
-    0x200000c0   0x08019800   0x00000004   Data   RW          866    .data.RefTemp       ins_task.o
+    0x20000000   0x08019740   0x00000004   Data   RW          876    .data.BMI088_ACCEL_SEN  bmi088driver.o
+    0x20000004   0x08019744   0x00000004   Data   RW          877    .data.BMI088_GYRO_SEN  bmi088driver.o
+    0x20000008   0x08019748   0x00000002   Data   RW          849    .data.CRC16_INIT    crc8_crc16.o
+    0x2000000a   0x0801974a   0x00000002   Data   RW          891    .data.Calibrate_MPU_Offset.CaliTimes  bmi088driver.o
+    0x2000000c   0x0801974c   0x00000090   Data   RW         1002    .data.IMU_QuaternionEKF_P  quaternionekf.o
+    0x2000009c   0x080197dc   0x00000004   Data   RW         1201    .data.PID_Calc.M    pid.o
+    0x200000a0   0x080197e0   0x00000004   Data   RW         1202    .data.PID_Calc.a    pid.o
+    0x200000a4   0x080197e4   0x0000001c   Data   RW          652    .data.RGB_flow_color  led_flow_task.o
+    0x200000c0   0x08019800   0x00000004   Data   RW          801    .data.RefTemp       ins_task.o
     0x200000c4   0x08019804   0x00000004   Data   RW          434    .data.SystemCoreClock  system_stm32f4xx.o
-    0x200000c8   0x08019808   0x00000001   Data   RW          943    .data.caliOffset    bmi088driver.o
-    0x200000c9   0x08019809   0x00000001   Data   RW          750    .data.fric_motor_mode  shoot_task.o
-    0x200000ca   0x0801980a   0x00000001   Data   RW          748    .data.shoot_control_mode  shoot_task.o
-    0x200000cb   0x0801980b   0x00000001   Data   RW          749    .data.shoot_init_state  shoot_task.o
-    0x200000cc   0x0801980c   0x00000001   Data   RW          763    .data.shoot_set_control_mode.last_shoot_control_mode  shoot_task.o
-    0x200000cd   0x0801980d   0x00000001   Data   RW          751    .data.trigger_motor_mode  shoot_task.o
+    0x200000c8   0x08019808   0x00000001   Data   RW          878    .data.caliOffset    bmi088driver.o
+    0x200000c9   0x08019809   0x00000001   Data   RW          685    .data.fric_motor_mode  shoot_task.o
+    0x200000ca   0x0801980a   0x00000001   Data   RW          683    .data.shoot_control_mode  shoot_task.o
+    0x200000cb   0x0801980b   0x00000001   Data   RW          684    .data.shoot_init_state  shoot_task.o
+    0x200000cc   0x0801980c   0x00000001   Data   RW          698    .data.shoot_set_control_mode.last_shoot_control_mode  shoot_task.o
+    0x200000cd   0x0801980d   0x00000001   Data   RW          686    .data.trigger_motor_mode  shoot_task.o
     0x200000ce   0x0801980e   0x00000001   Data   RW         2188    .data.uwTickFreq    stm32f4xx_hal.o
     0x200000cf   0x0801980f   0x00000001   PAD
     0x200000d0   0x08019810   0x00000004   Data   RW         2187    .data.uwTickPrio    stm32f4xx_hal.o
     0x200000d4   0x08019814   0x00000004   Data   RW         3743    .data.uxCriticalNesting  port.o
-    0x200000d8   0x08019818   0x00000012   Data   RW          949    .data.write_BMI088_accel_reg_data_error  bmi088driver.o
-    0x200000ea   0x0801982a   0x00000012   Data   RW          950    .data.write_BMI088_gyro_reg_data_error  bmi088driver.o
+    0x200000d8   0x08019818   0x00000012   Data   RW          884    .data.write_BMI088_accel_reg_data_error  bmi088driver.o
+    0x200000ea   0x0801982a   0x00000012   Data   RW          885    .data.write_BMI088_gyro_reg_data_error  bmi088driver.o
     0x200000fc   0x0801983c   0x00000004   PAD
     0x20000100        -       0x00000060   Zero   RW         4651    .bss                c_w.l(libspace.o)
-    0x20000160        -       0x00000034   Zero   RW          946    .bss.BMI088         bmi088driver.o
-    0x20000194        -       0x00000002   Zero   RW          952    .bss.BMI088_Read.bmi088_raw_temp  bmi088driver.o
-    0x20000196        -       0x00000008   Zero   RW          951    .bss.BMI088_Read.buf  bmi088driver.o
+    0x20000160        -       0x00000034   Zero   RW          881    .bss.BMI088         bmi088driver.o
+    0x20000194        -       0x00000002   Zero   RW          887    .bss.BMI088_Read.bmi088_raw_temp  bmi088driver.o
+    0x20000196        -       0x00000008   Zero   RW          886    .bss.BMI088_Read.buf  bmi088driver.o
     0x2000019e   0x0801983c   0x00000002   PAD
-    0x200001a0        -       0x00000004   Zero   RW          974    .bss.BMI088_SPI     bmi088middleware.o
+    0x200001a0        -       0x00000004   Zero   RW          909    .bss.BMI088_SPI     bmi088middleware.o
     0x200001a4        -       0x00000004   Zero   RW         1382    .bss.CPU_FREQ_Hz    bsp_dwt.o
     0x200001a8        -       0x00000004   Zero   RW         1383    .bss.CPU_FREQ_Hz_ms  bsp_dwt.o
     0x200001ac        -       0x00000004   Zero   RW         1384    .bss.CPU_FREQ_Hz_us  bsp_dwt.o
     0x200001b0        -       0x00000008   Zero   RW         1389    .bss.CYCCNT64       bsp_dwt.o
     0x200001b8        -       0x00000004   Zero   RW         1391    .bss.CYCCNT_LAST    bsp_dwt.o
     0x200001bc        -       0x00000004   Zero   RW         1385    .bss.CYCCNT_RountCount  bsp_dwt.o
-    0x200001c0        -       0x00000004   Zero   RW          955    .bss.Calibrate_MPU_Offset.startTime  bmi088driver.o
+    0x200001c0        -       0x00000004   Zero   RW          890    .bss.Calibrate_MPU_Offset.startTime  bmi088driver.o
     0x200001c4   0x0801983c   0x00000004   PAD
     0x200001c8        -       0x00000008   Zero   RW         1386    .bss.DWT_SysTimeUpdate.CNT_TEMP1  bsp_dwt.o
     0x200001d0        -       0x00000008   Zero   RW         1387    .bss.DWT_SysTimeUpdate.CNT_TEMP2  bsp_dwt.o
     0x200001d8        -       0x00000008   Zero   RW         1388    .bss.DWT_SysTimeUpdate.CNT_TEMP3  bsp_dwt.o
-    0x200001e0        -       0x00000001   Zero   RW          696    .bss.HAL_CAN_RxFifo0MsgPendingCallback.i  can_receive.o
+    0x200001e0        -       0x00000001   Zero   RW         1278    .bss.HAL_CAN_RxFifo0MsgPendingCallback.i  can_receive.o
     0x200001e1   0x0801983c   0x00000003   PAD
     0x200001e4        -       0x00000004   Zero   RW           99    .bss.HAL_RCC_CAN1_CLK_ENABLED  can.o
-    0x200001e8        -       0x0000001c   Zero   RW          867    .bss.IMU_Param      ins_task.o
-    0x20000204        -       0x00000004   Zero   RW          876    .bss.IMU_Param_Correction.c_11  ins_task.o
-    0x20000208        -       0x00000004   Zero   RW          877    .bss.IMU_Param_Correction.c_12  ins_task.o
-    0x2000020c        -       0x00000004   Zero   RW          878    .bss.IMU_Param_Correction.c_13  ins_task.o
-    0x20000210        -       0x00000004   Zero   RW          879    .bss.IMU_Param_Correction.c_21  ins_task.o
-    0x20000214        -       0x00000004   Zero   RW          880    .bss.IMU_Param_Correction.c_22  ins_task.o
-    0x20000218        -       0x00000004   Zero   RW          881    .bss.IMU_Param_Correction.c_23  ins_task.o
-    0x2000021c        -       0x00000004   Zero   RW          882    .bss.IMU_Param_Correction.c_31  ins_task.o
-    0x20000220        -       0x00000004   Zero   RW          883    .bss.IMU_Param_Correction.c_32  ins_task.o
-    0x20000224        -       0x00000004   Zero   RW          884    .bss.IMU_Param_Correction.c_33  ins_task.o
-    0x20000228        -       0x00000004   Zero   RW          874    .bss.IMU_Param_Correction.lastPitchOffset  ins_task.o
-    0x2000022c        -       0x00000004   Zero   RW          875    .bss.IMU_Param_Correction.lastRollOffset  ins_task.o
-    0x20000230        -       0x00000004   Zero   RW          873    .bss.IMU_Param_Correction.lastYawOffset  ins_task.o
-    0x20000234        -       0x00000004   Zero   RW         1075    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q0  quaternionekf.o
-    0x20000238        -       0x00000004   Zero   RW         1076    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q1  quaternionekf.o
-    0x2000023c        -       0x00000004   Zero   RW         1077    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q2  quaternionekf.o
-    0x20000240        -       0x00000004   Zero   RW         1078    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q3  quaternionekf.o
-    0x20000244        -       0x00000004   Zero   RW         1079    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.qInvNorm  quaternionekf.o
-    0x20000248        -       0x00000048   Zero   RW         1074    .bss.IMU_QuaternionEKF_H  quaternionekf.o
-    0x20000290        -       0x00000048   Zero   RW         1073    .bss.IMU_QuaternionEKF_K  quaternionekf.o
-    0x200002d8        -       0x00000004   Zero   RW         1080    .bss.IMU_QuaternionEKF_SetH.doubleq0  quaternionekf.o
-    0x200002dc        -       0x00000004   Zero   RW         1081    .bss.IMU_QuaternionEKF_SetH.doubleq1  quaternionekf.o
-    0x200002e0        -       0x00000004   Zero   RW         1082    .bss.IMU_QuaternionEKF_SetH.doubleq2  quaternionekf.o
-    0x200002e4        -       0x00000004   Zero   RW         1083    .bss.IMU_QuaternionEKF_SetH.doubleq3  quaternionekf.o
-    0x200002e8        -       0x00000004   Zero   RW         1072    .bss.IMU_QuaternionEKF_Update.accelInvNorm  quaternionekf.o
-    0x200002ec        -       0x00000004   Zero   RW         1069    .bss.IMU_QuaternionEKF_Update.halfgxdt  quaternionekf.o
-    0x200002f0        -       0x00000004   Zero   RW         1070    .bss.IMU_QuaternionEKF_Update.halfgydt  quaternionekf.o
-    0x200002f4        -       0x00000004   Zero   RW         1071    .bss.IMU_QuaternionEKF_Update.halfgzdt  quaternionekf.o
-    0x200002f8        -       0x00000004   Zero   RW         1084    .bss.IMU_QuaternionEKF_xhatUpdate.q0  quaternionekf.o
-    0x200002fc        -       0x00000004   Zero   RW         1085    .bss.IMU_QuaternionEKF_xhatUpdate.q1  quaternionekf.o
-    0x20000300        -       0x00000004   Zero   RW         1086    .bss.IMU_QuaternionEKF_xhatUpdate.q2  quaternionekf.o
-    0x20000304        -       0x00000004   Zero   RW         1087    .bss.IMU_QuaternionEKF_xhatUpdate.q3  quaternionekf.o
-    0x20000308        -       0x00000080   Zero   RW          868    .bss.INS            ins_task.o
+    0x200001e8        -       0x0000001c   Zero   RW          802    .bss.IMU_Param      ins_task.o
+    0x20000204        -       0x00000004   Zero   RW          811    .bss.IMU_Param_Correction.c_11  ins_task.o
+    0x20000208        -       0x00000004   Zero   RW          812    .bss.IMU_Param_Correction.c_12  ins_task.o
+    0x2000020c        -       0x00000004   Zero   RW          813    .bss.IMU_Param_Correction.c_13  ins_task.o
+    0x20000210        -       0x00000004   Zero   RW          814    .bss.IMU_Param_Correction.c_21  ins_task.o
+    0x20000214        -       0x00000004   Zero   RW          815    .bss.IMU_Param_Correction.c_22  ins_task.o
+    0x20000218        -       0x00000004   Zero   RW          816    .bss.IMU_Param_Correction.c_23  ins_task.o
+    0x2000021c        -       0x00000004   Zero   RW          817    .bss.IMU_Param_Correction.c_31  ins_task.o
+    0x20000220        -       0x00000004   Zero   RW          818    .bss.IMU_Param_Correction.c_32  ins_task.o
+    0x20000224        -       0x00000004   Zero   RW          819    .bss.IMU_Param_Correction.c_33  ins_task.o
+    0x20000228        -       0x00000004   Zero   RW          809    .bss.IMU_Param_Correction.lastPitchOffset  ins_task.o
+    0x2000022c        -       0x00000004   Zero   RW          810    .bss.IMU_Param_Correction.lastRollOffset  ins_task.o
+    0x20000230        -       0x00000004   Zero   RW          808    .bss.IMU_Param_Correction.lastYawOffset  ins_task.o
+    0x20000234        -       0x00000004   Zero   RW         1010    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q0  quaternionekf.o
+    0x20000238        -       0x00000004   Zero   RW         1011    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q1  quaternionekf.o
+    0x2000023c        -       0x00000004   Zero   RW         1012    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q2  quaternionekf.o
+    0x20000240        -       0x00000004   Zero   RW         1013    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.q3  quaternionekf.o
+    0x20000244        -       0x00000004   Zero   RW         1014    .bss.IMU_QuaternionEKF_F_Linearization_P_Fading.qInvNorm  quaternionekf.o
+    0x20000248        -       0x00000048   Zero   RW         1009    .bss.IMU_QuaternionEKF_H  quaternionekf.o
+    0x20000290        -       0x00000048   Zero   RW         1008    .bss.IMU_QuaternionEKF_K  quaternionekf.o
+    0x200002d8        -       0x00000004   Zero   RW         1015    .bss.IMU_QuaternionEKF_SetH.doubleq0  quaternionekf.o
+    0x200002dc        -       0x00000004   Zero   RW         1016    .bss.IMU_QuaternionEKF_SetH.doubleq1  quaternionekf.o
+    0x200002e0        -       0x00000004   Zero   RW         1017    .bss.IMU_QuaternionEKF_SetH.doubleq2  quaternionekf.o
+    0x200002e4        -       0x00000004   Zero   RW         1018    .bss.IMU_QuaternionEKF_SetH.doubleq3  quaternionekf.o
+    0x200002e8        -       0x00000004   Zero   RW         1007    .bss.IMU_QuaternionEKF_Update.accelInvNorm  quaternionekf.o
+    0x200002ec        -       0x00000004   Zero   RW         1004    .bss.IMU_QuaternionEKF_Update.halfgxdt  quaternionekf.o
+    0x200002f0        -       0x00000004   Zero   RW         1005    .bss.IMU_QuaternionEKF_Update.halfgydt  quaternionekf.o
+    0x200002f4        -       0x00000004   Zero   RW         1006    .bss.IMU_QuaternionEKF_Update.halfgzdt  quaternionekf.o
+    0x200002f8        -       0x00000004   Zero   RW         1019    .bss.IMU_QuaternionEKF_xhatUpdate.q0  quaternionekf.o
+    0x200002fc        -       0x00000004   Zero   RW         1020    .bss.IMU_QuaternionEKF_xhatUpdate.q1  quaternionekf.o
+    0x20000300        -       0x00000004   Zero   RW         1021    .bss.IMU_QuaternionEKF_xhatUpdate.q2  quaternionekf.o
+    0x20000304        -       0x00000004   Zero   RW         1022    .bss.IMU_QuaternionEKF_xhatUpdate.q3  quaternionekf.o
+    0x20000308        -       0x00000080   Zero   RW          803    .bss.INS            ins_task.o
     0x20000388        -       0x00000004   Zero   RW           56    .bss.INSTaskHandle  freertos.o
-    0x2000038c        -       0x00000004   Zero   RW          864    .bss.INS_DWT_Count  ins_task.o
-    0x20000390        -       0x00000004   Zero   RW          869    .bss.INS_Task.count  ins_task.o
-    0x20000394        -       0x00000002   Zero   RW         1179    .bss.OLED_com_reset.time  oled.o
+    0x2000038c        -       0x00000004   Zero   RW          799    .bss.INS_DWT_Count  ins_task.o
+    0x20000390        -       0x00000004   Zero   RW          804    .bss.INS_Task.count  ins_task.o
+    0x20000394        -       0x00000002   Zero   RW         1114    .bss.OLED_com_reset.time  oled.o
     0x20000396   0x0801983c   0x00000002   PAD
-    0x20000398        -       0x00000004   Zero   RW         1138    .bss.OLS_Derivative.temp  user_lib.o
+    0x20000398        -       0x00000004   Zero   RW         1073    .bss.OLS_Derivative.temp  user_lib.o
     0x2000039c   0x0801983c   0x00000004   PAD
-    0x200003a0        -       0x000001e0   Zero   RW         1068    .bss.QEKF_INS       quaternionekf.o
-    0x20000580        -       0x00000004   Zero   RW          758    .bss.Shoot_Feedback_Update.speed_fliter_1  shoot_task.o
-    0x20000584        -       0x00000004   Zero   RW          759    .bss.Shoot_Feedback_Update.speed_fliter_2  shoot_task.o
-    0x20000588        -       0x00000004   Zero   RW          760    .bss.Shoot_Feedback_Update.speed_fliter_3  shoot_task.o
+    0x200003a0        -       0x000001e0   Zero   RW         1003    .bss.QEKF_INS       quaternionekf.o
+    0x20000580        -       0x00000004   Zero   RW          693    .bss.Shoot_Feedback_Update.speed_fliter_1  shoot_task.o
+    0x20000584        -       0x00000004   Zero   RW          694    .bss.Shoot_Feedback_Update.speed_fliter_2  shoot_task.o
+    0x20000588        -       0x00000004   Zero   RW          695    .bss.Shoot_Feedback_Update.speed_fliter_3  shoot_task.o
     0x2000058c        -       0x00000008   Zero   RW         1390    .bss.SysTime        bsp_dwt.o
-    0x20000594        -       0x000000aa   Zero   RW          860    .bss.TempCtrl       ins_task.o
-    0x2000063e        -       0x00000002   Zero   RW          668    .bss.USART3_IRQHandler.this_time_rx_len  remote_control.o
+    0x20000594        -       0x000000aa   Zero   RW          795    .bss.TempCtrl       ins_task.o
+    0x2000063e        -       0x00000002   Zero   RW         1250    .bss.USART3_IRQHandler.this_time_rx_len  remote_control.o
     0x20000640        -       0x00000002   Zero   RW          641    .bss.USART6_IRQHandler.this_time_rx_len  referee_usart_task.o
     0x20000642        -       0x00000001   Zero   RW         3812    .bss.USBD_SetConfig.cfgidx  usbd_ctlreq.o
     0x20000643        -       0x00000001   Zero   RW         1479    .bss.aRGB_led_show.alpha  bsp_led.o
@@ -10478,7 +10478,7 @@ Memory Map of the image
     0x2000064a        -       0x00000001   Zero   RW          616    .bss.buff_musk_t    referee.o
     0x2000064b   0x0801983c   0x00000001   PAD
     0x2000064c        -       0x00000006   Zero   RW          620    .bss.bullet_remaining_t  referee.o
-    0x20000652        -       0x00000002   Zero   RW          944    .bss.caliCount      bmi088driver.o
+    0x20000652        -       0x00000002   Zero   RW          879    .bss.caliCount      bmi088driver.o
     0x20000654        -       0x00000004   Zero   RW           50    .bss.chassisTaskHandle  freertos.o
     0x20000658        -       0x00000004   Zero   RW          455    .bss.chassis_high_water  chassis_task.o
     0x2000065c        -       0x00000018   Zero   RW          454    .bss.chassis_move   chassis_task.o
@@ -10487,21 +10487,21 @@ Memory Map of the image
     0x20000679   0x0801983c   0x00000003   PAD
     0x2000067c        -       0x00000004   Zero   RW          473    .bss.detect_task.system_time  detect_task.o
     0x20000680        -       0x00000004   Zero   RW          476    .bss.detect_task_stack  detect_task.o
-    0x20000684        -       0x00000004   Zero   RW          871    .bss.dt             ins_task.o
-    0x20000688        -       0x00000001   Zero   RW          945    .bss.error          bmi088driver.o
+    0x20000684        -       0x00000004   Zero   RW          806    .bss.dt             ins_task.o
+    0x20000688        -       0x00000001   Zero   RW          880    .bss.error          bmi088driver.o
     0x20000689   0x0801983c   0x00000003   PAD
     0x2000068c        -       0x00000264   Zero   RW          475    .bss.error_list     detect_task.o
-    0x200008f0        -       0x00000004   Zero   RW         1242    .bss.f_Integral_Limit.temp_Iout  controller.o
-    0x200008f4        -       0x00000004   Zero   RW         1241    .bss.f_Integral_Limit.temp_Output  controller.o
+    0x200008f0        -       0x00000004   Zero   RW         1177    .bss.f_Integral_Limit.temp_Iout  controller.o
+    0x200008f4        -       0x00000004   Zero   RW         1176    .bss.f_Integral_Limit.temp_Output  controller.o
     0x200008f8        -       0x00000004   Zero   RW         1356    .bss.fac_ms         bsp_delay.o
     0x200008fc        -       0x00000001   Zero   RW         1355    .bss.fac_us         bsp_delay.o
     0x200008fd   0x0801983c   0x00000003   PAD
     0x20000900        -       0x00000004   Zero   RW          609    .bss.field_event    referee.o
-    0x20000904        -       0x00000004   Zero   RW         1136    .bss.fp32_rounding.decimal  user_lib.o
-    0x20000908        -       0x00000004   Zero   RW         1135    .bss.fp32_rounding.integer  user_lib.o
-    0x2000090c        -       0x00000004   Zero   RW          757    .bss.fric           shoot_task.o
-    0x20000910        -       0x000000a4   Zero   RW          752    .bss.fric_move      shoot_task.o
-    0x200009b4        -       0x00000004   Zero   RW          954    .bss.gNormDiff      bmi088driver.o
+    0x20000904        -       0x00000004   Zero   RW         1071    .bss.fp32_rounding.decimal  user_lib.o
+    0x20000908        -       0x00000004   Zero   RW         1070    .bss.fp32_rounding.integer  user_lib.o
+    0x2000090c        -       0x00000004   Zero   RW          692    .bss.fric           shoot_task.o
+    0x20000910        -       0x000000a4   Zero   RW          687    .bss.fric_move      shoot_task.o
+    0x200009b4        -       0x00000004   Zero   RW          889    .bss.gNormDiff      bmi088driver.o
     0x200009b8        -       0x00000001   Zero   RW          607    .bss.game_result    referee.o
     0x200009b9   0x0801983c   0x00000001   PAD
     0x200009ba        -       0x00000020   Zero   RW          608    .bss.game_robot_HP_t  referee.o
@@ -10521,16 +10521,16 @@ Memory Map of the image
     0x20000a14        -       0x00000004   Zero   RW          517    .bss.gimbal_behavour_set.init_time  gimbal_behaviour.o
     0x20000a18        -       0x00000001   Zero   RW          519    .bss.gimbal_behavour_set.last_gimbal_behaviour  gimbal_behaviour.o
     0x20000a19   0x0801983c   0x00000003   PAD
-    0x20000a1c        -       0x00000018   Zero   RW          706    .bss.gimbal_callx_message  can_receive.o
-    0x20000a34        -       0x00000008   Zero   RW          707    .bss.gimbal_can_call_data  can_receive.o
-    0x20000a3c        -       0x00000008   Zero   RW          703    .bss.gimbal_can_send_data  can_receive.o
+    0x20000a1c        -       0x00000018   Zero   RW         1288    .bss.gimbal_callx_message  can_receive.o
+    0x20000a34        -       0x00000008   Zero   RW         1289    .bss.gimbal_can_call_data  can_receive.o
+    0x20000a3c        -       0x00000008   Zero   RW         1285    .bss.gimbal_can_send_data  can_receive.o
     0x20000a44        -       0x0000012c   Zero   RW          566    .bss.gimbal_control  gimbal_task.o
     0x20000b70        -       0x00000004   Zero   RW          567    .bss.gimbal_high_water  gimbal_task.o
     0x20000b74        -       0x00000004   Zero   RW          522    .bss.gimbal_init_control.yaw_error  gimbal_behaviour.o
     0x20000b78        -       0x00000001   Zero   RW          515    .bss.gimbal_init_finish_flag  gimbal_behaviour.o
     0x20000b79   0x0801983c   0x00000003   PAD
-    0x20000b7c        -       0x00000018   Zero   RW          702    .bss.gimbal_tx_message  can_receive.o
-    0x20000b94        -       0x0000000c   Zero   RW          953    .bss.gyroDiff       bmi088driver.o
+    0x20000b7c        -       0x00000018   Zero   RW         1284    .bss.gimbal_tx_message  can_receive.o
+    0x20000b94        -       0x0000000c   Zero   RW          888    .bss.gyroDiff       bmi088driver.o
     0x20000ba0        -       0x0000029c   Zero   RW          255    .bss.hUsbDeviceFS   usb_device.o
     0x20000e3c        -       0x00000048   Zero   RW           80    .bss.hadc1          adc.o
     0x20000e84        -       0x00000048   Zero   RW           81    .bss.hadc3          adc.o
@@ -10562,12 +10562,12 @@ Memory Map of the image
     0x20001988        -       0x00000040   Zero   RW          238    .bss.huart1         usart.o
     0x200019c8        -       0x00000040   Zero   RW          239    .bss.huart3         usart.o
     0x20001a08        -       0x00000040   Zero   RW          240    .bss.huart6         usart.o
-    0x20001a48        -       0x00000001   Zero   RW          747    .bss.last_shoot_mode  shoot_task.o
+    0x20001a48        -       0x00000001   Zero   RW          682    .bss.last_shoot_mode  shoot_task.o
     0x20001a49   0x0801983c   0x00000003   PAD
     0x20001a4c        -       0x00000004   Zero   RW           58    .bss.led_RGB_flow_handle  freertos.o
-    0x20001a50        -       0x00000046   Zero   RW          697    .bss.motor_chassis  can_receive.o
-    0x20001a96        -       0x00000014   Zero   RW          699    .bss.motor_shoot    can_receive.o
-    0x20001aaa        -       0x0000000a   Zero   RW          698    .bss.motor_tri      can_receive.o
+    0x20001a50        -       0x00000046   Zero   RW         1279    .bss.motor_chassis  can_receive.o
+    0x20001a96        -       0x00000014   Zero   RW         1281    .bss.motor_shoot    can_receive.o
+    0x20001aaa        -       0x0000000a   Zero   RW         1280    .bss.motor_tri      can_receive.o
     0x20001ab4        -       0x00000010   Zero   RW          614    .bss.power_heat_data_t  referee.o
     0x20001ac4        -       0x000000a0   Zero   RW         3563    .bss.prvCheckForValidListAndQueue.ucStaticTimerQueueStorage  timers.o
     0x20001b64        -       0x00000048   Zero   RW         3562    .bss.prvCheckForValidListAndQueue.xStaticTimerQueue  timers.o
@@ -10579,7 +10579,7 @@ Memory Map of the image
     0x20001bc0        -       0x00000004   Zero   RW         3505    .bss.pxOverflowDelayedTaskList  tasks.o
     0x20001bc4        -       0x00000004   Zero   RW         3558    .bss.pxOverflowTimerList  timers.o
     0x20001bc8        -       0x0000008c   Zero   RW         3495    .bss.pxReadyTasksLists  tasks.o
-    0x20001c54        -       0x00000016   Zero   RW          667    .bss.rc_ctrl        remote_control.o
+    0x20001c54        -       0x00000016   Zero   RW         1249    .bss.rc_ctrl        remote_control.o
     0x20001c6a   0x0801983c   0x00000002   PAD
     0x20001c6c        -       0x00000018   Zero   RW          637    .bss.referee_fifo   referee_usart_task.o
     0x20001c84        -       0x00000400   Zero   RW          638    .bss.referee_fifo_buf  referee_usart_task.o
@@ -10589,32 +10589,32 @@ Memory Map of the image
     0x20002117   0x0801983c   0x00000001   PAD
     0x20002118        -       0x00000004   Zero   RW           60    .bss.referee_usart_task_handle  freertos.o
     0x2000211c        -       0x00000002   Zero   RW          612    .bss.referee_warning_t  referee.o
-    0x2000211e        -       0x00000001   Zero   RW          947    .bss.res            bmi088driver.o
+    0x2000211e        -       0x00000001   Zero   RW          882    .bss.res            bmi088driver.o
     0x2000211f   0x0801983c   0x00000001   PAD
     0x20002120        -       0x00000004   Zero   RW          623    .bss.rfid_status_t  referee.o
     0x20002124        -       0x0000000f   Zero   RW          622    .bss.robot_command_t  referee.o
     0x20002133        -       0x00000001   Zero   RW          617    .bss.robot_energy_t  referee.o
     0x20002134        -       0x00000001   Zero   RW          618    .bss.robot_hurt_t   referee.o
     0x20002135        -       0x0000001b   Zero   RW          613    .bss.robot_state    referee.o
-    0x20002150        -       0x00000048   Zero   RW          666    .bss.sbus_rx_buf    remote_control.o
-    0x20002198        -       0x00000008   Zero   RW          701    .bss.shoot_can_send_data  can_receive.o
+    0x20002150        -       0x00000048   Zero   RW         1248    .bss.sbus_rx_buf    remote_control.o
+    0x20002198        -       0x00000008   Zero   RW         1283    .bss.shoot_can_send_data  can_receive.o
     0x200021a0        -       0x00000007   Zero   RW          619    .bss.shoot_data_t   referee.o
-    0x200021a7        -       0x00000001   Zero   RW          746    .bss.shoot_mode     shoot_task.o
-    0x200021a8        -       0x00000004   Zero   RW          762    .bss.shoot_set_control_mode.init_time  shoot_task.o
+    0x200021a7        -       0x00000001   Zero   RW          681    .bss.shoot_mode     shoot_task.o
+    0x200021a8        -       0x00000004   Zero   RW          697    .bss.shoot_set_control_mode.init_time  shoot_task.o
     0x200021ac        -       0x00000004   Zero   RW           62    .bss.shoot_task_handle  freertos.o
-    0x200021b0        -       0x00000018   Zero   RW          700    .bss.shoot_tx_message  can_receive.o
-    0x200021c8        -       0x00000002   Zero   RW         1044    .bss.sizeof_double  kalman_filter.o
-    0x200021ca        -       0x00000002   Zero   RW         1043    .bss.sizeof_float   kalman_filter.o
-    0x200021cc        -       0x00000010   Zero   RW         1287    .bss.stm32_DW_shoot_0  stm32.o
-    0x200021dc        -       0x00000010   Zero   RW         1289    .bss.stm32_DW_shoot_1  stm32.o
-    0x200021ec        -       0x00000044   Zero   RW         1286    .bss.stm32_U_shoot  stm32.o
-    0x20002230        -       0x0000000c   Zero   RW         1288    .bss.stm32_Y_shoot  stm32.o
+    0x200021b0        -       0x00000018   Zero   RW         1282    .bss.shoot_tx_message  can_receive.o
+    0x200021c8        -       0x00000002   Zero   RW          979    .bss.sizeof_double  kalman_filter.o
+    0x200021ca        -       0x00000002   Zero   RW          978    .bss.sizeof_float   kalman_filter.o
+    0x200021cc        -       0x00000010   Zero   RW         1222    .bss.stm32_DW_shoot_0  stm32.o
+    0x200021dc        -       0x00000010   Zero   RW         1224    .bss.stm32_DW_shoot_1  stm32.o
+    0x200021ec        -       0x00000044   Zero   RW         1221    .bss.stm32_U_shoot  stm32.o
+    0x20002230        -       0x0000000c   Zero   RW         1223    .bss.stm32_Y_shoot  stm32.o
     0x2000223c        -       0x0000000c   Zero   RW          621    .bss.student_interactive_data_t  referee.o
     0x20002248        -       0x00000004   Zero   RW          610    .bss.supply_projectile_action_t  referee.o
     0x2000224c        -       0x00000003   Zero   RW          611    .bss.supply_projectile_booking_t  referee.o
     0x2000224f   0x0801983c   0x00000001   PAD
-    0x20002250        -       0x00000004   Zero   RW          872    .bss.t              ins_task.o
-    0x20002254        -       0x000000b4   Zero   RW          753    .bss.trigger_motor  shoot_task.o
+    0x20002250        -       0x00000004   Zero   RW          807    .bss.t              ins_task.o
+    0x20002254        -       0x000000b4   Zero   RW          688    .bss.trigger_motor  shoot_task.o
     0x20002308        -       0x00006000   Zero   RW         3706    .bss.ucHeap         heap_4.o
     0x20008308        -       0x00000001   Zero   RW         3741    .bss.ucMaxSysCallPriority  port.o
     0x20008309   0x0801983c   0x00000003   PAD
@@ -10627,10 +10627,10 @@ Memory Map of the image
     0x20008720        -       0x00000004   Zero   RW         3502    .bss.uxSchedulerSuspended  tasks.o
     0x20008724        -       0x00000004   Zero   RW         3497    .bss.uxTaskNumber   tasks.o
     0x20008728        -       0x00000004   Zero   RW         3496    .bss.uxTopReadyPriority  tasks.o
-    0x2000872c        -       0x00000154   Zero   RW          831    .bss.vision_control  vision_task.o
-    0x20008880        -       0x00000048   Zero   RW          832    .bss.vision_receive  vision_task.o
+    0x2000872c        -       0x00000154   Zero   RW          766    .bss.vision_control  vision_task.o
+    0x20008880        -       0x00000048   Zero   RW          767    .bss.vision_receive  vision_task.o
     0x200088c8        -       0x00000004   Zero   RW           64    .bss.vision_task_handle  freertos.o
-    0x200088cc        -       0x00000001   Zero   RW          948    .bss.write_reg_num  bmi088driver.o
+    0x200088cc        -       0x00000001   Zero   RW          883    .bss.write_reg_num  bmi088driver.o
     0x200088cd   0x0801983c   0x00000003   PAD
     0x200088d0        -       0x00000014   Zero   RW         3560    .bss.xActiveTimerList1  timers.o
     0x200088e4        -       0x00000014   Zero   RW         3561    .bss.xActiveTimerList2  timers.o
@@ -10668,90 +10668,90 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-       450          0          0          0        144       5191   adc.o
-      3488         28          0         47         87       7778   bmi088driver.o
-       124          0          0          0          4       4071   bmi088middleware.o
-       100          0          0          0          0       1127   bsp_can.o
-        62          0          0          0          5       1593   bsp_delay.o
-       704          8          0          0         60       3423   bsp_dwt.o
-       310          0          0          0          0       5766   bsp_i2c.o
-       106          0          0          0          7        779   bsp_led.o
-       124         14          0          0          0       3423   bsp_pwm.o
-       160          0          0          0          0       1238   bsp_rc.o
-       400          0          0          0          0       1893   bsp_usart.o
-       544          0          0          0         84       6484   can.o
-      1212          0          0          0        197       6201   can_receive.o
-       528          8          0          0         28       4375   chassis_task.o
-       120          0          0          0          0      24839   cmsis_os.o
+       450          0          0          0        144       5192   adc.o
+      3488         28          0         47         87       7779   bmi088driver.o
+       124          0          0          0          4       4072   bmi088middleware.o
+       100          0          0          0          0       1128   bsp_can.o
+        62          0          0          0          5       1594   bsp_delay.o
+       704          8          0          0         60       3424   bsp_dwt.o
+       310          0          0          0          0       5767   bsp_i2c.o
+       106          0          0          0          7        780   bsp_led.o
+       124         14          0          0          0       3424   bsp_pwm.o
+       160          0          0          0          0       1239   bsp_rc.o
+       400          0          0          0          0       1894   bsp_usart.o
+       544          0          0          0         84       6485   can.o
+      1212          0          0          0        197       6227   can_receive.o
+       528          8          0          0         28       4421   chassis_task.o
+       120          0          0          0          0      24840   cmsis_os.o
       2660         12          0          0          8      11935   controller.o
-        98          0          0          0          8       2514   crc.o
-       464          0        768          2          0       2205   crc8_crc16.o
-      1526          4         96          0        621       3524   detect_task.o
-       224          0          0          0          0       3348   dma.o
-       424          0          0          0          0       9385   fifo.o
-       616          0        287          0       1736       3772   freertos.o
-      2688         68          0          0         19       9348   gimbal_behaviour.o
-      2838         84          8          0        316       9846   gimbal_task.o
-       670          0          0          0          0       4275   gpio.o
-       634          0          0          0      24597       3963   heap_4.o
-       800          0          0          0        348       5827   i2c.o
-      2848         52         48          4        390       7291   ins_task.o
-      3256          0          0          0          4       6887   kalman_filter.o
-       516          4          0         28          0       1364   led_flow_task.o
-       150          0          0          0          0       2245   list.o
-       390          0          0          0          0       3689   main.o
-        52          0          0          0          2       5558   oled.o
-      1432          0          0          8          0       6530   pid.o
-       802         16          0          4          5       4007   port.o
-      4674         64        144        144        692       8366   quaternionekf.o
-      1386          0          0          0         64      21933   queue.o
+        98          0          0          0          8       2515   crc.o
+       464          0        768          2          0       2189   crc8_crc16.o
+      1526          4         96          0        621       3525   detect_task.o
+       224          0          0          0          0       3349   dma.o
+       424          0          0          0          0       9386   fifo.o
+       616          0        287          0       1736       3773   freertos.o
+      2688         68          0          0         19       9394   gimbal_behaviour.o
+      2838         84          8          0        316       9892   gimbal_task.o
+       670          0          0          0          0       4276   gpio.o
+       634          0          0          0      24597       4000   heap_4.o
+       800          0          0          0        348       5828   i2c.o
+      2848         52         48          4        390       7292   ins_task.o
+      3256          0          0          0          4       6888   kalman_filter.o
+       516          4          0         28          0       1365   led_flow_task.o
+       150          0          0          0          0       2246   list.o
+       390          0          0          0          0       3690   main.o
+        52          0          0          0          2       5595   oled.o
+      1432          0          0          8          0       6531   pid.o
+       802         16          0          4          5       4008   port.o
+      4674         64        144        144        692       8367   quaternionekf.o
+      1386          0          0          0         64      21970   queue.o
       1088          0          0          0        173       6328   referee.o
-       846          6          0          0       2211       3473   referee_usart_task.o
-       662          0          0          0         96       3627   remote_control.o
-        98          0          0          0         16       2468   rng.o
-       102          0          0          0         32       2608   rtc.o
-      2492         32         32          5        366       8183   shoot_task.o
-       694          0          0          0        368       5410   spi.o
+       846          6          0          0       2211       3474   referee_usart_task.o
+       662          0          0          0         96       3663   remote_control.o
+        98          0          0          0         16       2469   rng.o
+       102          0          0          0         32       2609   rtc.o
+      2492         32         32          5        366       8229   shoot_task.o
+       694          0          0          0        368       5411   spi.o
         64         26        392          0      16384        872   startup_stm32f407xx.o
       1656         40          0          0        112       2455   stm32.o
-       212          0          0          5          4       7244   stm32f4xx_hal.o
-       596          0          0          0          0      10666   stm32f4xx_hal_adc.o
-      1636          6          0          0          0      13507   stm32f4xx_hal_can.o
-       194          0          0          0          0      10570   stm32f4xx_hal_cortex.o
-        38          0          0          0          0       3119   stm32f4xx_hal_crc.o
-       714          4          8          0          0       9706   stm32f4xx_hal_dma.o
-       458          0          0          0          0       5138   stm32f4xx_hal_gpio.o
-       392          0          0          0          0      43284   stm32f4xx_hal_i2c.o
-        88          0          0          0          0       3368   stm32f4xx_hal_msp.o
-      2164          0          0          0          0      14229   stm32f4xx_hal_pcd.o
-         2          0          0          0          0       4311   stm32f4xx_hal_pcd_ex.o
-      1290          0          0          0          0       7220   stm32f4xx_hal_rcc.o
-       326          0          0          0          0       4412   stm32f4xx_hal_rcc_ex.o
-        50          0          0          0          0       4620   stm32f4xx_hal_rng.o
-       214          0          0          0          0      13042   stm32f4xx_hal_rtc.o
-       790          0          0          0          0      22338   stm32f4xx_hal_spi.o
-      1452          4          0          0          0      47410   stm32f4xx_hal_tim.o
-       140          0          0          0          0      16700   stm32f4xx_hal_tim_ex.o
-       744          0          0          0          0      18682   stm32f4xx_hal_uart.o
-       196          0          0          0          0       2211   stm32f4xx_it.o
-      1704          0          0          0          0      26168   stm32f4xx_ll_usb.o
-       110          0         24          4          0       2558   system_stm32f4xx.o
-      2870          8          0          0        300      31129   tasks.o
-      2650          0          0          0        384       8391   tim.o
-      1132         16          0          0        292      15633   timers.o
-      1172          0          0          0        672       7750   usart.o
-         0          0          0          0        668       2797   usb_device.o
-        72          0          0          0          0      10519   usbd_cdc.o
-        96          0          0          0          0       2461   usbd_cdc_if.o
-       944          4          0          0       1032      13746   usbd_conf.o
-       650          0          0          0          0       7533   usbd_core.o
-      1346         24          0          0          1       8617   usbd_ctlreq.o
-       102          0          0          0          0       4410   usbd_ioreq.o
-      1348          0          0          0         12       6648   user_lib.o
+       212          0          0          5          4       7245   stm32f4xx_hal.o
+       596          0          0          0          0      10667   stm32f4xx_hal_adc.o
+      1636          6          0          0          0      13508   stm32f4xx_hal_can.o
+       194          0          0          0          0      10571   stm32f4xx_hal_cortex.o
+        38          0          0          0          0       3120   stm32f4xx_hal_crc.o
+       714          4          8          0          0       9707   stm32f4xx_hal_dma.o
+       458          0          0          0          0       5139   stm32f4xx_hal_gpio.o
+       392          0          0          0          0      43285   stm32f4xx_hal_i2c.o
+        88          0          0          0          0       3369   stm32f4xx_hal_msp.o
+      2164          0          0          0          0      14230   stm32f4xx_hal_pcd.o
+         2          0          0          0          0       4312   stm32f4xx_hal_pcd_ex.o
+      1290          0          0          0          0       7221   stm32f4xx_hal_rcc.o
+       326          0          0          0          0       4413   stm32f4xx_hal_rcc_ex.o
+        50          0          0          0          0       4621   stm32f4xx_hal_rng.o
+       214          0          0          0          0      13043   stm32f4xx_hal_rtc.o
+       790          0          0          0          0      22339   stm32f4xx_hal_spi.o
+      1452          4          0          0          0      47411   stm32f4xx_hal_tim.o
+       140          0          0          0          0      16701   stm32f4xx_hal_tim_ex.o
+       744          0          0          0          0      18683   stm32f4xx_hal_uart.o
+       196          0          0          0          0       2212   stm32f4xx_it.o
+      1704          0          0          0          0      26169   stm32f4xx_ll_usb.o
+       110          0         24          4          0       2559   system_stm32f4xx.o
+      2870          8          0          0        300      31166   tasks.o
+      2650          0          0          0        384       8392   tim.o
+      1132         16          0          0        292      15670   timers.o
+      1172          0          0          0        672       7751   usart.o
+         0          0          0          0        668       2798   usb_device.o
+        72          0          0          0          0      10520   usbd_cdc.o
+        96          0          0          0          0       2462   usbd_cdc_if.o
+       944          4          0          0       1032      13747   usbd_conf.o
+       650          0          0          0          0       7534   usbd_core.o
+      1346         24          0          0          1       8618   usbd_ctlreq.o
+       102          0          0          0          0       4411   usbd_ioreq.o
+      1348          0          0          0         12       6649   user_lib.o
       5546        156          0          0        412      15127   vision_task.o
 
     ----------------------------------------------------------------------
-     77172        696       1840        252      53020     676681   Object Totals
+     77172        696       1840        252      53020     677160   Object Totals
          0          0         32          0          0          0   (incl. Generated)
        452          8          1          1         59          0   (incl. Padding)
 
@@ -10888,8 +10888,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     99628       2486       4628        252      53116     713277   Grand Totals
-     99628       2486       4628        252      53116     713277   ELF Image Totals
+     99628       2486       4628        252      53116     713756   Grand Totals
+     99628       2486       4628        252      53116     713756   ELF Image Totals
      99628       2486       4628        252          0          0   ROM Totals
 
 ==============================================================================

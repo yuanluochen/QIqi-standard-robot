@@ -66,11 +66,12 @@ standard_tpye_c/main.o: ..\Src\main.c ..\Inc\main.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h ..\Inc\gpio.h \
   ..\bsp\bsp_can.h ..\application\struct_typedef.h ..\bsp\bsp_delay.h \
-  ..\bsp\bsp_usart.h ..\application\remote_control.h ..\bsp\bsp_rc.h \
-  ..\application\chassis_task.h ..\application\CAN_receive.h \
-  ..\application\gimbal_task.h ..\module\controller\pid.h \
-  ..\module\userlib\user_lib.h ..\application\vision_task.h \
-  ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \
+  ..\bsp\bsp_usart.h ..\module\remote_control\remote_control.h \
+  ..\bsp\bsp_rc.h ..\application\chassis_task.h \
+  ..\module\dji_motor\CAN_receive.h ..\application\gimbal_task.h \
+  ..\module\controller\pid.h ..\module\userlib\user_lib.h \
+  ..\application\vision_task.h ..\application\INS_task.h \
+  ..\module\bmi088\BMI088driver.h \
   ..\module\kalman_filter\QuaternionEKF.h \
   ..\module\kalman_filter\kalman_filter.h \
   ..\module\arm_math\Include\arm_math.h \
