@@ -1,12 +1,12 @@
 standard_tpye_c/chassis_task.o: ..\application\chassis_task.c \
   ..\application\chassis_task.h ..\application\struct_typedef.h \
   ..\application\CAN_receive.h ..\application\gimbal_task.h \
-  ..\components\controller\pid.h ..\application\remote_control.h \
-  ..\bsp\boards\bsp_rc.h ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  ..\module\controller\pid.h ..\application\remote_control.h \
+  ..\bsp\bsp_rc.h ..\Drivers\CMSIS\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\components\algorithm\user_lib.h ..\application\vision_task.h \
+  ..\module\userlib\user_lib.h ..\application\vision_task.h \
   ..\Inc\usart.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
@@ -49,11 +49,10 @@ standard_tpye_c/chassis_task.o: ..\application\chassis_task.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\Inc\dma.h ..\application\INS_task.h \
-  ..\components\devices\BMI088driver.h \
-  ..\components\algorithm\QuaternionEKF.h \
-  ..\components\algorithm\kalman_filter.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\Inc\dma.h ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \
+  ..\module\kalman_filter\QuaternionEKF.h \
+  ..\module\kalman_filter\kalman_filter.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \

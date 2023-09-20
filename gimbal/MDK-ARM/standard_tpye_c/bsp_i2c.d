@@ -1,5 +1,5 @@
-standard_tpye_c/bsp_i2c.o: ..\bsp\boards\bsp_i2c.c \
-  ..\bsp\boards\bsp_i2c.h ..\application\struct_typedef.h ..\Inc\main.h \
+standard_tpye_c/bsp_i2c.o: ..\bsp\bsp_i2c.c ..\bsp\bsp_i2c.h \
+  ..\application\struct_typedef.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \

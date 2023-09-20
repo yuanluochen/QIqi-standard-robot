@@ -1,5 +1,5 @@
-standard_tpye_c/bmi088driver.o: ..\components\devices\BMI088driver.c \
-  ..\components\devices\BMI088driver.h \
+standard_tpye_c/bmi088driver.o: ..\module\bmi088\BMI088driver.c \
+  ..\module\bmi088\BMI088driver.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
@@ -45,6 +45,5 @@ standard_tpye_c/bmi088driver.o: ..\components\devices\BMI088driver.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\components\devices\BMI088reg.h \
-  ..\components\devices\BMI088Middleware.h ..\bsp\boards\bsp_dwt.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h
+  ..\module\bmi088\BMI088reg.h ..\module\bmi088\BMI088Middleware.h \
+  ..\bsp\bsp_dwt.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h

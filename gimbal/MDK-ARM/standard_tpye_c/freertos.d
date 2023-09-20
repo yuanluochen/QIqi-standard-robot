@@ -60,13 +60,13 @@ standard_tpye_c/freertos.o: ..\Src\freertos.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
   ..\application\chassis_task.h ..\application\struct_typedef.h \
   ..\application\CAN_receive.h ..\application\gimbal_task.h \
-  ..\components\controller\pid.h ..\application\remote_control.h \
-  ..\bsp\boards\bsp_rc.h ..\components\algorithm\user_lib.h \
+  ..\module\controller\pid.h ..\application\remote_control.h \
+  ..\bsp\bsp_rc.h ..\module\userlib\user_lib.h \
   ..\application\vision_task.h ..\Inc\usart.h ..\Inc\dma.h \
-  ..\application\INS_task.h ..\components\devices\BMI088driver.h \
-  ..\components\algorithm\QuaternionEKF.h \
-  ..\components\algorithm\kalman_filter.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \
+  ..\module\kalman_filter\QuaternionEKF.h \
+  ..\module\kalman_filter\kalman_filter.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \

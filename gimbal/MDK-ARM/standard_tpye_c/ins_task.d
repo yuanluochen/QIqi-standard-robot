@@ -1,7 +1,7 @@
 standard_tpye_c/ins_task.o: ..\application\INS_task.c \
   ..\application\INS_task.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\components\devices\BMI088driver.h ..\Inc\main.h \
+  ..\module\bmi088\BMI088driver.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -46,12 +46,12 @@ standard_tpye_c/ins_task.o: ..\application\INS_task.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\components\algorithm\QuaternionEKF.h \
-  ..\components\algorithm\kalman_filter.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\module\kalman_filter\QuaternionEKF.h \
+  ..\module\kalman_filter\kalman_filter.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  ..\components\controller\controller.h ..\bsp\boards\bsp_dwt.h \
-  ..\components\algorithm\user_lib.h ..\application\struct_typedef.h \
-  ..\bsp\boards\bsp_PWM.h ..\Inc\tim.h
+  ..\module\controller\controller.h ..\bsp\bsp_dwt.h \
+  ..\module\userlib\user_lib.h ..\application\struct_typedef.h \
+  ..\bsp\bsp_PWM.h ..\Inc\tim.h

@@ -1,5 +1,4 @@
-standard_tpye_c/fifo.o: ..\components\support\fifo.c \
-  ..\components\support\fifo.h \
+standard_tpye_c/fifo.o: ..\support\fifo.c ..\support\fifo.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \

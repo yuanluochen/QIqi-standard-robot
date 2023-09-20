@@ -1,10 +1,10 @@
-standard_tpye_c/oled.o: ..\components\devices\OLED.c \
-  ..\components\devices\OLED.h ..\application\struct_typedef.h \
+standard_tpye_c/oled.o: ..\module\oled\OLED.c ..\module\oled\OLED.h \
+  ..\application\struct_typedef.h \
   ..\Drivers\CMSIS\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  ..\components\devices\oledfont.h ..\bsp\boards\bsp_i2c.h ..\Inc\main.h \
+  ..\module\oled\oledfont.h ..\bsp\bsp_i2c.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \

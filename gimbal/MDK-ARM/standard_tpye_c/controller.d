@@ -1,5 +1,5 @@
-standard_tpye_c/controller.o: ..\components\controller\controller.c \
-  ..\components\controller\controller.h ..\Inc\main.h \
+standard_tpye_c/controller.o: ..\module\controller\controller.c \
+  ..\module\controller\controller.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -46,8 +46,7 @@ standard_tpye_c/controller.o: ..\components\controller\controller.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  ..\bsp\boards\bsp_dwt.h ..\components\algorithm\user_lib.h \
-  ..\application\struct_typedef.h \
-  ..\components\algorithm\Include\arm_math.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h ..\bsp\bsp_dwt.h \
+  ..\module\userlib\user_lib.h ..\application\struct_typedef.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h

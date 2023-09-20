@@ -1,6 +1,6 @@
-standard_tpye_c/bsp_crc32.o: ..\bsp\boards\bsp_crc32.c \
-  ..\bsp\boards\bsp_crc32.h ..\application\struct_typedef.h \
-  ..\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
+standard_tpye_c/bsp_crc32.o: ..\bsp\bsp_crc32.c ..\bsp\bsp_crc32.h \
+  ..\application\struct_typedef.h ..\Inc\main.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \

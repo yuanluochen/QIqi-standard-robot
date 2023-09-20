@@ -65,22 +65,21 @@ standard_tpye_c/main.o: ..\Src\main.c ..\Inc\main.h \
   ..\Inc\usbd_conf.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h ..\Inc\gpio.h \
-  ..\bsp\boards\bsp_can.h ..\application\struct_typedef.h \
-  ..\bsp\boards\bsp_delay.h ..\bsp\boards\bsp_usart.h \
-  ..\application\remote_control.h ..\bsp\boards\bsp_rc.h \
+  ..\bsp\bsp_can.h ..\application\struct_typedef.h ..\bsp\bsp_delay.h \
+  ..\bsp\bsp_usart.h ..\application\remote_control.h ..\bsp\bsp_rc.h \
   ..\application\chassis_task.h ..\application\CAN_receive.h \
-  ..\application\gimbal_task.h ..\components\controller\pid.h \
-  ..\components\algorithm\user_lib.h ..\application\vision_task.h \
-  ..\application\INS_task.h ..\components\devices\BMI088driver.h \
-  ..\components\algorithm\QuaternionEKF.h \
-  ..\components\algorithm\kalman_filter.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\application\gimbal_task.h ..\module\controller\pid.h \
+  ..\module\userlib\user_lib.h ..\application\vision_task.h \
+  ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \
+  ..\module\kalman_filter\QuaternionEKF.h \
+  ..\module\kalman_filter\kalman_filter.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h ..\application\referee.h \
   ..\application\protocol\protocol.h ..\application\detect_task.h \
   ..\application\led_flow_task.h ..\application\referee_usart_task.h \
-  ..\components\controller\stm32\stm32.h \
-  ..\components\controller\stm32\STM32_Config.h \
-  ..\components\controller\stm32\rtwtypes.h \
-  ..\components\controller\stm32\stm32_External_Functions.h \
-  ..\components\controller\stm32\stm32_types.h \
-  ..\components\controller\stm32\stm32_private.h ..\bsp\boards\bsp_dwt.h
+  ..\module\controller\stm32\stm32.h \
+  ..\module\controller\stm32\STM32_Config.h \
+  ..\module\controller\stm32\rtwtypes.h \
+  ..\module\controller\stm32\stm32_External_Functions.h \
+  ..\module\controller\stm32\stm32_types.h \
+  ..\module\controller\stm32\stm32_private.h ..\bsp\bsp_dwt.h

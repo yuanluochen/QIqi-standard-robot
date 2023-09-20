@@ -1,9 +1,8 @@
-standard_tpye_c/mem_mang4.o: ..\components\support\mem_mang4.c \
-  ..\components\support\mem_mang.h \
+standard_tpye_c/mem_mang4.o: ..\support\mem_mang4.c ..\support\mem_mang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  ..\components\support\macro_mutex.h \
+  ..\support\macro_mutex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \

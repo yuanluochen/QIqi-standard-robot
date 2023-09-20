@@ -1,6 +1,6 @@
 standard_tpye_c/remote_control.o: ..\application\remote_control.c \
   ..\application\remote_control.h ..\application\struct_typedef.h \
-  ..\bsp\boards\bsp_rc.h ..\Drivers\CMSIS\Include\cmsis_armclang.h \
+  ..\bsp\bsp_rc.h ..\Drivers\CMSIS\Include\cmsis_armclang.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_compat.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h ..\Inc\main.h \
@@ -45,6 +45,5 @@ standard_tpye_c/remote_control.o: ..\application\remote_control.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\bsp\boards\bsp_usart.h \
-  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\bsp\bsp_usart.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\application\detect_task.h

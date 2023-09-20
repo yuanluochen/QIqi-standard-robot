@@ -1,6 +1,6 @@
 standard_tpye_c/led_flow_task.o: ..\application\led_flow_task.c \
   ..\application\led_flow_task.h ..\application\struct_typedef.h \
-  ..\bsp\boards\bsp_led.h \
+  ..\bsp\bsp_led.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \

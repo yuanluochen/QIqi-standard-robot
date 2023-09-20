@@ -1,6 +1,6 @@
 standard_tpye_c/ist8310driver_middleware.o: \
-  ..\components\devices\ist8310driver_middleware.c \
-  ..\components\devices\ist8310driver_middleware.h \
+  ..\module\ist8310\ist8310driver_middleware.c \
+  ..\module\ist8310\ist8310driver_middleware.h \
   ..\application\struct_typedef.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
@@ -61,4 +61,4 @@ standard_tpye_c/ist8310driver_middleware.o: \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\queue.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\semphr.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\event_groups.h \
-  ..\bsp\boards\bsp_delay.h ..\bsp\boards\bsp_i2c.h
+  ..\bsp\bsp_delay.h ..\bsp\bsp_i2c.h

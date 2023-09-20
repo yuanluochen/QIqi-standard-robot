@@ -45,17 +45,16 @@ standard_tpye_c/vision_task.o: ..\application\vision_task.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\Inc\dma.h ..\application\INS_task.h \
-  ..\components\devices\BMI088driver.h \
-  ..\components\algorithm\QuaternionEKF.h \
-  ..\components\algorithm\kalman_filter.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\Inc\dma.h ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \
+  ..\module\kalman_filter\QuaternionEKF.h \
+  ..\module\kalman_filter\kalman_filter.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\application\referee.h ..\application\protocol\protocol.h \
   ..\application\struct_typedef.h ..\application\remote_control.h \
-  ..\bsp\boards\bsp_rc.h \
+  ..\bsp\bsp_rc.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\FreeRTOS.h \
   ..\Inc\FreeRTOSConfig.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\projdefs.h \
@@ -66,12 +65,13 @@ standard_tpye_c/vision_task.o: ..\application\vision_task.c \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\task.h \
   ..\Middlewares\Third_Party\FreeRTOS\Source\include\list.h \
   ..\application\shoot_task.h ..\application\CAN_receive.h \
-  ..\application\gimbal_task.h ..\components\controller\pid.h \
-  ..\components\algorithm\user_lib.h ..\application\gimbal_behaviour.h \
-  ..\components\support\CRC8_CRC16.h ..\Inc\usbd_cdc_if.h \
+  ..\application\gimbal_task.h ..\module\controller\pid.h \
+  ..\module\userlib\user_lib.h ..\application\gimbal_behaviour.h \
+  ..\module\crc8_crc16\CRC8_CRC16.h \
+  C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h ..\Inc\usbd_cdc_if.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc\usbd_cdc.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ioreq.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_def.h \
-  ..\Inc\usbd_conf.h C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
+  ..\Inc\usbd_conf.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h

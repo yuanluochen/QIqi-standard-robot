@@ -1,6 +1,5 @@
-standard_tpye_c/bmi088middleware.o: \
-  ..\components\devices\BMI088Middleware.c \
-  ..\components\devices\BMI088Middleware.h ..\Inc\main.h \
+standard_tpye_c/bmi088middleware.o: ..\module\bmi088\BMI088Middleware.c \
+  ..\module\bmi088\BMI088Middleware.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \

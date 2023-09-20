@@ -53,10 +53,10 @@ standard_tpye_c/usbd_cdc_if.o: ..\Src\usbd_cdc_if.c ..\Inc\usbd_cdc_if.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_core.h \
   ..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc\usbd_ctlreq.h \
   ..\application\vision_task.h ..\Inc\usart.h ..\Inc\dma.h \
-  ..\application\INS_task.h ..\components\devices\BMI088driver.h \
-  ..\components\algorithm\QuaternionEKF.h \
-  ..\components\algorithm\kalman_filter.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\application\INS_task.h ..\module\bmi088\BMI088driver.h \
+  ..\module\kalman_filter\QuaternionEKF.h \
+  ..\module\kalman_filter\kalman_filter.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h ..\application\referee.h \
   ..\application\protocol\protocol.h ..\application\struct_typedef.h \
-  ..\application\remote_control.h ..\bsp\boards\bsp_rc.h
+  ..\application\remote_control.h ..\bsp\bsp_rc.h

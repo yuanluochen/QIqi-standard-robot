@@ -59,4 +59,4 @@ standard_tpye_c/can_receive.o: ..\application\CAN_receive.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_ll_usb.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pcd_ex.h \
-  ..\bsp\boards\bsp_rng.h ..\application\detect_task.h
+  ..\bsp\bsp_rng.h ..\application\detect_task.h

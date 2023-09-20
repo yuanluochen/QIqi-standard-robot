@@ -1,5 +1,5 @@
-standard_tpye_c/kalman_filter.o: ..\components\algorithm\kalman_filter.c \
-  ..\components\algorithm\kalman_filter.h \
+standard_tpye_c/kalman_filter.o: ..\module\kalman_filter\kalman_filter.c \
+  ..\module\kalman_filter\kalman_filter.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\stm32f407xx.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
@@ -10,7 +10,7 @@ standard_tpye_c/kalman_filter.o: ..\components\algorithm\kalman_filter.c \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\arm_acle.h \
   ..\Drivers\CMSIS\Include\mpu_armv7.h \
   ..\Drivers\CMSIS\Device\ST\STM32F4xx\Include\system_stm32f4xx.h \
-  ..\components\algorithm\Include\arm_math.h \
+  ..\module\arm_math\Include\arm_math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\math.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h

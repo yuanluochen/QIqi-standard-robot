@@ -48,4 +48,4 @@ standard_tpye_c/referee.o: ..\application\referee.c \
   ..\application\protocol\protocol.h ..\application\struct_typedef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\components\support\CRC8_CRC16.h
+  ..\module\crc8_crc16\CRC8_CRC16.h

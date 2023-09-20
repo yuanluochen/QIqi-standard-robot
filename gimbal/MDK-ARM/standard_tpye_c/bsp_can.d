@@ -1,5 +1,5 @@
-standard_tpye_c/bsp_can.o: ..\bsp\boards\bsp_can.c \
-  ..\bsp\boards\bsp_can.h ..\application\struct_typedef.h ..\Inc\main.h \
+standard_tpye_c/bsp_can.o: ..\bsp\bsp_can.c ..\bsp\bsp_can.h \
+  ..\application\struct_typedef.h ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \

@@ -1,6 +1,6 @@
-standard_tpye_c/bsp_servo_pwm.o: ..\bsp\boards\bsp_servo_pwm.c \
-  ..\bsp\boards\bsp_servo_pwm.h ..\application\struct_typedef.h \
-  ..\Inc\main.h ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
+standard_tpye_c/bsp_servo_pwm.o: ..\bsp\bsp_servo_pwm.c \
+  ..\bsp\bsp_servo_pwm.h ..\application\struct_typedef.h ..\Inc\main.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_def.h \
