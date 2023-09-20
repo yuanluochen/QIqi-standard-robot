@@ -1,6 +1,6 @@
 standard_tpye_c/ahrs_middleware.o: \
   ..\components\algorithm\AHRS_middleware.c \
-  ..\components\algorithm\AHRS_MiddleWare.h \
+  ..\components\algorithm\AHRS_middleware.h \
   ..\components\algorithm\AHRS.h \
   ..\components\algorithm\Include\arm_math.h \
   ..\Drivers\CMSIS\Include\core_cm4.h \
