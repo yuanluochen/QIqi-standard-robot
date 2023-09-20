@@ -34,8 +34,14 @@ void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t dat
     uint8_t transmit_len = 0;
     //赋值发送数据参数
     can_comm_transmit->transmit_buf_len = data_len;
+    //赋值头帧
+    can_comm_transmit->transmit_buf[0] = CAN_COMM_HEADER;
+    //赋值长度
+    can_comm_transmit->transmit_buf[1] = can_comm_transmit->transmit_buf_len;
     //赋值数据段
-    memcpy(can_comm_transmit->transmit_buf + 2, data, data_len);
+    memcpy(can_comm_transmit->transmit_buf + 2, data, can_comm_transmit->transmit_buf_len);
+    //赋值帧尾
+    can_comm_transmit->transmit_buf[2 + can_comm_transmit->transmit_buf_len] = CAN_COMM_TAIL;
     //在发送数据末尾添加crc8检验
     append_CRC8_check_sum(can_comm_transmit->transmit_buf, can_comm_transmit->transmit_buf_len);
 

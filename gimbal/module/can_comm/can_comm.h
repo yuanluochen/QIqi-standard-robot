@@ -17,6 +17,11 @@
 //校验数据量 unit byte, 保存帧头帧尾 + + 数据长度位 + crc校验和
 #define CAN_COMM_OFFSET_BUFSIZE 4
 
+//帧头
+#define CAN_COMM_HEADER 0X73
+//帧尾
+#define CAN_COMM_TAIL 0x65
+
 //can设备单次发送最大值
 #define CAN_COMM_SINGLE_TRANSMIT_MAX_SIZE 8
 
