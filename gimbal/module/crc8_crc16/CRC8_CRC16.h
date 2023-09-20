@@ -2,7 +2,7 @@
   ****************************(C) COPYRIGHT 2019 DJI****************************
   * @file       crc8_crc16.c/h
   * @brief      crc8 and crc16 calculate function, verify function, append function.
-  *             crc8和crc16计算函数,校验函数,添加函数
+  *             crc8??crc16??????,У?麯??,???????
   * @note       
   * @history
   *  Version    Date            Author          Modification
@@ -18,7 +18,9 @@
 #ifndef CRC8_CRC16_H
 #define CRC8_CRC16_H
 
-#include "main.h"
+// #include "main.h"
+#include <stdint.h>
+#include <stdio.h>
 
 /**
   * @brief          calculate the crc8  
