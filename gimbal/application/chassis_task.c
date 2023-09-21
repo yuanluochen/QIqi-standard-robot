@@ -96,7 +96,7 @@ void chassis_task(void const *pvParameters)
         else
         {
             //发送控制数据
-            CAN_cmd_chassis(chassis_move.chassis_yaw_motor->relative_angle, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_relative_angle);
+            CAN_cmd_chassis(chassis_move.chassis_yaw_motor->relative_angle, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
         }
 
         // 系统延时
