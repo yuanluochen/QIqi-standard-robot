@@ -30,16 +30,16 @@
 //底盘运行模式通道
 #define CHASSIS_RUN_MODE_CHANNEL 1
 //遥控器前进摇杆（max 660）转化成车体前进速度（m/s）的比例
-#define CHASSIS_VX_RC_SEN 0.006f
+#define CHASSIS_VX_RC_SEN 1.0f
 //遥控器左右摇杆（max 660）转化成车体左右速度（m/s）的比例
-#define CHASSIS_VY_RC_SEN 0.005f
+#define CHASSIS_VY_RC_SEN 1.0f
 //摇杆死区
-#define CHASSIS_RC_DEADLINE 15
+#define CHASSIS_RC_DEADLINE 30
 
 
 
 //底盘任务控制间隔 2ms
-#define CHASSIS_CONTROL_TIME_MS 2
+#define CHASSIS_CONTROL_TIME_MS 1
 //底盘任务控制间隔 0.002s
 #define CHASSIS_CONTROL_TIME 0.002f
 

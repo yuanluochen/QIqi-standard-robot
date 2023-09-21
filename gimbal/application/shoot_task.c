@@ -114,7 +114,8 @@ void shoot_task(void const *pvParameters)
         if (!(toe_is_error(TRIGGER_MOTOR_TOE) && !toe_is_error(FRIC_LEFT_MOTOR_TOE) && !toe_is_error(FRIC_RIGHT_MOTOR_TOE)))
         {
             // 发送控制指令
-            CAN_cmd_shoot(fric_move.fric_CAN_Set_Current[0], fric_move.fric_CAN_Set_Current[1], trigger_motor.given_current, 0);
+            // CAN_cmd_shoot(fric_move.fric_CAN_Set_Current[0], fric_move.fric_CAN_Set_Current[1], trigger_motor.given_current, 0);
+            CAN_cmd_shoot(0, 0, trigger_motor.given_current, 0);
         }
         vTaskDelay(SHOOT_TASK_DELAY_TIME);
     }
@@ -306,7 +307,7 @@ static void shoot_set_control_mode(fric_move_t *fric_set_control)
     if (switch_is_up(fric_set_control->shoot_rc->rc.s[SHOOT_CONTROL_CHANNEL]))
     {
         // 自动控制模式
-        shoot_control_mode = SHOOT_AUTO_CONTROL;
+        // shoot_control_mode = SHOOT_AUTO_CONTROL;
     }
     else if (switch_is_mid(fric_set_control->shoot_rc->rc.s[SHOOT_CONTROL_CHANNEL]))
     {

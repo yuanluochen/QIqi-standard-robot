@@ -360,28 +360,31 @@ static void gimbal_behavour_set(gimbal_control_t *gimbal_mode_set)
     }
     else if (switch_is_up(gimbal_mode_set->gimbal_rc_ctrl->rc.s[GIMBAL_MODE_CHANNEL]))
     {
-        // 切换到云台自动模式
-        // 判断当前模式是否为自动移动模式
-        if (judge_cur_mode_is_auto_move_mode())
-        {
-            //是自动移动模式
-            gimbal_behaviour = GIMBAL_AUTO_MOVE;  //云台自动移动模式
-        }
-        else
-        {
-            // 不是自动移动模式
-            // 根据视觉是否识别，自动控制模式
-            if (judge_vision_appear_target())
-            {
-                // 识别到目标
-                gimbal_behaviour = GIMBAL_AUTO_ATTACK; // 云台自动袭击模式
-            }
-            else
-            {
-                // 未识别到目标
-                gimbal_behaviour = GIMBAL_AUTO_SCAN; // 云台自动扫描模式
-            }
-        }
+
+        gimbal_behaviour = GIMBAL_RC;
+        // // 切换到云台自动模式
+        // // 判断当前模式是否为自动移动模式
+        // if (judge_cur_mode_is_auto_move_mode())
+        // {
+        //     //是自动移动模式
+        //     gimbal_behaviour = GIMBAL_AUTO_MOVE;  //云台自动移动模式
+        // }
+        // else
+        // {
+        //     // 不是自动移动模式
+        //     // 根据视觉是否识别，自动控制模式
+        //     if (judge_vision_appear_target())
+        //     {
+        //         // 识别到目标
+        //         gimbal_behaviour = GIMBAL_AUTO_ATTACK; // 云台自动袭击模式
+        //     }
+        //     else
+        //     {
+        //         // 未识别到目标
+        //         gimbal_behaviour = GIMBAL_AUTO_SCAN; // 云台自动扫描模式
+        //     }
+        // }
+
     }
     // 遥控器报错处理
     if (toe_is_error(DBUS_TOE))
@@ -400,14 +403,14 @@ static void gimbal_behavour_set(gimbal_control_t *gimbal_mode_set)
     }
 
     // 判断是否发生云台从其他模式切入自动扫描模式模式
-    if (last_gimbal_behaviour != GIMBAL_AUTO_SCAN && gimbal_behaviour == GIMBAL_AUTO_SCAN)
-    {
-        // 用于自动扫描 -- 重新初始化扫描初始时间
-        gimbal_mode_set->gimbal_auto_scan.scan_begin_time = TIME_MS_TO_S(HAL_GetTick());
-        // 用于自动扫描 -- 重新设置云台yaw轴扫描中点，为当前位置
-        gimbal_mode_set->gimbal_auto_scan.yaw_center_value = gimbal_mode_set->gimbal_yaw_motor.absolute_angle;
-        gimbal_mode_set->gimbal_auto_scan.pitch_center_value = gimbal_mode_set->gimbal_pitch_motor.absolute_angle;
-    }
+//    if (last_gimbal_behaviour != GIMBAL_AUTO_SCAN && gimbal_behaviour == GIMBAL_AUTO_SCAN)
+//    {
+//        // 用于自动扫描 -- 重新初始化扫描初始时间
+//        gimbal_mode_set->gimbal_auto_scan.scan_begin_time = TIME_MS_TO_S(HAL_GetTick());
+//        // 用于自动扫描 -- 重新设置云台yaw轴扫描中点，为当前位置
+//        gimbal_mode_set->gimbal_auto_scan.yaw_center_value = gimbal_mode_set->gimbal_yaw_motor.absolute_angle;
+//        gimbal_mode_set->gimbal_auto_scan.pitch_center_value = gimbal_mode_set->gimbal_pitch_motor.absolute_angle;
+//    }
     // 保存历史数据
     last_gimbal_behaviour = gimbal_behaviour;
 }
