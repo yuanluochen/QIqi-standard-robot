@@ -2,9 +2,10 @@
 DebugConfig
 out
 RTE
+standard_tpye_c
 standard_debug
 tmp
-.clang
+.clangd
 EventRecorderStub.scvd
 JLinkLog.txt
 JLinkSettings.ini
