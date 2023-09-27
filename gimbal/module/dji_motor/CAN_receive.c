@@ -74,17 +74,6 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     { 
 		switch (rx_header.StdId)
     {
-        case CAN_3508_M1_ID:
-        case CAN_3508_M2_ID:
-        case CAN_3508_M3_ID:
-        case CAN_3508_M4_ID:
-        {
-            static uint8_t i = 0;
-            i = rx_header.StdId - CAN_3508_M4_ID;
-            get_motor_measure(&motor_chassis[i], rx_data);
-            detect_hook(CHASSIS_MOTOR1_TOE + i);
-            break;
-        }
         case CAN_YAW_MOTOR_ID:
         {
 

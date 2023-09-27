@@ -335,14 +335,14 @@ static void shoot_set_control_mode(fric_move_t *fric_set_control)
         shoot_control_mode = SHOOT_STOP_CONTROL;
     }
 
-    // 判断进入初始化模式
-    static shoot_control_mode_e last_shoot_control_mode = SHOOT_STOP_CONTROL;
-    if (shoot_control_mode != SHOOT_STOP_CONTROL && last_shoot_control_mode == SHOOT_STOP_CONTROL)
-    {
-        // 进入初始化模式
-        shoot_control_mode = SHOOT_INIT_CONTROL;
-    }
-    last_shoot_control_mode = shoot_control_mode;
+    // // 判断进入初始化模式
+    // static shoot_control_mode_e last_shoot_control_mode = SHOOT_STOP_CONTROL;
+    // if (shoot_control_mode != SHOOT_STOP_CONTROL && last_shoot_control_mode == SHOOT_STOP_CONTROL)
+    // {
+    //     // 进入初始化模式
+    //     shoot_control_mode = SHOOT_INIT_CONTROL;
+    // }
+    // last_shoot_control_mode = shoot_control_mode;
 }
 
 /**

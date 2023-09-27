@@ -164,7 +164,6 @@ static fp32 gimbal_motor_second_order_linear_controller_calc(gimbal_motor_second
 
 //云台任务结构体
 gimbal_control_t gimbal_control;
-int flag = 0;
 
 /**
  * @brief          云台任务，间隔 GIMBAL_CONTROL_TIME 1ms
