@@ -65,7 +65,7 @@ typedef struct
     chassis_behaviour_e chassis_behaviour;
     fp32 vx_set;                 // 底盘设定速度 前进方向 前为正，单位 m/s
     fp32 vy_set;                 // 底盘设定速度 左右方向 左为正，单位 m/s
-    fp32 chassis_relative_angle; // 底盘与云台的相对角度，单位 rad
+    fp32 chassis_relative_ecd; // 底盘与云台的相对角度，单位 rad
 } chassis_move_t;
 
 /**
