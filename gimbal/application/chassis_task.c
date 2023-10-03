@@ -96,7 +96,7 @@ void chassis_task(void const *pvParameters)
         else
         {
             //发送控制数据
-            CAN_cmd_chassis(chassis_move.chassis_yaw_motor->relative_angle, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
+            CAN_cmd_chassis(chassis_move.chassis_relative_ecd, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
         }
 
         // 系统延时
@@ -130,7 +130,11 @@ static void chassis_init(chassis_move_t *chassis_move_init)
  */
 static void chassis_feedback_update(chassis_move_t *chassis_move_feedback_update)
 {
-    chassis_move_feedback_update->chassis_relative_angle = chassis_move_feedback_update->chassis_yaw_motor->relative_angle;
+    chassis_move_feedback_update->chassis_relative_ecd = chassis_move_feedback_update->chassis_yaw_motor->gimbal_motor_measure->ecd - chassis_move_feedback_update->chassis_yaw_motor->frist_ecd;
+    if (chassis_move_feedback_update->chassis_relative_ecd > 4096)
+        chassis_move_feedback_update->chassis_relative_ecd -= 8191;
+    else if (chassis_move_feedback_update->chassis_relative_ecd < -4096)
+        chassis_move_feedback_update->chassis_relative_ecd += 8191;
 }
 
 
@@ -157,7 +161,15 @@ static void chassis_set_mode(chassis_move_t *chassis_move_mode)
         // 遥控器中挡为遥控器控制模式，
 
         // 默认底盘跟随云台
-        chassis_move_mode->chassis_behaviour = CHASSIS_FOLLOW_GIMBAL_YAW;
+        if (switch_is_down(chassis_move_mode->chassis_RC->rc.s[1]))
+        {
+            chassis_move_mode->chassis_behaviour = CHASSIS_RUDDER_FOLLOW_GIMBAL_YAW;
+        }
+        else
+        {
+            chassis_move_mode->chassis_behaviour = CHASSIS_FOLLOW_GIMBAL_YAW;
+        }
+        
     }
     else if (switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
     {

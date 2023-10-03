@@ -30,16 +30,16 @@
 //底盘运行模式通道
 #define CHASSIS_RUN_MODE_CHANNEL 1
 //遥控器前进摇杆（max 660）转化成车体前进速度（m/s）的比例
-#define CHASSIS_VX_RC_SEN 0.006f
+#define CHASSIS_VX_RC_SEN 1.0f
 //遥控器左右摇杆（max 660）转化成车体左右速度（m/s）的比例
-#define CHASSIS_VY_RC_SEN 0.005f
+#define CHASSIS_VY_RC_SEN 1.0f
 //摇杆死区
-#define CHASSIS_RC_DEADLINE 15
+#define CHASSIS_RC_DEADLINE 30
 
 
 
 //底盘任务控制间隔 2ms
-#define CHASSIS_CONTROL_TIME_MS 2
+#define CHASSIS_CONTROL_TIME_MS 1
 //底盘任务控制间隔 0.002s
 #define CHASSIS_CONTROL_TIME 0.002f
 
@@ -65,7 +65,7 @@ typedef struct
     chassis_behaviour_e chassis_behaviour;
     fp32 vx_set;                 // 底盘设定速度 前进方向 前为正，单位 m/s
     fp32 vy_set;                 // 底盘设定速度 左右方向 左为正，单位 m/s
-    fp32 chassis_relative_angle; // 底盘与云台的相对角度，单位 rad
+    fp32 chassis_relative_ecd; // 底盘与云台的相对角度，单位 rad
 } chassis_move_t;
 
 /**
