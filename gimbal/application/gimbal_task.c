@@ -201,6 +201,7 @@ void gimbal_task(void const *pvParameters)
             {
                 // ÅÐ¶ÏÒ£¿ØÆ÷ÊÇ·ñµôÏß
                 CAN_cmd_gimbal(0, 0, 0);
+                vTaskDelay(GIMBAL_CONTROL_TIME);
                 CAN_cmd_chassis(0, 0, 0, 0);
             }
             else

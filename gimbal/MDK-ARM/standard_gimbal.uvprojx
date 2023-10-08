@@ -554,6 +554,11 @@
               <FileType>1</FileType>
               <FilePath>..\application\INS_task.c</FilePath>
             </File>
+            <File>
+              <FileName>can_comm_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\application\can_comm_task.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

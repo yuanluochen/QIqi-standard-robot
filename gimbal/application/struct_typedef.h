@@ -16,6 +16,12 @@ typedef unsigned char bool_t;
 typedef float fp32;
 typedef double fp64;
 
+//bool¿‡–Õ
+typedef enum
+{
+    true = 1,
+    false = 0
+} bool;
 
 #endif
 

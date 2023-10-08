@@ -58,3 +58,47 @@ void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t dat
     }
     
 }
+
+void can_comm_queue_init(can_comm_queue_t *comm_queue, int queue_capacity)
+{
+    //队列置空
+    memset(comm_queue, 0, sizeof(can_comm_queue_t));
+    //赋值队列容量
+    comm_queue->capacity = queue_capacity + 1;
+    //开辟队列空间
+    comm_queue->can_comm_data = malloc(sizeof(can_comm_queue_t) * (comm_queue->capacity));
+    //初始化队头尾指针
+    comm_queue->head = comm_queue->tail = 0;
+}
+
+bool can_comm_queue_push(can_comm_queue_t *comm_queue, const can_comm_data_t *can_comm_data)
+{
+    //判断队列是否已满
+    if ((comm_queue->tail + 1) % comm_queue->capacity == comm_queue->head)
+    {
+        //添加失败不添加
+        return false;     
+    }
+    //尾指针后移添加数据
+    memcpy(comm_queue->can_comm_data + (++comm_queue->head), can_comm_data, sizeof(can_comm_data_t));
+    //返回添加数据
+    return true;
+
+}
+
+can_comm_data_t *can_comm_queue_pop(can_comm_queue_t *comm_queue)
+{
+    //判断是否队空
+    if (comm_queue->head == comm_queue->tail)
+    {
+        //队空返回空指针
+        return NULL;
+    }
+    //返回头指针，并且头指针后移
+    return comm_queue->can_comm_data + (++comm_queue->head);
+}
+
+int can_comm_queue_size(can_comm_queue_t *comm_queue)
+{
+    return (comm_queue->tail - comm_queue->head + comm_queue->capacity) % comm_queue->capacity;
+}

@@ -37,6 +37,26 @@ typedef enum
 } can_comm_statue_e;
 
 
+//can通信数据结构体
+typedef struct 
+{
+    //通信数据
+    uint8_t* data;
+}can_comm_data_t;
+
+//can设备通信队列
+typedef struct 
+{
+    //通信数据队列存储缓存
+    can_comm_data_t* can_comm_data; 
+    //队列容量
+    int capacity;
+    //头指针
+    int head;
+    //尾指针
+    int tail;
+}can_comm_queue_t;
+
 /**
  * @brief can设备通信通信结构体
  * 
@@ -64,5 +84,38 @@ typedef struct
  * @param data_len 数据长度
  */
 void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t data_len);
+
+/**
+ * @brief can通信队列初始化
+ * 
+ * @param comm_queue 待初始化的can通信队列
+ * @param queue_capacity can通信队列的大小
+ */
+void can_comm_queue_init(can_comm_queue_t *comm_queue, int queue_capacity);
+
+/**
+ * @brief can通信队列添加
+ * 
+ * @param comm_queue can通信队列结构体
+ * @param can_comm_data can通信队列数据
+ * @return bool_t 添加成功返回true，添加失败返回false
+ */
+bool can_comm_queue_push(can_comm_queue_t *comm_queue, const can_comm_data_t *can_comm_data);
+
+/**
+ * @brief can通信队列出队
+ * 
+ * @param comm_queue 
+ * @return can_comm_data_t* 返回出队元素指针，如果队空则返回空指针
+ */
+can_comm_data_t *can_comm_queue_pop(can_comm_queue_t *comm_queue);
+
+/**
+ * @brief 返回队列大小 
+ * 
+ * @param comm_queue 队列结构体
+ * @return 返回队列大小，类型为整形 
+ */
+int can_comm_queue_size(can_comm_queue_t *comm_queue);
 
 #endif // !CAN_PACKEET_CONNECTION_H
