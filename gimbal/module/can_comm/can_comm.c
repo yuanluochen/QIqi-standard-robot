@@ -79,8 +79,9 @@ bool can_comm_queue_push(can_comm_queue_t *comm_queue, const can_comm_data_t *ca
         //添加失败不添加
         return false;     
     }
+    comm_queue->tail = (++comm_queue->tail) % comm_queue->capacity;
     //尾指针后移添加数据
-    memcpy(comm_queue->can_comm_data + (++comm_queue->head), can_comm_data, sizeof(can_comm_data_t));
+    memcpy(comm_queue->can_comm_data + comm_queue->tail, can_comm_data, sizeof(can_comm_data_t));
     //返回添加数据
     return true;
 
@@ -95,7 +96,8 @@ can_comm_data_t *can_comm_queue_pop(can_comm_queue_t *comm_queue)
         return NULL;
     }
     //返回头指针，并且头指针后移
-    return comm_queue->can_comm_data + (++comm_queue->head);
+    comm_queue->head = (++comm_queue->head) % comm_queue->capacity;
+    return comm_queue->can_comm_data + comm_queue->head;
 }
 
 int can_comm_queue_size(can_comm_queue_t *comm_queue)

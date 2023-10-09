@@ -41,7 +41,7 @@ typedef enum
 typedef struct 
 {
     //通信数据
-    uint8_t* data;
+    uint8_t data[CAN_COMM_SINGLE_TRANSMIT_MAX_SIZE];
 }can_comm_data_t;
 
 //can设备通信队列
