@@ -71,9 +71,9 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
     HAL_CAN_GetRxMessage(hcan, CAN_RX_FIFO0, &rx_header, rx_data);
 
     if (hcan == &hcan1)
-    { 
-		switch (rx_header.StdId)
     {
+        switch (rx_header.StdId)
+        {
         case CAN_YAW_MOTOR_ID:
         {
 
@@ -106,13 +106,13 @@ void HAL_CAN_RxFifo0MsgPendingCallback(CAN_HandleTypeDef *hcan)
         case CAN_3508_S1_ID:
         {
             get_motor_measure(&motor_shoot[rx_header.StdId - CAN_3508_S1_ID], rx_data);
-            detect_hook(FRIC_LEFT_MOTOR_TOE );
+            detect_hook(FRIC_LEFT_MOTOR_TOE);
             break;
         }
         case CAN_3508_S2_ID:
         {
             get_motor_measure(&motor_shoot[rx_header.StdId - CAN_3508_S1_ID], rx_data);
-            detect_hook(FRIC_RIGHT_MOTOR_TOE );
+            detect_hook(FRIC_RIGHT_MOTOR_TOE);
             break;
         }
         default:

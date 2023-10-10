@@ -39,7 +39,7 @@
 
 
 //底盘任务控制间隔 2ms
-#define CHASSIS_CONTROL_TIME_MS 1
+#define CHASSIS_CONTROL_TIME_MS 2
 //底盘任务控制间隔 0.002s
 #define CHASSIS_CONTROL_TIME 0.002f
 

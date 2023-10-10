@@ -39,6 +39,9 @@
 #include "pid.h"
 #include "stm32.h"
 #include "stm32_private.h"
+#include "can_comm_task.h"
+#include "chassis_task.h"
+
 // motor enconde value format, range[0-8191]
 // 电机编码值规整 0—8191
 #define ecd_format(ecd)         \
@@ -161,7 +164,7 @@ static void gimbal_motor_second_order_linear_controller_init(gimbal_motor_second
  * @return 返回系统输入 即电机电流值 
  */
 static fp32 gimbal_motor_second_order_linear_controller_calc(gimbal_motor_second_order_linear_controller_t* controller, fp32 set_angle, fp32 cur_angle, fp32 cur_angle_speed, fp32 cur_current);
-
+extern chassis_move_t chassis_move;
 //云台任务结构体
 gimbal_control_t gimbal_control;
 
@@ -197,12 +200,19 @@ void gimbal_task(void const *pvParameters)
         {
             if (toe_is_error(DBUS_TOE))
             {
-                // 判断遥控器是否掉线
-                CAN_cmd_gimbal(0, 0, 0);
+                // // 判断遥控器是否掉线
+                // CAN_cmd_gimbal(0, 0, 0);
+                // vTaskDelay(GIMBAL_CONTROL_TIME);
+                // CAN_cmd_chassis(0, 0, 0, 0);
+                can_comm_gimbal(0, 0);
+                
             }
             else
             {
-                CAN_cmd_gimbal(gimbal_control.gimbal_yaw_motor.given_current, -gimbal_control.gimbal_pitch_motor.given_current, 0);
+                // CAN_cmd_gimbal(gimbal_control.gimbal_yaw_motor.given_current, -gimbal_control.gimbal_pitch_motor.given_current, 0);
+                // vTaskDelay(GIMBAL_CONTROL_TIME);
+                // CAN_cmd_chassis(chassis_move.chassis_relative_ecd, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
+                can_comm_gimbal(gimbal_control.gimbal_yaw_motor.given_current, -gimbal_control.gimbal_pitch_motor.given_current);
             }
         }
         vTaskDelay(GIMBAL_CONTROL_TIME);
