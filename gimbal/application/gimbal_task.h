@@ -108,7 +108,7 @@
 #define YAW_ENCODE_SEN    0.01f
 #define PITCH_ENCODE_SEN  0.01f
 
-#define GIMBAL_CONTROL_TIME 1
+#define GIMBAL_CONTROL_TIME 2
 
 #define PITCH_TURN  1
 #define YAW_TURN    0

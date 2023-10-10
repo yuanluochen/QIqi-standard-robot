@@ -15,52 +15,64 @@
 #include <stdlib.h>
 
 
-/**
- * @brief can设备通信函数 
- * 
- * @param can_comm_transmit can设备通信结构体 
- * @param data 发送数据指针
- * @param data_len 数据长度
- */
-void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t data_len)
-{
-    //判断发送数据是否符合要求
-    if ((data_len > CAN_COMM_MAX_BUFSIZE) || (can_comm_transmit == NULL) || (data == NULL))
-    {
-        //不符合要求,直接退出
-        return;
-    }
-    //发送数据长度
-    uint8_t transmit_len = 0;
-    //赋值发送数据参数
-    can_comm_transmit->transmit_buf_len = data_len;
-    //赋值头帧
-    can_comm_transmit->transmit_buf[0] = CAN_COMM_HEADER;
-    //赋值长度
-    can_comm_transmit->transmit_buf[1] = can_comm_transmit->transmit_buf_len;
-    //赋值数据段
-    memcpy(can_comm_transmit->transmit_buf + 2, data, can_comm_transmit->transmit_buf_len);
-    //赋值帧尾
-    can_comm_transmit->transmit_buf[2 + can_comm_transmit->transmit_buf_len] = CAN_COMM_TAIL;
-    //在发送数据末尾添加crc8检验
-    append_CRC8_check_sum(can_comm_transmit->transmit_buf, can_comm_transmit->transmit_buf_len);
+// /**
+//  * @brief can设备通信函数 
+//  * 
+//  * @param can_comm_transmit can设备通信结构体 
+//  * @param data 发送数据指针
+//  * @param data_len 数据长度
+//  */
+// void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t data_len)
+// {
+//     //判断发送数据是否符合要求
+//     if ((data_len > CAN_COMM_MAX_BUFSIZE) || (can_comm_transmit == NULL) || (data == NULL))
+//     {
+//         //不符合要求,直接退出
+//         return;
+//     }
+//     //发送数据长度
+//     uint8_t transmit_len = 0;
+//     //赋值发送数据参数
+//     can_comm_transmit->transmit_buf_len = data_len;
+//     //赋值头帧
+//     can_comm_transmit->transmit_buf[0] = CAN_COMM_HEADER;
+//     //赋值长度
+//     can_comm_transmit->transmit_buf[1] = can_comm_transmit->transmit_buf_len;
+//     //赋值数据段
+//     memcpy(can_comm_transmit->transmit_buf + 2, data, can_comm_transmit->transmit_buf_len);
+//     //赋值帧尾
+//     can_comm_transmit->transmit_buf[2 + can_comm_transmit->transmit_buf_len] = CAN_COMM_TAIL;
+//     //在发送数据末尾添加crc8检验
+//     append_CRC8_check_sum(can_comm_transmit->transmit_buf, can_comm_transmit->transmit_buf_len);
 
-    //数据发送，根据数据大小确定发送次数
-    for (int i = 0; i < can_comm_transmit->transmit_buf_len; i += 8)
-    {
-        //计算该次发送数据长度
-        transmit_len = can_comm_transmit->transmit_buf_len - i >= 8 ? 8 : can_comm_transmit->transmit_buf_len - i;
-        //设置该次发送数据长度
+//     //数据发送，根据数据大小确定发送次数
+//     for (int i = 0; i < can_comm_transmit->transmit_buf_len; i += 8)
+//     {
+//         //计算该次发送数据长度
+//         transmit_len = can_comm_transmit->transmit_buf_len - i >= 8 ? 8 : can_comm_transmit->transmit_buf_len - i;
+//         //设置该次发送数据长度
 
-        //拷贝发送数据
-        // memcpy(can_comm_transmit->)
+//         //拷贝发送数据
+//         // memcpy(can_comm_transmit->)
         
-    }
+//     }
     
+// }
+
+void can_transmit(can_comm_data_t* can_comm_data)
+{
+    if (can_comm_data == NULL)
+        return;
+    if (can_comm_data->can_handle == NULL)
+        return;
+
+    uint32_t send_mail_box;
+    HAL_CAN_AddTxMessage(can_comm_data->can_handle, &can_comm_data->transmit_message, can_comm_data->data, &send_mail_box);
 }
 
-void can_comm_queue_init(can_comm_queue_t *comm_queue, int queue_capacity)
+can_comm_queue_t *can_comm_queue_init(int queue_capacity)
 {
+    can_comm_queue_t *comm_queue = malloc(sizeof(can_comm_queue_t));
     //队列置空
     memset(comm_queue, 0, sizeof(can_comm_queue_t));
     //赋值队列容量
@@ -69,6 +81,7 @@ void can_comm_queue_init(can_comm_queue_t *comm_queue, int queue_capacity)
     comm_queue->can_comm_data = malloc(sizeof(can_comm_queue_t) * (comm_queue->capacity));
     //初始化队头尾指针
     comm_queue->head = comm_queue->tail = 0;
+    return comm_queue;
 }
 
 bool can_comm_queue_push(can_comm_queue_t *comm_queue, const can_comm_data_t *can_comm_data)
@@ -103,4 +116,10 @@ can_comm_data_t *can_comm_queue_pop(can_comm_queue_t *comm_queue)
 int can_comm_queue_size(can_comm_queue_t *comm_queue)
 {
     return (comm_queue->tail - comm_queue->head + comm_queue->capacity) % comm_queue->capacity;
+}
+
+
+bool can_comm_queue_is_empty(can_comm_queue_t *comm_queue)
+{
+    return (can_comm_queue_size(comm_queue) == NULL);
 }

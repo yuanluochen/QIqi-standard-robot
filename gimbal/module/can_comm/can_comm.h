@@ -10,7 +10,9 @@
  */
 #ifndef CAN_PACKEET_CONNECTION_H
 #define CAN_PACKEET_CONNECTION_H
+
 #include "struct_typedef.h"
+#include "main.h"
 
 //最大传输数据量 unit byte
 #define CAN_COMM_MAX_BUFSIZE 60
@@ -36,10 +38,13 @@ typedef enum
     CAN_COMM_END = 2,        // 通信结束
 } can_comm_statue_e;
 
-
 //can通信数据结构体
 typedef struct 
 {
+    //can设备
+    CAN_HandleTypeDef *can_handle;
+    //can发送数据句柄
+    CAN_TxHeaderTypeDef transmit_message;
     //通信数据
     uint8_t data[CAN_COMM_SINGLE_TRANSMIT_MAX_SIZE];
 }can_comm_data_t;
@@ -57,44 +62,31 @@ typedef struct
     int tail;
 }can_comm_queue_t;
 
+// /**
+//  * @brief can设备通信函数 
+//  * 
+//  * @param can_comm_transmit can设备通信结构体 
+//  * @param data 发送数据指针
+//  * @param data_len 数据长度
+//  */
+// void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t data_len);
+
 /**
- * @brief can设备通信通信结构体
+ * @brief  can设备通信函数,发送can通信数据结构体内数据
  * 
+ * @param can_commit_data can通信数据
  */
-typedef struct
-{
-    //can设备 
-    // 发送部分
-    uint8_t transmit_data_len;                                            // 发送数据长度
-    uint8_t transmit_buf_len;                                             // 发送缓冲区数据长度 该长度包括发送数据长度 帧头帧尾 数据长度位 校验和
-    uint8_t transmit_buf[CAN_COMM_MAX_BUFSIZE + CAN_COMM_OFFSET_BUFSIZE]; // 发送数据区, 大小为 CAN_COMM_MAX_BUFSIZE + CAN_COMM_OFFSET_BUFSIZE
-
-    // 接收部分
-    uint8_t receive_data_len;                                            // 接收数据长度
-    uint8_t receive_buf_len;                                             // 接收缓冲区数据长度 该长度包括发送数据长度 帧头帧尾 数据长度位 校验和
-    uint8_t receive_buf[CAN_COMM_MAX_BUFSIZE + CAN_COMM_OFFSET_BUFSIZE]; // 接收数据区, 大小为 CAN_COMM_MAX_BUFSIZE + CAN_COMM_OFFSET_BUFSIZE
-
-} can_comm_t;
-
+void can_transmit(can_comm_data_t* can_commit_data);
 /**
- * @brief can设备通信函数 
+ * @brief can通信队列开辟函数
  * 
- * @param can_comm_transmit can设备通信结构体 
- * @param data 发送数据指针
- * @param data_len 数据长度
+ * @param queue_capacity 队列空间大小
+ * @return can_comm_queue_t* 返回开辟队列指针
  */
-void can_comm_transmit(can_comm_t *can_comm_transmit, uint8_t* data, uint8_t data_len);
+can_comm_queue_t *can_comm_queue_init(int queue_capacity);
 
 /**
- * @brief can通信队列初始化
- * 
- * @param comm_queue 待初始化的can通信队列
- * @param queue_capacity can通信队列的大小
- */
-void can_comm_queue_init(can_comm_queue_t *comm_queue, int queue_capacity);
-
-/**
- * @brief can通信队列添加
+ * @brief can通信队列添加, 数据添加使用memcpy进行内存拷贝，无需担心添加数据会变
  * 
  * @param comm_queue can通信队列结构体
  * @param can_comm_data can通信队列数据
@@ -117,5 +109,14 @@ can_comm_data_t *can_comm_queue_pop(can_comm_queue_t *comm_queue);
  * @return 返回队列大小，类型为整形 
  */
 int can_comm_queue_size(can_comm_queue_t *comm_queue);
+
+/**
+ * @brief 判断是否发生队空 
+ * 
+ * @param comm_queue can通信队列
+ * @return true 是队空
+ * @return false 不是队空
+ */
+bool can_comm_queue_is_empty(can_comm_queue_t *comm_queue);
 
 #endif // !CAN_PACKEET_CONNECTION_H

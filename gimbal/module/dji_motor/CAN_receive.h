@@ -22,29 +22,30 @@
 #define CAN_RECEIVE_H
 
 #include "struct_typedef.h"
+#include "can_comm_task.h"
 
 #define CHASSIS_CAN hcan1
-#define GIMBAL_CAN hcan1
+// #define GIMBAL_CAN hcan1
 
-/* CAN send and receive ID */
-typedef enum
-{
-    CAN_CHASSIS_ALL_ID = 0x200,
-    CAN_3508_M1_ID = 0x204,
-    CAN_3508_M2_ID = 0x203,
-    CAN_3508_M3_ID = 0x202,
-    CAN_3508_M4_ID = 0x201,
-    CAN_GIMBAL_CONTROL_CHASSIS_ID = 0x218,
-    CAN_YAW_MOTOR_ID = 0x205,
-    CAN_PIT_MOTOR_ID = 0x206,
-    CAN_TRIGGER_MOTOR_ID = 0x207,
-    CAN_GIMBAL_ALL_ID = 0x1FF,
+// /* CAN send and receive ID */
+// typedef enum
+// {
+//     CAN_CHASSIS_ALL_ID = 0x200,
+//     CAN_3508_M1_ID = 0x204,
+//     CAN_3508_M2_ID = 0x203,
+//     CAN_3508_M3_ID = 0x202,
+//     CAN_3508_M4_ID = 0x201,
+//     CAN_GIMBAL_CONTROL_CHASSIS_ID = 0x218,
+//     CAN_YAW_MOTOR_ID = 0x205,
+//     CAN_PIT_MOTOR_ID = 0x206,
+//     CAN_TRIGGER_MOTOR_ID = 0x207,
+//     CAN_GIMBAL_ALL_ID = 0x1FF,
 
-    CAN_SHOOT_ALL_ID = 0x1FF,
-    CAN_3508_S1_ID = 0x205,
-    CAN_3508_S2_ID = 0x206,
+//     CAN_SHOOT_ALL_ID = 0x1FF,
+//     CAN_3508_S1_ID = 0x205,
+//     CAN_3508_S2_ID = 0x206,
 
-} can_msg_id_e;
+// } can_msg_id_e;
 
 //rm motor data
 typedef struct

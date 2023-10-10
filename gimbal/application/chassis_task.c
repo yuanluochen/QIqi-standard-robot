@@ -16,6 +16,7 @@
 #include "CAN_receive.h"
 #include "detect_task.h"
 #include "INS_task.h"
+#include "can_comm_task.h"
 #include "gimbal_task.h"
 #include "gimbal_behaviour.h"
 #define abs(x) ((x) > 0 ? (x) : (-x))
@@ -91,12 +92,13 @@ void chassis_task(void const *pvParameters)
         if (toe_is_error(DBUS_TOE))
         {
             // 当遥控器离线发送控制信号为零
+            can_comm_board(0, 0, 0, 0); 
         }
         else
         {
             //发送控制数据
+            can_comm_board(chassis_move.chassis_relative_ecd, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
         }
-
         // 系统延时
         vTaskDelay(CHASSIS_CONTROL_TIME_MS);
 
