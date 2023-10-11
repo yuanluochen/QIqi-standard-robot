@@ -99,8 +99,8 @@
 #define RC_DEADBAND   15
 
 
-#define YAW_RC_SEN    -0.000005f
-#define PITCH_RC_SEN  0.000004f //0.0050.000005f
+#define YAW_RC_SEN    -0.00002f
+#define PITCH_RC_SEN  0.00002f //0.0050.000005f
 
 #define YAW_MOUSE_SEN   0.00005f
 #define PITCH_MOUSE_SEN 0.00015f
@@ -122,7 +122,7 @@
 #define GIMBAL_INIT_TIME            5000
 #define GIMBAL_CALI_REDUNDANT_ANGLE 0.1f
 //云台初始化回中值的速度以及控制到的角度
-#define GIMBAL_INIT_PITCH_SPEED     0.004f
+#define GIMBAL_INIT_PITCH_SPEED     0.01f
 #define GIMBAL_INIT_YAW_SPEED       0.005f
 
 #define INIT_YAW_SET    0.0f
@@ -206,11 +206,14 @@
 
 //角度误差项系数
 #define K_YAW_ANGLE_ERROR 120000.0f
-#define K_PITCH_ANGLE_ERROR 400000.0f
+// #define K_PITCH_ANGLE_ERROR 400000.0f
+#define K_PITCH_ANGLE_ERROR 1000000.0f
+
 
 //速度项系数
 #define K_YAW_ANGLE_SPEED 4000.0f
-#define K_PITCH_ANGLE_SPEED 4000.0f
+// #define K_PITCH_ANGLE_SPEED 4000.0f
+#define K_PITCH_ANGLE_SPEED 10000.0f
 
 //最大最小输出
 #define YAW_MAX_OUT 32000.0f

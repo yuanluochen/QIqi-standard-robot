@@ -92,12 +92,12 @@ void chassis_task(void const *pvParameters)
         if (toe_is_error(DBUS_TOE))
         {
             // 当遥控器离线发送控制信号为零
-            can_comm_board(0, 0, 0, 0); 
+            // can_comm_board(0, 0, 0, 0); 
         }
         else
         {
             //发送控制数据
-            can_comm_board(chassis_move.chassis_relative_ecd, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
+            // can_comm_board(chassis_move.chassis_relative_ecd, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
         }
         // 系统延时
         vTaskDelay(CHASSIS_CONTROL_TIME_MS);
@@ -156,25 +156,24 @@ static void chassis_set_mode(chassis_move_t *chassis_move_mode)
         // 遥控器拨到下侧挡位为底盘无力模式
         chassis_move_mode->chassis_behaviour = CHASSIS_ZERO_FORCE;
     }
-    else if (switch_is_mid(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
+    else if (switch_is_mid(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]) || switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
     {
-        // 遥控器中挡为遥控器控制模式，
-
-        // 默认底盘跟随云台
-        if (switch_is_down(chassis_move_mode->chassis_RC->rc.s[1]))
+        // 遥控器中挡以及上档为底盘有力模式
+        if (switch_is_down(chassis_move_mode->chassis_RC->rc.s[CHASSIS_RUN_MODE_CHANNEL]))
         {
+            //舵跟随云台
             chassis_move_mode->chassis_behaviour = CHASSIS_RUDDER_FOLLOW_GIMBAL_YAW;
         }
-        else
+        else if (switch_is_mid(chassis_move_mode->chassis_RC->rc.s[CHASSIS_RUN_MODE_CHANNEL]))
         {
+            //底盘跟随云台
             chassis_move_mode->chassis_behaviour = CHASSIS_FOLLOW_GIMBAL_YAW;
         }
-        
-    }
-    else if (switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
-    {
-        // 上档为陀螺
-        chassis_move_mode->chassis_behaviour = CHASSIS_SPIN;
+        else if (switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_RUN_MODE_CHANNEL]))
+        {
+            // 陀螺
+            chassis_move_mode->chassis_behaviour = CHASSIS_SPIN;
+        }
     }
     else if (toe_is_error(DBUS_TOE))
     {

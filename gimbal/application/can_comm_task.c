@@ -43,6 +43,7 @@ static can_comm_data_t gimbal_can_comm_data = {
 static can_comm_data_t board_can_comm_data = {
     .can_handle = &BOARD_CAN, // 初始化双板通信设备can
 };
+
 //实例化can通信线程结构体,全局变量，保证数据一直存在
 static can_comm_task_t can_comm = { 0 };
 
