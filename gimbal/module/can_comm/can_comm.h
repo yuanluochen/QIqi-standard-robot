@@ -56,6 +56,8 @@ typedef struct
     can_comm_data_t* can_comm_data; 
     //队列容量
     int capacity;
+    //队列数据量
+    int size;
     //头指针
     int head;
     //尾指针

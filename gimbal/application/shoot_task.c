@@ -114,8 +114,8 @@ void shoot_task(void const *pvParameters)
         if (!(toe_is_error(TRIGGER_MOTOR_TOE) && !toe_is_error(FRIC_LEFT_MOTOR_TOE) && !toe_is_error(FRIC_RIGHT_MOTOR_TOE)))
         {
             // 发送控制指令
-            // CAN_cmd_shoot(fric_move.fric_CAN_Set_Current[0], fric_move.fric_CAN_Set_Current[1], trigger_motor.given_current, 0);
-            CAN_cmd_shoot(0, 0, trigger_motor.given_current, 0);
+            CAN_cmd_shoot(fric_move.fric_CAN_Set_Current[0], fric_move.fric_CAN_Set_Current[1], trigger_motor.given_current, 0);
+            // CAN_cmd_shoot(0, 0, trigger_motor.given_current, 0);
         }
         vTaskDelay(SHOOT_TASK_DELAY_TIME);
     }
@@ -308,6 +308,7 @@ static void shoot_set_control_mode(fric_move_t *fric_set_control)
     {
         // 自动控制模式
         // shoot_control_mode = SHOOT_AUTO_CONTROL;
+        shoot_control_mode = SHOOT_RC_CONTROL;
     }
     else if (switch_is_mid(fric_set_control->shoot_rc->rc.s[SHOOT_CONTROL_CHANNEL]))
     {
@@ -353,10 +354,8 @@ static void shoot_set_control_mode(fric_move_t *fric_set_control)
 static void Shoot_Set_Mode(void)
 {
 
-    
-    
     //设置发射控制模式
-    shoot_set_control_mode(&fric_move);
+    // shoot_set_control_mode(&fric_move);
 
     //保留上次射击模式
     last_shoot_mode = shoot_mode;
@@ -368,26 +367,8 @@ static void Shoot_Set_Mode(void)
     if (GUARD_MAX_MUZZLE_HEAT - power_heat_data_t.shooter_id1_17mm_cooling_heat >= GUARD_MAX_ALLOW_MUZZLE_HEAT_ERR0R &&
         GUARD_MAX_MUZZLE_HEAT - power_heat_data_t.shooter_id2_17mm_cooling_heat >= GUARD_MAX_ALLOW_MUZZLE_HEAT_ERR0R)
     {
-        // 未即将达到最大值，发射任务正常进行
-
-        // 根据控制模式设置发射模式
-        if (shoot_control_mode == SHOOT_AUTO_CONTROL)
+        if (!toe_is_error(DBUS_TOE))
         {
-            if (fric_move.shoot_vision_control->shoot_command == SHOOT_ATTACK)
-            {
-                // 设置发射模式，开摩擦轮，拨弹盘
-                shoot_mode = SHOOT_BULLET;
-            }
-            else
-            {
-                // 其他状态摩擦轮一直开启
-                // 设置准备发射模式，开摩擦轮
-                shoot_mode = SHOOT_READY;
-            }
-        }
-        else if (shoot_control_mode == SHOOT_RC_CONTROL)
-        {
-            // 此时哨兵为遥控器控制模式，射击手动
             if (switch_is_up(fric_move.shoot_rc->rc.s[SHOOT_MODE_CHANNEL]))
             {
                 shoot_mode = SHOOT_READY;
@@ -397,44 +378,86 @@ static void Shoot_Set_Mode(void)
                     shoot_mode = SHOOT_BULLET;
                 }
             }
+            else if (switch_is_mid(fric_move.shoot_rc->rc.s[SHOOT_MODE_CHANNEL]) || switch_is_down(fric_move.shoot_rc->rc.s[SHOOT_MODE_CHANNEL]))
+            {
+                shoot_mode = SHOOT_STOP;
+            }
             else
             {
                 shoot_mode = SHOOT_STOP;
             }
         }
-        else if (shoot_control_mode == SHOOT_INIT_CONTROL)
-        {
-            // 此时哨兵初始化控制模式
-            shoot_mode = SHOOT_INIT;
-        }
-        else if (shoot_control_mode == SHOOT_STOP_CONTROL)
-        {
-            shoot_mode = SHOOT_STOP;
-        }
         else
         {
             shoot_mode = SHOOT_STOP;
         }
-    }
-    else
-    {
-        //即将到达最大值，停止发射
-        if (shoot_control_mode == SHOOT_AUTO_CONTROL)
-        {
-            //如果为自动控制模式则停止拨弹
-            shoot_mode = SHOOT_READY;
+
+        // // 未即将达到最大值，发射任务正常进行
+
+        // // 根据控制模式设置发射模式
+        // if (shoot_control_mode == SHOOT_AUTO_CONTROL)
+        // {
+        //     if (fric_move.shoot_vision_control->shoot_command == SHOOT_ATTACK)
+        //     {
+        //         // 设置发射模式，开摩擦轮，拨弹盘
+        //         shoot_mode = SHOOT_BULLET;
+        //     }
+        //     else
+        //     {
+        //         // 其他状态摩擦轮一直开启
+        //         // 设置准备发射模式，开摩擦轮
+        //         shoot_mode = SHOOT_READY;
+        //     }
+        // }
+        // else if (shoot_control_mode == SHOOT_RC_CONTROL)
+        // {
+        // 此时哨兵为遥控器控制模式，射击手动
+        // if (switch_is_up(fric_move.shoot_rc->rc.s[SHOOT_MODE_CHANNEL]))
+        // {
+        //     shoot_mode = SHOOT_READY;
+        //     // 控制发射
+        //     if (abs(fric_move.shoot_rc->rc.ch[4]) >= 100)
+        //     {
+        //         shoot_mode = SHOOT_BULLET;
+        //     }
+        // }
+        // else
+        // {
+        //     shoot_mode = SHOOT_STOP;
+        // }
+        //     }
+        //     else if (shoot_control_mode == SHOOT_INIT_CONTROL)
+        //     {
+        //         // 此时哨兵初始化控制模式
+        //         shoot_mode = SHOOT_INIT;
+        //     }
+        //     else if (shoot_control_mode == SHOOT_STOP_CONTROL)
+        //     {
+        //         shoot_mode = SHOOT_STOP;
+        //     }
+        //     else
+        //     {
+        //         shoot_mode = SHOOT_STOP;
+        //     }
+        // }
+        // else
+        // {
+        //     //即将到达最大值，停止发射
+        //     if (shoot_control_mode == SHOOT_AUTO_CONTROL)
+        //     {
+        //         //如果为自动控制模式则停止拨弹
+        //         shoot_mode = SHOOT_READY;
+        //     }
+        //     else if (shoot_control_mode == SHOOT_RC_CONTROL)
+        //     {
+        //         //如果为遥控器控制模式，则停止一切
+        //         shoot_mode = SHOOT_STOP;
+        //     }
+        //     else
+        //     {
+        //         shoot_mode = SHOOT_STOP;
+        //     }
         }
-        else if (shoot_control_mode == SHOOT_RC_CONTROL)
-        {
-            //如果为遥控器控制模式，则停止一切
-            shoot_mode = SHOOT_STOP;
-        }
-        else
-        {
-            shoot_mode = SHOOT_STOP;
-        }
-    }
-    
 }
 /**
  * @brief          拨弹轮循环

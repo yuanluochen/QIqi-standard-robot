@@ -156,25 +156,24 @@ static void chassis_set_mode(chassis_move_t *chassis_move_mode)
         // Ò£¿ØÆ÷²¦µ½ÏÂ²àµ²Î»Îªµ×ÅÌÎÞÁ¦Ä£Ê½
         chassis_move_mode->chassis_behaviour = CHASSIS_ZERO_FORCE;
     }
-    else if (switch_is_mid(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
+    else if (switch_is_mid(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]) || switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
     {
-        // Ò£¿ØÆ÷ÖÐµ²ÎªÒ£¿ØÆ÷¿ØÖÆÄ£Ê½£¬
-
-        // Ä¬ÈÏµ×ÅÌ¸úËæÔÆÌ¨
-        if (switch_is_down(chassis_move_mode->chassis_RC->rc.s[1]))
+        // Ò£¿ØÆ÷ÖÐµ²ÒÔ¼°ÉÏµµÎªµ×ÅÌÓÐÁ¦Ä£Ê½
+        if (switch_is_down(chassis_move_mode->chassis_RC->rc.s[CHASSIS_RUN_MODE_CHANNEL]))
         {
+            //¶æ¸úËæÔÆÌ¨
             chassis_move_mode->chassis_behaviour = CHASSIS_RUDDER_FOLLOW_GIMBAL_YAW;
         }
-        else
+        else if (switch_is_mid(chassis_move_mode->chassis_RC->rc.s[CHASSIS_RUN_MODE_CHANNEL]))
         {
+            //µ×ÅÌ¸úËæÔÆÌ¨
             chassis_move_mode->chassis_behaviour = CHASSIS_FOLLOW_GIMBAL_YAW;
         }
-        
-    }
-    else if (switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_MODE_CHANNEL]))
-    {
-        // ÉÏµµÎªÍÓÂÝ
-        chassis_move_mode->chassis_behaviour = CHASSIS_SPIN;
+        else if (switch_is_up(chassis_move_mode->chassis_RC->rc.s[CHASSIS_RUN_MODE_CHANNEL]))
+        {
+            // ÍÓÂÝ
+            chassis_move_mode->chassis_behaviour = CHASSIS_SPIN;
+        }
     }
     else if (toe_is_error(DBUS_TOE))
     {
