@@ -99,8 +99,8 @@
 #define RC_DEADBAND   15
 
 
-#define YAW_RC_SEN    -0.00002f
-#define PITCH_RC_SEN  0.00002f //0.0050.000005f
+#define YAW_RC_SEN    -0.000005f
+#define PITCH_RC_SEN  0.000004f //0.0050.000005f
 
 #define YAW_MOUSE_SEN   0.00005f
 #define PITCH_MOUSE_SEN 0.00015f
@@ -108,7 +108,7 @@
 #define YAW_ENCODE_SEN    0.01f
 #define PITCH_ENCODE_SEN  0.01f
 
-#define GIMBAL_CONTROL_TIME 2
+#define GIMBAL_CONTROL_TIME 1
 
 #define PITCH_TURN  1
 #define YAW_TURN    0
@@ -122,7 +122,7 @@
 #define GIMBAL_INIT_TIME            5000
 #define GIMBAL_CALI_REDUNDANT_ANGLE 0.1f
 //云台初始化回中值的速度以及控制到的角度
-#define GIMBAL_INIT_PITCH_SPEED     0.01f
+#define GIMBAL_INIT_PITCH_SPEED     0.005f
 #define GIMBAL_INIT_YAW_SPEED       0.005f
 
 #define INIT_YAW_SET    0.0f
@@ -155,11 +155,11 @@
 #define GIMBAL_PITCH_AUTO_SCAN_NUM 133.3f
 
 //云台pitch轴最大值相对角度
-#define GIMBAL_PITCH_MAX_ENCODE 0X0566
+#define GIMBAL_PITCH_MAX_ENCODE 0X1D50
 //云台pitch轴最小相对角
-#define GIMBAL_PITCH_MIN_ENCODE 0X1F08
+#define GIMBAL_PITCH_MIN_ENCODE 0X14A7
 //云台pitch轴中值
-#define GIMBAL_PITCH_OFFSET_ENCODE 0x0271
+#define GIMBAL_PITCH_OFFSET_ENCODE 0x1843
 //云台yaw轴中值
 #define GIMBAL_YAW_OFFSET_ENCODE 0x1FBF
 //yaw轴后侧中值
@@ -205,15 +205,15 @@
 #define PITCH_FEED_FORWARD 0.95f
 
 //角度误差项系数
-#define K_YAW_ANGLE_ERROR 320000.0f
-// #define K_PITCH_ANGLE_ERROR 400000.0f
-#define K_PITCH_ANGLE_ERROR 1000000.0f
+#define K_YAW_ANGLE_ERROR 60000.0f
+#define K_PITCH_ANGLE_ERROR 350000.0f
+// #define K_PITCH_ANGLE_ERROR 1000000.0f
 
 
 //速度项系数
-#define K_YAW_ANGLE_SPEED 8000.0f
-// #define K_PITCH_ANGLE_SPEED 4000.0f
-#define K_PITCH_ANGLE_SPEED 10000.0f
+#define K_YAW_ANGLE_SPEED 4000.0f
+#define K_PITCH_ANGLE_SPEED 6000.0f
+// #define K_PITCH_ANGLE_SPEED 10000.0f
 
 //最大最小输出
 #define YAW_MAX_OUT 32000.0f

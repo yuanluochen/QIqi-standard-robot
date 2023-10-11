@@ -200,19 +200,13 @@ void gimbal_task(void const *pvParameters)
         {
             if (toe_is_error(DBUS_TOE))
             {
-                // // ÅÐ¶ÏÒ£¿ØÆ÷ÊÇ·ñµôÏß
-                CAN_cmd_gimbal(0, 0, 0);
-                vTaskDelay(GIMBAL_CONTROL_TIME);
-                CAN_cmd_chassis(0, 0, 0, 0);
-                // can_comm_gimbal(0, 0);
+                // ÅÐ¶ÏÒ£¿ØÆ÷ÊÇ·ñµôÏß
+                can_comm_gimbal(0, 0);
                 
             }
             else
             {
-                CAN_cmd_gimbal(gimbal_control.gimbal_yaw_motor.given_current, -gimbal_control.gimbal_pitch_motor.given_current, 0);
-                vTaskDelay(GIMBAL_CONTROL_TIME);
-                CAN_cmd_chassis(chassis_move.chassis_relative_ecd, chassis_move.vx_set, chassis_move.vy_set, chassis_move.chassis_behaviour);
-                // can_comm_gimbal(gimbal_control.gimbal_yaw_motor.given_current, -gimbal_control.gimbal_pitch_motor.given_current);
+                can_comm_gimbal(gimbal_control.gimbal_yaw_motor.given_current, -gimbal_control.gimbal_pitch_motor.given_current);
             }
         }
         vTaskDelay(GIMBAL_CONTROL_TIME);

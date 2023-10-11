@@ -34,6 +34,13 @@ static void can_comm_task_transmit(can_comm_task_t * can_comm_transmit);
  */
 static void add_can_comm_queue(can_comm_task_t *add_comm_queue, can_comm_data_t *comm_data);
 
+/**
+ * @brief can通信队列数据更新
+ * 
+ * @param feedback_update can通信队列结构体
+ */
+static void can_comm_feedback_update(can_comm_task_t *feedback_update);
+
 //云台can通信数据
 static can_comm_data_t gimbal_can_comm_data = {
     .can_handle = &GIMBAL_CAN, // 初始化云台通信设备can
@@ -47,14 +54,16 @@ static can_comm_data_t board_can_comm_data = {
 //实例化can通信线程结构体,全局变量，保证数据一直存在
 static can_comm_task_t can_comm = { 0 };
 
-void can_comm_task(void)
+void can_comm_task(void const* pvParameters)
 { 
-    //等待云台底盘任务运行完毕
+    //要在云台和底盘任务开始之前完成该任务的初始化
     vTaskDelay(CAN_COMM_TASK_INIT_TIME);
     //can通信任务初始化
     can_comm_task_init(&can_comm);
     while(1)
     {
+        //can通信数据更新
+        can_comm_feedback_update(&can_comm);
         //can通信数据发送
         can_comm_task_transmit(&can_comm);
         //can数据数据发送 
@@ -62,6 +71,10 @@ void can_comm_task(void)
     }
 }
 
+static void can_comm_feedback_update(can_comm_task_t *feedback_update)
+{
+    feedback_update->can_comm_queue->size = can_comm_queue_size(feedback_update->can_comm_queue);
+}
 
 static void can_comm_task_init(can_comm_task_t *can_comm_init)
 {

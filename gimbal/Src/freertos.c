@@ -35,6 +35,7 @@
 #include "led_flow_task.h"
 #include "referee_usart_task.h"
 #include "vision_task.h"
+#include "can_comm_task.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,6 +48,7 @@ osThreadId referee_usart_task_handle;
 osThreadId shoot_task_handle;
 osThreadId vision_task_handle;
 osThreadId INSTaskHandle;
+osThreadId can_comm_task_handle;
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -160,6 +162,9 @@ void MX_FREERTOS_Init(void)
 
     osThreadDef(VISION, vision_task, osPriorityNormal, 0, 512);
     vision_task_handle = osThreadCreate(osThread(VISION), NULL);
+
+    osThreadDef(CanComm, can_comm_task, osPriorityHigh, 0, 512);
+    can_comm_task_handle = osThreadCreate(osThread(CanComm), NULL);
 
     /* USER CODE END RTOS_THREADS */
 }

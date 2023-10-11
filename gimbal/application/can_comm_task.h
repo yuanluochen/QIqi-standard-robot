@@ -14,7 +14,7 @@
 #include "can.h"
 
 //can通信任务初始化时间 单位ms
-#define CAN_COMM_TASK_INIT_TIME 400
+#define CAN_COMM_TASK_INIT_TIME 100
 //can通信任务运行时间间隔 单位ms
 #define CAN_COMM_TASK_TIME 1
 //can通信队列大小
@@ -55,7 +55,7 @@ typedef struct
  * @brief  can通信任务
  * 
  */
-void can_comm_task(void);
+void can_comm_task(void const* pvParameters);
 
 /**
  * @brief 云台控制数据发送，发送值为电机电流值，发送到can_comm线程的通信队列中
